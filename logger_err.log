@@ -1,0 +1,40 @@
+(node:1514) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:1514) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:402) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:402) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:916) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:916) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+events.js:288
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Unexpected close
+    at succeed (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:272:13)
+    at onOpenOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:254:5)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:166:32
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+Emitted 'error' event on ChannelModel instance at:
+    at Connection.emit (events.js:311:20)
+    at Connection.C.onSocketError (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:353:10)
+    at Socket.emit (events.js:323:22)
+    at endReadableNT (_stream_readable.js:1204:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+(node:442) UnhandledPromiseRejectionWarning: Error: connect ECONNREFUSED 192.168.43.85:5672
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+(node:442) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:442) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:582) UnhandledPromiseRejectionWarning: Error: connect ECONNREFUSED 192.168.43.85:5672
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+(node:582) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:582) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:791) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:791) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:2131) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:2131) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:4839) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:4839) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit

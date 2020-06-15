@@ -1,0 +1,20 @@
+(node:372) UnhandledPromiseRejectionWarning: Error: Unexpected close
+    at succeed (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:272:13)
+    at onOpenOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:254:5)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:166:32
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:372) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:372) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:443) UnhandledPromiseRejectionWarning: Error: connect ECONNREFUSED 192.168.43.85:5672
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+(node:443) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:443) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:559) UnhandledPromiseRejectionWarning: Error: connect ECONNREFUSED 192.168.43.85:5672
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+(node:559) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:559) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.

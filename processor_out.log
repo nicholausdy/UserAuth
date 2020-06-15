@@ -1,0 +1,5031 @@
+Received a request message : {
+  username: 'nicdanyos',
+  password: '$2b$10$oNd81C/eKbSq4WYUyt1oweuzyFffTeebg.DFVytXnM.irY6yCOmAe',
+  email: 'nicdanyos@gmail.com',
+  action: 'registerAccount'
+}
+Time to write to DB: 16.939999999999998
+Time to send email 3023.8553
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1013,
+    messageTime: 825,
+    messageSize: 1325,
+    response: '250 2.0.0 OK  1591335561 g19sm6203400pfo.209 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<5b333a7d-b430-97f0-30c8-12d7c0ff9f10@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3037.0476
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 20.041999999999998
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyo',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyo',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 13.094
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 12.774099999999999
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 12.236099999999999
+Received a request message : {
+  username: 'nicdanyos',
+  password: '$2b$10$vuR02B10pW8.eUvhON/eF.cRlfHqDyDofEymBNLkhTIzyiAQKV5J.',
+  email: 'nicdanyos@gmail.com',
+  action: 'registerAccount'
+}
+Time to write to DB: 7.2223
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_pkey"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 200,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (username)=(nicdanyos) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_pkey',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 48.3673
+Received a request message : {
+  username: 'nicholaus',
+  password: '$2b$10$/i2z77zNyPqYMTadU6x5CeDOlo3AWfaTjjwTBNlwgRuKbd0DoKuua',
+  email: 'nicdanyos@gmail.com',
+  action: 'registerAccount'
+}
+Time to write to DB: 6.1578
+Time to send email 2512.2452
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 783,
+    messageTime: 836,
+    messageSize: 1325,
+    response: '250 2.0.0 OK  1591335779 q185sm5856871pfb.82 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<b02f6107-e873-7e7d-66d2-f70c44ee531c@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2521.5407
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicholaus',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 23.6148
+Received a request message : {
+  username: 'nicdanyos',
+  password: '$2b$10$Ltt.LYvdW2mSpop1C/18BO9KiQccB15n6SpGWL/Hkl/LpPNY.elaC',
+  email: 'nicdanyos@gmail.com',
+  action: 'registerAccount'
+}
+Time to write to DB: 37.2387
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_pkey"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 200,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (username)=(nicdanyos) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_pkey',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 54.6111
+Received a request message : {
+  username: 'nicholaus',
+  password: '$2b$10$qtk5O4BfM0HmzYiW/gx/pOZVfMEhGjsw2r2Z549KtOG3Ee5Pevfte',
+  email: 'nicdanyos@gmail.com',
+  action: 'registerAccount'
+}
+Time to write to DB: 20.2507
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_pkey"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 200,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (username)=(nicholaus) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_pkey',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 36.0261
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 7.8994
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 13.4958
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicholaus',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 35.079
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 18.3041
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 19.0724
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicholaus',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 14.9756
+Received a request message : {
+  username: 'nicdanyos',
+  password: '$2b$10$1W4GW9mxxX4Ktn.sNemh2ugf7s2dlbYpqxtSaA/j7VZKPSvFt5Tsy',
+  email: 'nicdanyos@gmail.com',
+  action: 'registerAccount'
+}
+Time to write to DB: 8.7351
+Time to send email 3169.3372
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 767,
+    messageTime: 1041,
+    messageSize: 1325,
+    response: '250 2.0.0 OK  1591336243 p12sm6275606pfq.69 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<0ede1b07-7340-becd-745e-42207bb44c5b@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3180.1341
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 58.7784
+Received a request message : {
+  username: 'nicholaus',
+  password: '$2b$10$yNj2nm8qTjuDo69GYnQc3O3pVc0E6eHlk2gMWmP8W8HwRYxiBQ2Pi',
+  email: 'nicdanyos@gmail.com',
+  action: 'registerAccount'
+}
+Time to write to DB: 17.5339
+Time to send email 2563.2063
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 750,
+    messageTime: 853,
+    messageSize: 1325,
+    response: '250 2.0.0 OK  1591336379 b29sm6189598pff.176 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<71a49175-ebd4-3513-8694-fd827733d899@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2573.7169
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicholaus',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 33.9889
+Received a request message : {
+  username: '18217028',
+  password: '$2b$10$oupX2TN1v9mEZjHwyxRHseOJ9yPEp9vPUyzSYOZuX945LIbnPdu0a',
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'registerAccount'
+}
+Time to write to DB: 14.7577
+Time to send email 2632.6216
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 818,
+    messageTime: 855,
+    messageSize: 1330,
+    response: '250 2.0.0 OK  1591336544 b3sm6081188pft.127 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<e17df28a-c7c1-a98b-50d7-87cb8ab96cc6@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2645.7585
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: '18217028',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  username: '18217028',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 7.737299999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: '18217028',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 43.9646
+Received a request message : {
+  username: 'nicholausdy',
+  password: '$2b$10$Pv4ptZJWYhhTK6B7nSuWzOPAEgqjBtzYzfQlqHPocEweiKeXFK.Nq',
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'registerAccount'
+}
+Time to write to DB: 18.2519
+Time to send email 2590.6854
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 813,
+    messageTime: 804,
+    messageSize: 1337,
+    response: '250 2.0.0 OK  1591336643 v3sm6978908pja.8 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<82fd0731-ebe9-000e-a966-d589730a2ffb@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2600.181
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicholausdy',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 25.3584
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1c2R5IiwiaWF0IjoxNTkxNjc3OTU2LCJleHAiOjE1OTE3NjQzNTZ9.AERkTgm3Dqh15xLRfDRrcyDpZnl_um_g7nLHDk7TqPOAK39TIv785IRmZBxl4stbFarsXsAmB1qxFxKBiNO4qXpm2a_jBGm0weVirSYeThtMCvTitaA89stD-DdSXY0kmUnymSC4Iy_XhX4mRlB2t_LFGdd_SLtZhkyCWOYQbu9EIIaZsHSjENyAbDpJg3GVKKI7gme66fdoJoxl7QlIIxK8okiCgOJzSB9ObvYiXDJAslx0K6DUHunt5peZ-ZkKlqH-xEpJ1ilJeWKJZwv-9tmoBnL1t_p_LAQwMwtbrHaA2fWUfljvY1at95UvkuuUm5ghgX8CVxWIQ7nUw3Vw8FOKWg2X_fHkeG0D8up_UqqzUHgIiIReYnylyXDYWvxaFG2Ga-X0TkMU1oXt4AgDWHkNgixyMpALFX1XZur_TIpxCQD3UWHlff8vBlp1I-vdsO_bt6_d1CnAHW0vM16u9tEExOS4CZadha3O5KpLaGRaDevOfupZuAFBlnHbtRJlEl3djeh_x2b8GdBllcD6kIZ5PbBozDPbPv_6uB2baggHtoryMoq1P3ZrnPmM1ICPIUv31nCydtCeSs0Iz2tLaK8dTt0RNQrmUHONTUvKpdEH4aGt-emw_b-YBRkN4diLGXP7auOi2z_titqbtDVvDxKXp3XPb72zGh6TPgyNUTY',
+  Code: 200,
+  username: 'nicholausdy',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1c2R5IiwiaWF0IjoxNTkxNjc3OTU2LCJleHAiOjE1OTE3NjQzNTZ9.AERkTgm3Dqh15xLRfDRrcyDpZnl_um_g7nLHDk7TqPOAK39TIv785IRmZBxl4stbFarsXsAmB1qxFxKBiNO4qXpm2a_jBGm0weVirSYeThtMCvTitaA89stD-DdSXY0kmUnymSC4Iy_XhX4mRlB2t_LFGdd_SLtZhkyCWOYQbu9EIIaZsHSjENyAbDpJg3GVKKI7gme66fdoJoxl7QlIIxK8okiCgOJzSB9ObvYiXDJAslx0K6DUHunt5peZ-ZkKlqH-xEpJ1ilJeWKJZwv-9tmoBnL1t_p_LAQwMwtbrHaA2fWUfljvY1at95UvkuuUm5ghgX8CVxWIQ7nUw3Vw8FOKWg2X_fHkeG0D8up_UqqzUHgIiIReYnylyXDYWvxaFG2Ga-X0TkMU1oXt4AgDWHkNgixyMpALFX1XZur_TIpxCQD3UWHlff8vBlp1I-vdsO_bt6_d1CnAHW0vM16u9tEExOS4CZadha3O5KpLaGRaDevOfupZuAFBlnHbtRJlEl3djeh_x2b8GdBllcD6kIZ5PbBozDPbPv_6uB2baggHtoryMoq1P3ZrnPmM1ICPIUv31nCydtCeSs0Iz2tLaK8dTt0RNQrmUHONTUvKpdEH4aGt-emw_b-YBRkN4diLGXP7auOi2z_titqbtDVvDxKXp3XPb72zGh6TPgyNUTY',
+  Code: 200,
+  username: 'nicholausdy',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 7.215599999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1c2R5IiwiaWF0IjoxNTkxNjc3OTcwLCJleHAiOjE1OTE3NjQzNzB9.aQ8lJAeyMOzeMx0c_QY39bE-l3UW3Df-TGg22iT05XS2y7120HavizlpWAwcm6EdAf7f1pphp4umm9sr0nsnq0vHTSi5XsyfnUv-aO6-RG83SnwiJG5TuREYo3AZR_LhakAOVi8O9JsnEyJt03Rwls4bifESCVKWJ0xzK6eg6C6a_HDIfFb6No6Iw5JHPtbzu6fExievhfueBlPIJpuYBr6j89b3exGueuZRwvxkkjAMfaOzBKz_1VU7ggWMBeOkAtNykj2V-kFQaHfNtIhT8mqilwrPD9mE4aZrIXgmhL_9rdRS_wfvRj0IB8_pgTNziq9P1ohRQV7TAtjvbXmljQJGuB8-GgltEx6KJOoDPFo1TZiP1if2l58cng7CzSImOgaNytPpIIUQQGGVY1CjNL2XE7IfUSgCNdVF_L9XVjTtolGFUlSaYpZTy6va1PtoqGWDq1D6NKHkEFmh_g97ebn1yHRJCikJC-5khO-SnNWr50DZeLNd6NlnD60acH4M-oOAvb04NwzMLkVDP39oO8qNzMVdzRvmq5vHEHHuV3ifEUXAfPRguYNTrnVScxSPPdonR-gQVnodKL6B2nRtxWAZBWxk2wOn-Y1nt0nnFxFKHcPXbDSw6ANbClwkP86cN4dxFdt0TTPL-eNULyoAUf457yiW0amf6Wv9U3HrBFg',
+  Code: 200,
+  username: 'nicholausdy',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1c2R5IiwiaWF0IjoxNTkxNjc3OTcwLCJleHAiOjE1OTE3NjQzNzB9.aQ8lJAeyMOzeMx0c_QY39bE-l3UW3Df-TGg22iT05XS2y7120HavizlpWAwcm6EdAf7f1pphp4umm9sr0nsnq0vHTSi5XsyfnUv-aO6-RG83SnwiJG5TuREYo3AZR_LhakAOVi8O9JsnEyJt03Rwls4bifESCVKWJ0xzK6eg6C6a_HDIfFb6No6Iw5JHPtbzu6fExievhfueBlPIJpuYBr6j89b3exGueuZRwvxkkjAMfaOzBKz_1VU7ggWMBeOkAtNykj2V-kFQaHfNtIhT8mqilwrPD9mE4aZrIXgmhL_9rdRS_wfvRj0IB8_pgTNziq9P1ohRQV7TAtjvbXmljQJGuB8-GgltEx6KJOoDPFo1TZiP1if2l58cng7CzSImOgaNytPpIIUQQGGVY1CjNL2XE7IfUSgCNdVF_L9XVjTtolGFUlSaYpZTy6va1PtoqGWDq1D6NKHkEFmh_g97ebn1yHRJCikJC-5khO-SnNWr50DZeLNd6NlnD60acH4M-oOAvb04NwzMLkVDP39oO8qNzMVdzRvmq5vHEHHuV3ifEUXAfPRguYNTrnVScxSPPdonR-gQVnodKL6B2nRtxWAZBWxk2wOn-Y1nt0nnFxFKHcPXbDSw6ANbClwkP86cN4dxFdt0TTPL-eNULyoAUf457yiW0amf6Wv9U3HrBFg',
+  Code: 200,
+  username: 'nicholausdy',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 5.2531
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1c2R5IiwiaWF0IjoxNTkxNjc3OTg2LCJleHAiOjE1OTE3NjQzODZ9.wfDNE4GnmCDGAle_06MmEEKBdCpqRXrW00EHYhq3g1BmU5yTljggV0nUFvg-wGqJvmwnKmHJxfiSN2ZFqtkOGGiJF4jNhlmMaZMD9p2cDvK92oqPbDZceWWg8OYbItXd_0fEeUhSJvzb1rpWke5gIeEII9ZA3tCKIIOf78-zs9GVJnVsl80a0q4CBE8v1PMYzMjOYXCLwUX9XbVS_EtLqFVw5-bmgGuU-fZFhuBpw89TcIUMCCOhZXTI4ZvfzRnD2MmvSla17U-hPEBppX4bUmXJwvQsdjnG1EEANIM3MYH-5Q8CEAphydiInjJ_JcujUTgO5JfcKB9CQfTjfrDfhIsVb7bYpwVMZkT17lfO1-zHMiaV8NHQy_retXPamuQaCtnUWC2KJjd-9whGUDq-u9xVq04QyFBdhHbetWNWoZuBpHS3yJ8aLSosJc0MOqMhSlRdlwQQ-RGClr86KAYEfq9ysVP84zizwa9BcQ5XW7w0Wd-zpdHzLDsy75d4WJD78Wwq6dtA8bDzqCCZO8qgKfK2aqwbANC9tB4XVzuneNheO9Ziv4JSZkCk7KwrB8tjbQQis_JdfBwNh9Qx0HZgEt02nj2bGRKNtsxXLKO8VtB6UB8a0IRIdmCCKaZcXGpklwxI7J0yGznirbMd50tuFCalwIGLlYPvDjwB-s4avEQ',
+  Code: 200,
+  username: 'nicholausdy',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1c2R5IiwiaWF0IjoxNTkxNjc3OTg2LCJleHAiOjE1OTE3NjQzODZ9.wfDNE4GnmCDGAle_06MmEEKBdCpqRXrW00EHYhq3g1BmU5yTljggV0nUFvg-wGqJvmwnKmHJxfiSN2ZFqtkOGGiJF4jNhlmMaZMD9p2cDvK92oqPbDZceWWg8OYbItXd_0fEeUhSJvzb1rpWke5gIeEII9ZA3tCKIIOf78-zs9GVJnVsl80a0q4CBE8v1PMYzMjOYXCLwUX9XbVS_EtLqFVw5-bmgGuU-fZFhuBpw89TcIUMCCOhZXTI4ZvfzRnD2MmvSla17U-hPEBppX4bUmXJwvQsdjnG1EEANIM3MYH-5Q8CEAphydiInjJ_JcujUTgO5JfcKB9CQfTjfrDfhIsVb7bYpwVMZkT17lfO1-zHMiaV8NHQy_retXPamuQaCtnUWC2KJjd-9whGUDq-u9xVq04QyFBdhHbetWNWoZuBpHS3yJ8aLSosJc0MOqMhSlRdlwQQ-RGClr86KAYEfq9ysVP84zizwa9BcQ5XW7w0Wd-zpdHzLDsy75d4WJD78Wwq6dtA8bDzqCCZO8qgKfK2aqwbANC9tB4XVzuneNheO9Ziv4JSZkCk7KwrB8tjbQQis_JdfBwNh9Qx0HZgEt02nj2bGRKNtsxXLKO8VtB6UB8a0IRIdmCCKaZcXGpklwxI7J0yGznirbMd50tuFCalwIGLlYPvDjwB-s4avEQ',
+  Code: 200,
+  username: 'nicholausdy',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.8568999999999996
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicholausdy',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicholausdy',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 8.3597
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 5.4109
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.2206
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 8.12
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 5.9058
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.5958
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.2511
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2RhbnlvcyIsImlhdCI6MTU5MTY3ODA5OCwiZXhwIjoxNTkxNzY0NDk4fQ.ODHO7dYFKOP_XK9LZvy-S2UagcINIJ0fotOtnGFrqadECiJicagL9LB368T3rHonX_BzLXvAfZjA5_fRFFdwP-7j25i6iZChcTK7NErq1WT_8j5rXINplps6f9Pmb8GBrCYy8XPGPc2BXoFb6dHvAhv-qquinVaN_8hF5lVr7oI6hVB2_rjnApELrhx701GoNNTiWr6EPzzJ3wNDtvs4u9bAaqecsZ3TbT4TQS-2QKSf1hhRagQKL2G5XjlZsTDDxyhjCHnW9Hqo9AlfI1SIs8-SIHBQFC3ndKVtUsktl-SxtF_uNSVPBLUCcy3BWKzqSPndv4Y1AoigUeaZ89oEZYeA2Yt4Q_rM-G8Cwr6XVkGGTR9Pt4QMsYDHjaQy5fLLT1aUYjGrEeTDiuddIm3r3ppnP0PnmfUYQpHDD4jdswkIZNrkWabO7pEQQ41HeEdpcZdAJMlMPbPPbFJbO6i2zE4z4lq3D5kojjg88tceEJivhplbUKdPZuFZCBKTlmnApGyu_JKLRGS3_Xk_gVflWZ2uLiTDhrKIsHXb_fXtDHW1EkQ_7IjqGm5KUOlaujYriut0EB9SPw3tmBKSapwIGnA1BSTNnjm1f43M5bXvsK0YJu2MiPcpK-tNXzxwh5_enXxbaKOul62_1oVQ7ZMt0mVDPxzcxnNNfQ_OlFt9g1M',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2RhbnlvcyIsImlhdCI6MTU5MTY3ODA5OCwiZXhwIjoxNTkxNzY0NDk4fQ.ODHO7dYFKOP_XK9LZvy-S2UagcINIJ0fotOtnGFrqadECiJicagL9LB368T3rHonX_BzLXvAfZjA5_fRFFdwP-7j25i6iZChcTK7NErq1WT_8j5rXINplps6f9Pmb8GBrCYy8XPGPc2BXoFb6dHvAhv-qquinVaN_8hF5lVr7oI6hVB2_rjnApELrhx701GoNNTiWr6EPzzJ3wNDtvs4u9bAaqecsZ3TbT4TQS-2QKSf1hhRagQKL2G5XjlZsTDDxyhjCHnW9Hqo9AlfI1SIs8-SIHBQFC3ndKVtUsktl-SxtF_uNSVPBLUCcy3BWKzqSPndv4Y1AoigUeaZ89oEZYeA2Yt4Q_rM-G8Cwr6XVkGGTR9Pt4QMsYDHjaQy5fLLT1aUYjGrEeTDiuddIm3r3ppnP0PnmfUYQpHDD4jdswkIZNrkWabO7pEQQ41HeEdpcZdAJMlMPbPPbFJbO6i2zE4z4lq3D5kojjg88tceEJivhplbUKdPZuFZCBKTlmnApGyu_JKLRGS3_Xk_gVflWZ2uLiTDhrKIsHXb_fXtDHW1EkQ_7IjqGm5KUOlaujYriut0EB9SPw3tmBKSapwIGnA1BSTNnjm1f43M5bXvsK0YJu2MiPcpK-tNXzxwh5_enXxbaKOul62_1oVQ7ZMt0mVDPxzcxnNNfQ_OlFt9g1M',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.553
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 7.532699999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE4MjE3MDI4IiwiaWF0IjoxNTkxNjc4MTk5LCJleHAiOjE1OTE3NjQ1OTl9.rI8zynX3TvYCZ7UVWkJjasr0Wjwihhvce15EnG5l3lP-4ia44kI5k1zCA6UqodVkkVMTPwS-4OXfnw34QS505U3koX1bJxTL8JAbAPKVWfnE22M1az_nLFfsBE0ed7AN4KPgv9db0gltpCNIpBUAGEzazTHYzsjdHO2-8dbnDSgfm2f0x7UqMTgYLLkew9pU1BrotymBw-Bvqe9ZBI3LiXhnyu_KQi047-lfWFj_2qvhjeziO6lnzpqiiucoX81pyrKxVIdodoJoZ4O6oQfgbwAoGl3eZftr_LfsGwJaGvl6oi3B8Uz7-_VJkQ-e6pF2tvmSO99kUS6rFxo4gsT9zczKA7UpttwetvDdY4PHbCusAV3o-Q5ViiEgXhfkiMvC6RoGHM_FRVJ9vwul6YYeFe8bcHKr0oHKiXCOGsHAehsPMtt_HWBI_26XJDrwKAox8llnm3ls3YeE8Gpbj8r5z7DvZM0D4hW3lGbrztTeYfk4XQ83JK8zlwILim28DXMOAq_qzEG5IwfQgxh9wWry2s3Qn0phIozJyXM-KKRD1xskL-1jzslNQ0oj_n_7jnf9-peFIjyZwh3lta3hxLpLb73iwXLgO_OAiHuHWJ09Ig1PTelvDA_Q0zNeesmwoDXKacelTufhir6F-PvtktE_zslsZs9jUJ6xsRmaDOJJsOo',
+  Code: 200,
+  username: '18217028',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE4MjE3MDI4IiwiaWF0IjoxNTkxNjc4MTk5LCJleHAiOjE1OTE3NjQ1OTl9.rI8zynX3TvYCZ7UVWkJjasr0Wjwihhvce15EnG5l3lP-4ia44kI5k1zCA6UqodVkkVMTPwS-4OXfnw34QS505U3koX1bJxTL8JAbAPKVWfnE22M1az_nLFfsBE0ed7AN4KPgv9db0gltpCNIpBUAGEzazTHYzsjdHO2-8dbnDSgfm2f0x7UqMTgYLLkew9pU1BrotymBw-Bvqe9ZBI3LiXhnyu_KQi047-lfWFj_2qvhjeziO6lnzpqiiucoX81pyrKxVIdodoJoZ4O6oQfgbwAoGl3eZftr_LfsGwJaGvl6oi3B8Uz7-_VJkQ-e6pF2tvmSO99kUS6rFxo4gsT9zczKA7UpttwetvDdY4PHbCusAV3o-Q5ViiEgXhfkiMvC6RoGHM_FRVJ9vwul6YYeFe8bcHKr0oHKiXCOGsHAehsPMtt_HWBI_26XJDrwKAox8llnm3ls3YeE8Gpbj8r5z7DvZM0D4hW3lGbrztTeYfk4XQ83JK8zlwILim28DXMOAq_qzEG5IwfQgxh9wWry2s3Qn0phIozJyXM-KKRD1xskL-1jzslNQ0oj_n_7jnf9-peFIjyZwh3lta3hxLpLb73iwXLgO_OAiHuHWJ09Ig1PTelvDA_Q0zNeesmwoDXKacelTufhir6F-PvtktE_zslsZs9jUJ6xsRmaDOJJsOo',
+  Code: 200,
+  username: '18217028',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 11.2049
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE4MjE3MDI4IiwiaWF0IjoxNTkxNjc4MjA3LCJleHAiOjE1OTE3NjQ2MDd9.EC4b2DopJ4QA1qSUiODQbNdYMPkwZOdjjHHxWlSVFYA3JcT3vuLOml8lxHZB4hH2PgixihLEAaMV9Y6zDQv6bnQMt916SBcVaqudARiZObU20QwRnZzGigdBlPO_67D9tVvCRElAtijN7iYWNrqP8cYcqH0itVmE4I_CZRU9rUMmfxwoNAHe8-hx9VktkiN38KPv64Iwkp9ONqNLzNW5hZZkLeNgoGI7K9SEEELjA1TkeB31tdt1stmc2xQW6FrRlABRoba1kGTRs_RkbITwzk4MLRVn7b6ixcbrObQXgHTtM-x4j5YVwXYifMoZ6g2vTMoiP3UweNzEhwht2TU1XtgsxopiNYQzX2Ms4SmsbogY2MNZRXIOd1ohiS2P0J4rZwQmLUii2C4zDkCPb0cKF3cO4lE9NnYeX2HzMif_71wdVDhD0mEtJtpXlYqJgx120bY0jwDgWhcmpXORqdCCWLU6XorofJXn94t_jCxtXYLc5ZInTVAvOll_-Poq3wVdSPLENBgLuFw2W956CLnu1LMgpL8R4SZjRDJgu9mA0c4hER901D_3FW74wC-3C34Urgcw1jqmGQLzGVQ9nEB2oHVZ74R8_1dm9cgH0sqTsi7mtCp8ZmgiMe-bh3d8R77JHDjP9LEP6rmvY3iHpukwlV_9ewoRIIUuL6pkJHqzxA8',
+  Code: 200,
+  username: '18217028',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjE4MjE3MDI4IiwiaWF0IjoxNTkxNjc4MjA3LCJleHAiOjE1OTE3NjQ2MDd9.EC4b2DopJ4QA1qSUiODQbNdYMPkwZOdjjHHxWlSVFYA3JcT3vuLOml8lxHZB4hH2PgixihLEAaMV9Y6zDQv6bnQMt916SBcVaqudARiZObU20QwRnZzGigdBlPO_67D9tVvCRElAtijN7iYWNrqP8cYcqH0itVmE4I_CZRU9rUMmfxwoNAHe8-hx9VktkiN38KPv64Iwkp9ONqNLzNW5hZZkLeNgoGI7K9SEEELjA1TkeB31tdt1stmc2xQW6FrRlABRoba1kGTRs_RkbITwzk4MLRVn7b6ixcbrObQXgHTtM-x4j5YVwXYifMoZ6g2vTMoiP3UweNzEhwht2TU1XtgsxopiNYQzX2Ms4SmsbogY2MNZRXIOd1ohiS2P0J4rZwQmLUii2C4zDkCPb0cKF3cO4lE9NnYeX2HzMif_71wdVDhD0mEtJtpXlYqJgx120bY0jwDgWhcmpXORqdCCWLU6XorofJXn94t_jCxtXYLc5ZInTVAvOll_-Poq3wVdSPLENBgLuFw2W956CLnu1LMgpL8R4SZjRDJgu9mA0c4hER901D_3FW74wC-3C34Urgcw1jqmGQLzGVQ9nEB2oHVZ74R8_1dm9cgH0sqTsi7mtCp8ZmgiMe-bh3d8R77JHDjP9LEP6rmvY3iHpukwlV_9ewoRIIUuL6pkJHqzxA8',
+  Code: 200,
+  username: '18217028',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 7.4159
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: '1821702',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  username: '1821702',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 10.942
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: '1821702',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  username: '1821702',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.5973
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: '18217028',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: '18217028',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.8016
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicholaus',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicholaus',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 5.2005
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicholaus',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nicholaus',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 7.665699999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1cyIsImlhdCI6MTU5MTY3ODQ4OCwiZXhwIjoxNTkxNzY0ODg4fQ.bMG_Sd05JGArNPt0iExdnZqZNP_mrSSsRjw2La12TsvvwfjYKk_qtKdAq_vSUCFXPC25cgiF10vDAXIsuP8jD5F0-7ZqynCfishesz7b5lw4d5uVlUyaDfC8tW4gZUdpXK3vbrM6CYwK1v7vfHHd2H6x7qGB6dZuf4tmlxRaVa5Ta3fktKRkr9C3X_4KM5Ta9b6UojCXZZJ0D5aHKN6jbW7XhVBAySdpOBM-L7hYo2_dIte7eGETFsyzUuEA6RjSoosEr3yTywAMlgzjC_lhxr8dJMdV0cSUJEcP4suQZGyoAnSSmk1HgbYSiQLrsRW9y5JFsB7jNyw5FrTJJWyDTG8usMZmXUYXC_w-6-XG3tLu3qqciWVjCuYD06u1Or-YMC1AUW_J4C3YOlFFtgDIfhWX4HHeELHaHt8cRm-QlXhwwvYRbCE1OiWFIbPWSjiqdhQZ7BjsQAs4N06enVueIdmVpfwJS8-3CDCj8NpBGo-r4nYuA_xI0368viNuZmOPRrlfH0ndV11Wgorb-WX6bwAapx8mUq-sc_LtP5QBXYTnM_KmcCFFQVFsgCCEQd42mCzeaBoTI93W6GNTo0pgO1l7Gg08x7qng1WQpcRDtkTusTDs24AQs41vMnm11ApgEo7NWCNw_d-w8i27LuO9ygA5O92gWN9ThSI9jdE0rD4',
+  Code: 200,
+  username: 'nicholaus',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2hvbGF1cyIsImlhdCI6MTU5MTY3ODQ4OCwiZXhwIjoxNTkxNzY0ODg4fQ.bMG_Sd05JGArNPt0iExdnZqZNP_mrSSsRjw2La12TsvvwfjYKk_qtKdAq_vSUCFXPC25cgiF10vDAXIsuP8jD5F0-7ZqynCfishesz7b5lw4d5uVlUyaDfC8tW4gZUdpXK3vbrM6CYwK1v7vfHHd2H6x7qGB6dZuf4tmlxRaVa5Ta3fktKRkr9C3X_4KM5Ta9b6UojCXZZJ0D5aHKN6jbW7XhVBAySdpOBM-L7hYo2_dIte7eGETFsyzUuEA6RjSoosEr3yTywAMlgzjC_lhxr8dJMdV0cSUJEcP4suQZGyoAnSSmk1HgbYSiQLrsRW9y5JFsB7jNyw5FrTJJWyDTG8usMZmXUYXC_w-6-XG3tLu3qqciWVjCuYD06u1Or-YMC1AUW_J4C3YOlFFtgDIfhWX4HHeELHaHt8cRm-QlXhwwvYRbCE1OiWFIbPWSjiqdhQZ7BjsQAs4N06enVueIdmVpfwJS8-3CDCj8NpBGo-r4nYuA_xI0368viNuZmOPRrlfH0ndV11Wgorb-WX6bwAapx8mUq-sc_LtP5QBXYTnM_KmcCFFQVFsgCCEQd42mCzeaBoTI93W6GNTo0pgO1l7Gg08x7qng1WQpcRDtkTusTDs24AQs41vMnm11ApgEo7NWCNw_d-w8i27LuO9ygA5O92gWN9ThSI9jdE0rD4',
+  Code: 200,
+  username: 'nicholaus',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 7.6837
+Received a request message : {
+  username: 'nic',
+  password: '$2b$10$NxSQmZRRoH90giFXizv9ZeAz15xzjkovMXzr1A.3034UMwXyjbdeO',
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'registerAccount'
+}
+Time to write to DB: 23.8295
+Time to send email 3625.1482
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 1313,
+    messageTime: 953,
+    messageSize: 1319,
+    response: '250 2.0.0 OK  1591678543 125sm8528838pff.130 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<46cc2b9e-ec21-1348-ff91-fa55acb8bdfc@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3630.5562
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 7.0256
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 8.245
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nic',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 14.295
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pYyIsImlhdCI6MTU5MTY3ODYzMywiZXhwIjoxNTkxNzY1MDMzfQ.VOO6x-ngXERYndaKx9XwmirwEerKpxnNkg5N6yUxq64K_ocf5pb2_4rul9t1gYihY7p4yGndrRe_H0vRd81Nde1Beg4YiaqzkaQoHpJrGsg0LoEdd_sLBrKw5SU-a4Sr5lhisgFz-VEJTr4OSqqwBlSEee_Ln-jblHa6vTbmHxHc40JwHxNgX5Cc7nFm8_9qhYJgRWSChy8yIVRij9Siwcaep5YQ-MPvkv0UH6X3G-OVjLFQQq3pLxKrIbttXvx9g-wH9SlQVEiEP_qXXs2vyaj7zqzBl4W6oEbaYIiM52yj-jOQAoZwfJv4U1BZsaKh7pLUldDM9YWODDAU9gG6QmQbr0uWNlmVeZ5tbdr4pa4fQz2wY2Xq-nvg09BBkwod1d0O05ZGKR_goqLRF6ALjrBL_D68BH2pP7t5_O4RcXRhas4tyIUGU9XQHxJipBNJKZoUowNhST73t0692AQKnUa4iWSxEhIG4L5FlBAZgUJA6I2Q9r767mMEZ-MC_MZxrb7gQq3WBA1wReT0Ji0cZ8o5snpu7JzNtUIkPn47XICY_u_NLyc3ANJhiaq9bRitdj5Xx5VrZus-z4SS1HC9dAQbTn1sREkufJj47OLoo8OoaylzcpjpP0zcxHBIqDJCo3fXxkxXgELAWzNfR53YT730KPXsRSAq-nBmap3fdFg',
+  Code: 200,
+  username: 'nic',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pYyIsImlhdCI6MTU5MTY3ODYzMywiZXhwIjoxNTkxNzY1MDMzfQ.VOO6x-ngXERYndaKx9XwmirwEerKpxnNkg5N6yUxq64K_ocf5pb2_4rul9t1gYihY7p4yGndrRe_H0vRd81Nde1Beg4YiaqzkaQoHpJrGsg0LoEdd_sLBrKw5SU-a4Sr5lhisgFz-VEJTr4OSqqwBlSEee_Ln-jblHa6vTbmHxHc40JwHxNgX5Cc7nFm8_9qhYJgRWSChy8yIVRij9Siwcaep5YQ-MPvkv0UH6X3G-OVjLFQQq3pLxKrIbttXvx9g-wH9SlQVEiEP_qXXs2vyaj7zqzBl4W6oEbaYIiM52yj-jOQAoZwfJv4U1BZsaKh7pLUldDM9YWODDAU9gG6QmQbr0uWNlmVeZ5tbdr4pa4fQz2wY2Xq-nvg09BBkwod1d0O05ZGKR_goqLRF6ALjrBL_D68BH2pP7t5_O4RcXRhas4tyIUGU9XQHxJipBNJKZoUowNhST73t0692AQKnUa4iWSxEhIG4L5FlBAZgUJA6I2Q9r767mMEZ-MC_MZxrb7gQq3WBA1wReT0Ji0cZ8o5snpu7JzNtUIkPn47XICY_u_NLyc3ANJhiaq9bRitdj5Xx5VrZus-z4SS1HC9dAQbTn1sREkufJj47OLoo8OoaylzcpjpP0zcxHBIqDJCo3fXxkxXgELAWzNfR53YT730KPXsRSAq-nBmap3fdFg',
+  Code: 200,
+  username: 'nic',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 8.0764
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  tempcode: 155774667,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 24.8656
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  tempcode: 654932569,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 11.828899999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  tempcode: 569286615,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 25.345299999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  tempcode: 482582817,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 29.096
+Received a request message : {
+  Status: 'Success',
+  Message: 482582817,
+  username: 'nicholaus',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 482582817,
+  username: 'nicholaus',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.3239
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicholaus',
+  email: 'nicdanyos@gmail.com',
+  tempcode: 482582817,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1111,
+    messageTime: 939,
+    messageSize: 409,
+    response: '250 2.0.0 OK  1591684761 d67sm9039884pfc.63 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<0b8933c6-0c40-c42a-10e4-d1399ddfae8b@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3129.1618
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicda',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicda',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.6350999999999996
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicda',
+  action: 'logError',
+  Code: 500
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicda',
+  action: 'logError',
+  Code: 500,
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.6808
+Received a request message : {
+  username: 'jack',
+  password: '$2b$10$YzUHe4siBllt4Y4DIDX5VeJ4gPJv47fg5izR0ZbS7IsaPA5UUskUu',
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'registerAccount'
+}
+Time to write to DB: 7.7439
+Time to send email 2693.1723
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 868,
+    messageTime: 846,
+    messageSize: 1321,
+    response: '250 2.0.0 OK  1591684897 i197sm9021758pfe.30 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<2af55a1e-223c-dbe7-3234-cee85c265619@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2699.5171
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'jack',
+  tempcode: 419276366,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 17.6376
+Received a request message : {
+  Status: 'Success',
+  Message: 419276366,
+  username: 'jack',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 419276366,
+  username: 'jack',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.1996
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'jack',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 7.4948999999999995
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified. 0',
+  Code: 500,
+  username: 'jack',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified. 0',
+  Code: 500,
+  username: 'jack',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.501799999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'jack',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 14.919799999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'jack',
+  tempcode: 139737467,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 31.9834
+Received a request message : {
+  Status: 'Success',
+  Message: 139737467,
+  username: 'jack',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 139737467,
+  username: 'jack',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.3877
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'jack',
+  email: '18217028@std.stei.itb.ac.id',
+  tempcode: 139737467,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 750,
+    messageTime: 746,
+    messageSize: 417,
+    response: '250 2.0.0 OK  1591685036 y6sm9287360pfp.144 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<4da8e448-6747-21ea-7aa9-6532c46e605b@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2394.8624
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'jack',
+  tempcode: 861989948,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 11.960199999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 861989948,
+  username: 'jack',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 861989948,
+  username: 'jack',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.2286
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'jack',
+  email: '18217028@std.stei.itb.ac.id',
+  tempcode: 861989948,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 731,
+    messageTime: 818,
+    messageSize: 417,
+    response: '250 2.0.0 OK  1591685334 j6sm8822805pfi.183 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<671de866-0b4d-97f9-1024-d13ded36ff91@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2493.8361999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nic',
+  tempcode: 267774663,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 20.069699999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 267774663,
+  username: 'nic',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 267774663,
+  username: 'nic',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 1.7325
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nic',
+  email: '18217028@std.stei.itb.ac.id',
+  tempcode: 267774663,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 771,
+    messageTime: 1056,
+    messageSize: 417,
+    response: '250 2.0.0 OK  1591685524 r1sm7687357pgb.37 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<81af66e1-551d-0159-0092-45c9e3d13729@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 4004.9259
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  tempcode: 471973724,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 34.264199999999995
+Received a request message : {
+  Status: 'Success',
+  Message: 471973724,
+  username: 'nicholaus',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 471973724,
+  username: 'nicholaus',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.6758
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicholaus',
+  email: 'nicdanyos@gmail.com',
+  tempcode: 471973724,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 750,
+    messageTime: 840,
+    messageSize: 409,
+    response: '250 2.0.0 OK  1591685536 q92sm1539704pjh.12 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<f573e6f2-3435-a3c3-7236-7e523c405fb5@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2551.4229
+Received a request message : {
+  username: 'nicholaus.students',
+  password: '$2b$10$MXdVWB/AFpnP0ujNuDId/utAuW1viv/DJR5cDfP48e1ZKftI2MTEy',
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'registerAccount'
+}
+Time to write to DB: 8.476799999999999
+Time to send email 2673.9485
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 752,
+    messageTime: 1022,
+    messageSize: 1357,
+    response: '250 2.0.0 OK  1591686096 l187sm8782133pfl.218 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<1b053eb7-efd3-7a8a-e006-69a2883ca16c@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2679.559
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  tempcode: 164887839,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 27.4865
+Received a request message : {
+  Status: 'Success',
+  Message: 164887839,
+  username: 'nicholaus.students',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 164887839,
+  username: 'nicholaus.students',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.1507
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 5.8873
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified. 0',
+  Code: 500,
+  username: 'nicholaus.students',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified. 0',
+  Code: 500,
+  username: 'nicholaus.students',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.4068
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  tempcode: 734584947,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 21.2771
+Received a request message : {
+  Status: 'Success',
+  Message: 734584947,
+  username: 'nicholaus.students',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 734584947,
+  username: 'nicholaus.students',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.7323
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 7.430899999999999
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified. 0',
+  Code: 500,
+  username: 'nicholaus.students',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified. 0',
+  Code: 500,
+  username: 'nicholaus.students',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 1.9003999999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  username: 'nicholaus.students',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 27.620099999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  tempcode: 864286614,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 17.4863
+Received a request message : {
+  Status: 'Success',
+  Message: 864286614,
+  username: 'nicholaus.students',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 864286614,
+  username: 'nicholaus.students',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 1.887
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicholaus.students',
+  email: '18217028@std.stei.itb.ac.id',
+  tempcode: 864286614,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 722,
+    messageTime: 1278,
+    messageSize: 417,
+    response: '250 2.0.0 OK  1591686183 m5sm7557500pga.3 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<c89c8e48-2bfd-4ae9-d818-fe3000d7716f@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2905.9021
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: '18217028',
+  tempcode: 451175621,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 34.8407
+Received a request message : {
+  Status: 'Success',
+  Message: 451175621,
+  username: '18217028',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 451175621,
+  username: '18217028',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.6572999999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: '18217028',
+  email: '18217028@std.stei.itb.ac.id',
+  tempcode: 451175621,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 782,
+    messageTime: 760,
+    messageSize: 417,
+    response: '250 2.0.0 OK  1591686216 q92sm1583883pjh.12 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<391acd5a-1c1f-00be-bc29-872ebbca0b8f@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3028.0909
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: '18217028',
+  tempcode: 854371773,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 30.6421
+Received a request message : {
+  Status: 'Success',
+  Message: 854371773,
+  username: '18217028',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 854371773,
+  username: '18217028',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.1062
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: '18217028',
+  email: '18217028@std.stei.itb.ac.id',
+  tempcode: 854371773,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 735,
+    messageTime: 752,
+    messageSize: 417,
+    response: '250 2.0.0 OK  1591686257 j19sm8974158pfn.109 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<d53668a3-5ecc-3e8c-5388-fc5edb9adda5@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2461.0198
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicdanyos',
+  tempcode: 691691726,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 15.2805
+Received a request message : {
+  Status: 'Success',
+  Message: 691691726,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 691691726,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 1.8311
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicdanyos',
+  email: 'nicdanyos@gmail.com',
+  tempcode: 691691726,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 724,
+    messageTime: 812,
+    messageSize: 409,
+    response: '250 2.0.0 OK  1591686389 d15sm8944646pfh.175 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<a660488a-f1b2-d750-eac9-8e6826e7c1d8@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2401.8697
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicdanyos',
+  tempcode: 928447594,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 27.057199999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 928447594,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 928447594,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 1.9105999999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicdanyos',
+  email: 'nicdanyos@gmail.com',
+  tempcode: 928447594,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 741,
+    messageTime: 766,
+    messageSize: 409,
+    response: '250 2.0.0 OK  1591686416 u7sm9295155pfu.162 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<c1a5cb7f-66cb-5960-c775-e63e0ebc5a96@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2488.8787
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicdanyos',
+  tempcode: 839132884,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 28.9194
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.2558
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicdanyos',
+  email: 'nicdanyos@gmail.com',
+  tempcode: 839132884,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1272,
+    messageTime: 1293,
+    messageSize: 409,
+    response: '250 2.0.0 OK  1591858483 h17sm1688387pgv.41 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<b6b84ed7-c2af-a88e-a145-7e9a651ca604@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3623.0124
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2RhbnlvcyIsImlhdCI6MTU5MTg1ODc4MSwiZXhwIjoxNTkxOTQ1MTgxfQ.NNc9d-aFclD1mbqBMjXAYmk73F9u8nVXZx3l-ueY-AVu6f1eM2phJMwOeItle0xpU4v-8Y1hutiODDwlO2f_c0AvGP8pimLfBB9BZVGj80lsSBebSigoNTtu_kl-V-Kh0fj2Px3sgluvvsSYQb8ivyXAwjooen8nksYVH2896joao3qizVlP6xsd__FkuY-XjDDYqQdMckCLrQV2hNlTCnnxX-ObPeq5n-wpEfxnwaDvSwuFtYFZR6xFhtvnHnUzbL2XcQWTxNuW9NNtb_RePEpCaYOX2WhITY6I5p_lhYjBKeuUxVHG-rHHE4S0NGm7--on1c5Oo2jSYquHStxXS1imN_LccLxRSBQZJOD8OPeh3B-a_hOfIuzSNDK-ugrgFK1m9rz83yf1Gox1C5nEthDW2tgrBd5nQwja8Umflc3o_JAheUJt8JiL_oMVo1ZBSFL34_6Kzzbk8W882N_7xyCNuqNigrbcSkQvqkmTuRraYE_VwtfCNips7lCa5jVoS-d1CuI5yKNFEVVqtn8yoMfVy_wL3PrstTtZhehutnVVlb4sOTXTJXUdSnF5E0h8I9VmZlLd0spewP3IyyucfawpKy_c29God4MTr1ToZuCiERnILXmN-NNUJ0TtUDusCLiGdXT6m1aZGNhp1LE42o2zZy358xR82XFxtXqi1pI',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pY2RhbnlvcyIsImlhdCI6MTU5MTg1ODc4MSwiZXhwIjoxNTkxOTQ1MTgxfQ.NNc9d-aFclD1mbqBMjXAYmk73F9u8nVXZx3l-ueY-AVu6f1eM2phJMwOeItle0xpU4v-8Y1hutiODDwlO2f_c0AvGP8pimLfBB9BZVGj80lsSBebSigoNTtu_kl-V-Kh0fj2Px3sgluvvsSYQb8ivyXAwjooen8nksYVH2896joao3qizVlP6xsd__FkuY-XjDDYqQdMckCLrQV2hNlTCnnxX-ObPeq5n-wpEfxnwaDvSwuFtYFZR6xFhtvnHnUzbL2XcQWTxNuW9NNtb_RePEpCaYOX2WhITY6I5p_lhYjBKeuUxVHG-rHHE4S0NGm7--on1c5Oo2jSYquHStxXS1imN_LccLxRSBQZJOD8OPeh3B-a_hOfIuzSNDK-ugrgFK1m9rz83yf1Gox1C5nEthDW2tgrBd5nQwja8Umflc3o_JAheUJt8JiL_oMVo1ZBSFL34_6Kzzbk8W882N_7xyCNuqNigrbcSkQvqkmTuRraYE_VwtfCNips7lCa5jVoS-d1CuI5yKNFEVVqtn8yoMfVy_wL3PrstTtZhehutnVVlb4sOTXTJXUdSnF5E0h8I9VmZlLd0spewP3IyyucfawpKy_c29God4MTr1ToZuCiERnILXmN-NNUJ0TtUDusCLiGdXT6m1aZGNhp1LE42o2zZy358xR82XFxtXqi1pI',
+  Code: 200,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.6426
+Received a request message : {
+  Status: 'Success',
+  Message: 854371773,
+  username: '18217028',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 854371773,
+  username: '18217028',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.3034999999999997
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: '18217028',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: '18217028',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.2395
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.2623999999999995
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 1.9577
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.8243
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0543
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.2958
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0646
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.1705
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.5035
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.9204
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.4541999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.0679
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 1.938
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.488
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.1212999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.9503999999999997
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0732
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.2885
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.3051999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.9972
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0206999999999997
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicdanyo',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicdanyo',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.7712
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicdanyo',
+  action: 'logError',
+  Code: 403
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicdanyo',
+  action: 'logError',
+  Code: 403,
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0570999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 839132884,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.6911
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicdanyos',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 1594.0937
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  username: 'nicdanyos',
+  password: '$2b$10$hs5GunPeFE2z3Z7u1cEK8elZAeRbkAH/GApvdeICtdBhy7KsfJNTS',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 10.3887
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicdanyos',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicdanyos',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.7308
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicdanyos',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0444
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  tempcode: 814437868,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 10.7942
+Received a request message : {
+  Status: 'Success',
+  Message: 814437868,
+  username: 'nicholaus',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 814437868,
+  username: 'nicholaus',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.5878
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicholaus',
+  email: 'nicdanyos@gmail.com',
+  tempcode: 814437868,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1123,
+    messageTime: 895,
+    messageSize: 409,
+    response: '250 2.0.0 OK  1591860010 u14sm2318639pfk.211 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<c38f53a2-296f-9f37-45a0-4a64234aab99@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3185.9154
+Received a request message : {
+  Status: 'Success',
+  Message: 814437868,
+  username: 'nicholaus',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 814437868,
+  username: 'nicholaus',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.3344
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 22.820899999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  username: 'nicholaus',
+  password: '$2b$10$EjdP9xUMJEhCbWiIRNWxgeLwvxfbKcPRBZGGIr3k838WPItJriWTO',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 6.3183
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.0244
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicholaus',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicholaus',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.7186999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 267774663,
+  username: 'nic',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 267774663,
+  username: 'nic',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 1.9441
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nic',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nic',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0334
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicho',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicho',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 1.9174
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicho',
+  action: 'logError',
+  Code: 403
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicho',
+  action: 'logError',
+  Code: 403,
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 1.9548999999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholausdy',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholausdy',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.0368
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicholausdy',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicholausdy',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.4249
+Received a request message : {
+  Status: 'Success',
+  Message: 864286614,
+  username: 'nicholaus.students',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 864286614,
+  username: 'nicholaus.students',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.8979999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 25.8873
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  username: 'nicholaus.students',
+  password: '$2b$10$Nfl6Cx/Mop/85pvTTewL2eV0/JrOiLD0Q9pYXogiu4hLDFVPQQMGO',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 10.2387
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  tempcode: 274234382,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 15.199499999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 274234382,
+  username: 'nicholaus.students',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 274234382,
+  username: 'nicholaus.students',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.3279
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  username: 'nicholaus.students',
+  email: '18217028@std.stei.itb.ac.id',
+  tempcode: 274234382,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 776,
+    messageTime: 1104,
+    messageSize: 417,
+    response: '250 2.0.0 OK  1591860319 r7sm1987189pfl.117 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<0dc17b0f-3195-3397-1f04-2bb52a3a2be2@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3031.625
+Received a request message : {
+  Status: 'Success',
+  Message: 274234382,
+  username: 'nicholaus.students',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 274234382,
+  username: 'nicholaus.students',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.0183
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicholaus.students',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  username: 'nicholaus.students',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0585
+Received a request message : {
+  Status: 'Success',
+  Message: 274234382,
+  username: 'nicholaus.students',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 274234382,
+  username: 'nicholaus.students',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.0908999999999995
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  username: 'nicholaus.students',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 19.528499999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  username: 'nicholaus.students',
+  password: '$2b$10$48owlVTuzD9OI2mydbv0Ru200z9QfyuwKAxEa34.xLaVTMTL7LFbG',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 14.7394
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicholaus.student',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicholaus.student',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.4185999999999996
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicholaus.student',
+  action: 'logError',
+  Code: 403
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  username: 'nicholaus.student',
+  action: 'logError',
+  Code: 403,
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0997
+Received a request message : {
+  user_id: 'odw8zjgvsvsbjzwk27hhtf',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$5.kbxMYHXHtftkyoKyb22eeJWRbvAjeENps4I1vuFmA/0axTrA8PC',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 10.8042
+Published results for : {
+  Status: 'Failed',
+  Message: 'Unknown error encountered',
+  Detail: error: column "nama_lengkap" of relation "account" does not exist
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 132,
+    name: 'error',
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '30',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_target.c',
+    line: '1005',
+    routine: 'checkInsertTargets'
+  },
+  Code: 500
+}
+Time to process RabbitMQ queue 27.6785
+Received a request message : {
+  user_id: 'agfnrspvu5bu8h734zfm3c',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$Y2EV/nuBCWe41FmiBBA6yu466I4xaBTSNKp/ZkRhxbEP.VOsUjCuW',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 8.1508
+Published results for : {
+  Status: 'Failed',
+  Message: 'Unknown error encountered',
+  Detail: error: column "nama_lengkap" of relation "account" does not exist
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 132,
+    name: 'error',
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '30',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_target.c',
+    line: '1005',
+    routine: 'checkInsertTargets'
+  },
+  Code: 500
+}
+Time to process RabbitMQ queue 13.1312
+Received a request message : {
+  user_id: '73uev2alfholchmv5k30c7',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$t1nPJ5pjLq9kAakx.nj2L.iNbIIlqOKeqz7A0lefbEaYuZ7Af/ruy',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 12.0078
+Published results for : {
+  Status: 'Failed',
+  Message: 'Unknown error encountered',
+  Detail: error: insert or update on table "profile" violates foreign key constraint "profile_user_id_fkey"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 273,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23503',
+    detail: 'Key (user_id)=(73uev2alfholchmv5k30c7) is not present in table "account".',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'profile',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'profile_user_id_fkey',
+    file: 'ri_triggers.c',
+    line: '3266',
+    routine: 'ri_ReportViolation'
+  },
+  Code: 500
+}
+Time to process RabbitMQ queue 27.709699999999998
+Received a request message : {
+  user_id: 'zvhjoa1c56sh869xv8j6b',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$QP6qZDwS1r9V2ElUflsjGO8E3dZi0VlduSlv.kN48hJR8IjS2j1Wy',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 30.8416
+Time to send email 3474.7233
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1224,
+    messageTime: 1181,
+    messageSize: 1394,
+    response: '250 2.0.0 OK  1592206334 b5sm13056034pfg.191 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<5a45280e-44f4-0a8f-7e8a-f315b0b72ffc@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3481.6217
+Received a request message : {
+  user_id: 'rtpe0xzzvwrmlww1lpuler',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$I2ZYNKccur.RF1GBwgG4fu0wsR3f1lefviGAFHttNkQJjuF98eVBa',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 5.1372
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 473.383
+Received a request message : {
+  user_id: '1szghaqjk4vrz5o58twjm',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$DU4/nPz8rVN3rkCt3/qw3.cb1YL.7chEHEEHLKolsETM4DtOeohUS',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 16.840999999999998
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 36.7221
+Received a request message : {
+  user_id: 'o97thiajhthz530iv358cf',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$Y64zhqLjf6WbaEVZF1yye.FItrzxb8XVqhddau4FXLje5tTIaKFl2',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 5.5987
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 39.3179
+Received a request message : {
+  user_id: '1k06c5s0ev9g1k3j83n04j',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$0J1bWR50gbGBY5/eEv5xX.uyihguFmF1jBmm.FL07piavp/.xyCNu',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 31.961
+Time to send email 2855.1537
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 728,
+    messageTime: 664,
+    messageSize: 1415,
+    response: '250 2.0.0 OK  1592207125 np5sm12614148pjb.43 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<0016356a-feef-92d6-d742-c0a4e45e5a90@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2860.1386
+Received a request message : {
+  user_id: '1t9qas72huldabflg6ugy9',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$kRBJbVJCprjfuTXfdYJCve25l.IX5UtId7/1emR4KOVj63i97ARCu',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 5.279599999999999
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 225,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(18217028@std.stei.itb.ac.id) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: '18217028@std.stei.itb.ac.id',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 18.2565
+Received a request message : {
+  user_id: 'l8z61yoaysisfqn9tb5fb',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$1uCSXMFX0anpy2PUglgSgOcbILqAjusRLz9sVstIEE73GcsaAM9US',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 19.4463
+Time to send email 3004.8949
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 1098,
+    messageTime: 868,
+    messageSize: 1413,
+    response: '250 2.0.0 OK  1592208189 t9sm11527396pjs.16 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<a64ce313-4f15-e44d-01dc-7f7c7a5694e4@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3011.4807
+Received a request message : {
+  user_id: 'fchxcwbxo4e5ion10evtp7',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$W03OOIQ4E1x0eskt/uoB5OWvGOg8PhDA4EWaS77HpytiFcoRghGne',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 16.9759
+Time to send email 2323.9222
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 712,
+    messageTime: 726,
+    messageSize: 1415,
+    response: '250 2.0.0 OK  1592208325 b19sm11679594pjo.57 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<43bea2f6-370e-e32f-8228-819464e2cc2f@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2330.371
+Received a request message : {
+  user_id: 'ztkmqvsw6p7oqa4fwkh1j',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$lOVyIdw8DrW3Bn3kYwcKTOpj7xKrcDFwZwpuDhoEMBOUoxWbc3w5y',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 11.5456
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 225,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(18217028@std.stei.itb.ac.id) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: '18217028@std.stei.itb.ac.id',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 32.8944
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'fchxcwbxo4e5ion10evtp7',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Unknown error encountered',
+  Detail: error: column "username" does not exist
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 108,
+    name: 'error',
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '40',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3293',
+    routine: 'errorMissingColumn'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 17.7542
+Received a request message : {
+  user_id: '38ttuxnzsn6codka041kj',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$92oCmtnzPqidLNIdlV3M5.qZKNmWgDiWWWUkRAxwi9LQHlAtW0l6q',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 25.191499999999998
+Time to send email 2915.2407
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 734,
+    messageTime: 1031,
+    messageSize: 1413,
+    response: '250 2.0.0 OK  1592208799 np5sm12737843pjb.43 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<a011e94b-b05a-e675-6548-6b0a1925309b@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2921.1742999999997
+Received a request message : {
+  user_id: 'tl2vdqujumccrgcrfd10d8',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$JFhetTyIJWDFgLBZmFlcc.1uGU1lnihPeaiU..VEBlDQMEcRyQtwC',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 19.7502
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 225,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(18217028@std.stei.itb.ac.id) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: '18217028@std.stei.itb.ac.id',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 53.186899999999994
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: '38ttuxnzsn6codka041kj',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 20.865
+Received a request message : {
+  user_id: 'msy7fti3o4yxxkct9rdmn',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$CUjcG1//vIshR1h0USywiOtkEdqWhPwD1MjTuvHUsYdYyjXsYY8sC',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 22.252299999999998
+Time to send email 2954.441
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 709,
+    messageTime: 816,
+    messageSize: 1394,
+    response: '250 2.0.0 OK  1592208976 h12sm11394683pgj.71 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<075fbc73-ceda-2cb2-2230-264a2867f417@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2958.3374
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'msy7fti3o4yxxkct9rdmn',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 24.247799999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'msy7fti3o4yxxkct9rdmn',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 15.6739
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: '38ttuxnzsn6codka041kj',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 11.587299999999999
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  user_id: '38ttuxnzsn6codka041kj',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  user_id: '38ttuxnzsn6codka041kj',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.0569999999999995
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: '38ttuxnzsn6codka041kj',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 15.1786
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  user_id: '38ttuxnzsn6codka041kj',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  user_id: '38ttuxnzsn6codka041kj',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.7344
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  user_id: 'msy7fti3o4yxxkct9rdm',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  user_id: 'msy7fti3o4yxxkct9rdm',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.2273
+Received a request message : {
+  user_id: '2pj3fl92sse6vevfum8vy',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$x7S2KGU9Rizd5cFft0pBmeyWNWnyY1b20ASbp/5qZnwIt2CTSXd/C',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 17.0644
+Time to send email 2996.9708
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 986,
+    messageTime: 810,
+    messageSize: 1394,
+    response: '250 2.0.0 OK  1592210970 g17sm11850637pju.11 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<67822ad7-4b4e-d55a-de1d-0cf8c75c5f55@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3002.8673
+Received a request message : {
+  user_id: 'r2vddhj4p96zwq69c8ii3',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$6rlgPWqbOJA3G1gTiTl6Qu0G1RPBuVj/U6VU8jdKKwJBLPfgpAA.a',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 10.6722
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 47.971799999999995
+Received a request message : {
+  user_id: '1p32jwp4obnvrqkvcdcjhe',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$AcHG0Ysc5jU7mwVMZWbHlOaMFqYwag/69vklidiDyYP3cNEM1q1zu',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 19.249299999999998
+Time to send email 2453.0888999999997
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 737,
+    messageTime: 707,
+    messageSize: 1397,
+    response: '250 2.0.0 OK  1592211284 n65sm12822528pfn.17 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<8fc715cf-4c6a-af8a-9c9a-f36f3bf93ba3@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2459.9647999999997
+Received a request message : {
+  user_id: 'rk2mz71xd4cugoov819vv',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$8wxELlTS52aE9z88OMzNnOUr62jU/2LgBtBUjkwfaecxL8BSXGJza',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 2.2771
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 22.9881
+Received a request message : {
+  user_id: 'dbgvivbnrom87cldjtiwk',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$ffwWMR/fq7EOED9hu1zArOtrRVdjhrfuEUkz2G.xMNfIz9yz6ymhi',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 5.338299999999999
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 20.2789
+Received a request message : {
+  user_id: 'g9cqi6e5nuckibngcqwy',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$hRKmP0lkgziXGK.v6JJvMuZU8NQw7Zq9zu8.KCrsMJVtvdUh/Vp.C',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 5.7698
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 22.7827
+Received a request message : {
+  user_id: 'w17ttk3shzmlzjymk34jo',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$7VMLXBDJcipkxcOcQO7anuJeamq3YVCLcjgAx2ZgiW/fv4fb5Mfmy',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 20.5159
+Time to send email 4543.8114
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 749,
+    messageTime: 2821,
+    messageSize: 1394,
+    response: '250 2.0.0 OK  1592211809 h3sm13222023pfr.2 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<6f0bea96-48f2-6082-a106-17797ea9e2ba@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 4550.1440999999995
+Received a request message : {
+  user_id: 'xralxrm1xn5etmu34serr',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$3g4P7diUtQJs3x8xt2u1EOA07bxNTnWA.Av.teBVu7lnVn8PTS6t2',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 366.93789999999996
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 384.2385
+Received a request message : {
+  user_id: 'nqakskei3rawzr0t7vtxs',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$QTxBshl/tg9peGp7k7.CVeJmKi08LYiC62KA.9BGR99H67bEB2o8K',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 5.0024999999999995
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 17.1453
+Received a request message : {
+  user_id: 'iwdm3aqxxssr0goe5712xo',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$mJrlxH8T0CER00aT7u.V/uavfACDXQ6NsQQSMeafQOAPO2GrqSH4K',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 11.148
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 57.7761
+Received a request message : {
+  user_id: 'ticeuq4tyctqf5sglqqnf',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$q1b69wcIqrNG78H2NxFktuoV/pfn0RbYvQZVudQVo/A96PHPxoiK2',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 11.021099999999999
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 34.5761
+Received a request message : {
+  user_id: 'kvs70q49juupnehe8n5kd',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$526SBQx2KhJ.cJyGNzAvYu1TQAmbOt1mGJlgAzwv0b62BGwMKeCgG',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 17.2614
+Time to send email 2499.3314
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 726,
+    messageTime: 709,
+    messageSize: 1394,
+    response: '250 2.0.0 OK  1592212144 e124sm12977583pfh.140 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<15d6ba96-198a-b302-6f3a-1f1888f57a62@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2504.1515
+Received a request message : {
+  user_id: 'sdwgyaheamjdbuso37te',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$DH3IqlFig8MfwKB8gxTeBuqPTdV37wkVT7wS5Vw4J3/B2FJmv81yO',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 12.771799999999999
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 27.3205
+Received a request message : {
+  user_id: 'aopd54wodxjlqy9pyf5',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$xHBupxrZ26M.xzlHVMG5gO.FbOD3NNb.iVwHW2TdoAiJ0QrI.32IW',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 31.1852
+Time to send email 2310.5156
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 700,
+    messageTime: 742,
+    messageSize: 1408,
+    response: '250 2.0.0 OK  1592212222 q92sm12089470pjh.12 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<7ae41da1-a495-d3f0-63fe-f0e0a0d265be@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2315.5843
+Received a request message : {
+  user_id: '5bs4uny1ha9th00lb1w6u',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$eJu0dqKCkrltmEmJOF2Cg.OzyDXtaI8HmZFgjDRhPA/ISzuKewYFy',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 23.9514
+Time to send email 2929.0788000000002
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 731,
+    messageTime: 1099,
+    messageSize: 1413,
+    response: '250 2.0.0 OK  1592212647 f23sm11874920pja.8 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<fc444a30-a605-3a49-11e2-066d666be940@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2935.6764
+Received a request message : {
+  user_id: '2w77rr1awl2j5ahg3zkain',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$laDmGYd8C6YpajrD7PdDXuY0AxTiMUtbSTIedVZCrXJAt8ZT2MgBO',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 20.1643
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 225,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(18217028@std.stei.itb.ac.id) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: '18217028@std.stei.itb.ac.id',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 54.6511
+Received a request message : {
+  user_id: '4taxve8qbekqi99okuy9p',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$j2nYTV9iWBXZt3i93SQKgupw.08wMQlH9jzfWMOW2iKkpUaYTWziW',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 31.888099999999998
+Time to send email 2373.7977
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 701,
+    messageTime: 737,
+    messageSize: 1394,
+    response: '250 2.0.0 OK  1592212762 s36sm11470429pgl.35 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<7aa7e418-f350-2887-5d1c-052ca1f11637@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2376.1276
+Received a request message : {
+  user_id: 'wd4ymwgre1tywbay1gtmd',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$tp6nTufcn1i0dmWz9dt7XuVG1f30keL4twUQfvD7IiNPAWfJYqr/W',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 20.377399999999998
+Time to send email 2766.598
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 841,
+    messageTime: 934,
+    messageSize: 1394,
+    response: '250 2.0.0 OK  1592213201 q10sm14107279pfk.86 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<82f7eee9-7726-fcd9-0a00-0c2c29449f50@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2772.6174
+Received a request message : {
+  user_id: '763douns6rpdapwjh8oos7',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$NA5JgE/RQ0gC16c910ERR.97DuO/YOQlGmKtkCXwkleQFRdcoDV7K',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 12.3988
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 50.3059
+Received a request message : {
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$Dz6SVw7yph.k/Rtknl4XJeuR60V2xWewmAtTx.a5vmByQqmxuKZju',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 35.5528
+Time to send email 2400.1412
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicdanyos@gmail.com' ],
+    rejected: [],
+    envelopeTime: 704,
+    messageTime: 716,
+    messageSize: 1397,
+    response: '250 2.0.0 OK  1592213482 fa13sm12034885pjb.39 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<246a3be8-ae83-dacf-6ef4-1247f3ae8e98@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2403.9668
+Received a request message : {
+  user_id: 'e4ummsl4ymjj40g0qtmk5k',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$AeFE5N0JeYSupBpfgB2ExeNltoi6VtDjZge.I9i6Y3tPOWeCoOuiC',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 6.1048
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 34.7299
+Received a request message : {
+  user_id: '1prldycn3ysjlme8hla6l5',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$2Wogyp.lYji3bPU41V5wXejKthKQJBIv/SU/9T9PsSV54wPCUFo2.',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 11.3925
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 55.521699999999996
+Received a request message : {
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$3GT7EgHVVCtUKUkiKfnF4.tWU3eWf6yisshXQd9iK3qFZBc6g5/Ta',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 35.6395
+Time to send email 2336.809
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ '18217028@std.stei.itb.ac.id' ],
+    rejected: [],
+    envelopeTime: 744,
+    messageTime: 727,
+    messageSize: 1415,
+    response: '250 2.0.0 OK  1592213654 b5sm13471922pfg.191 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<8afb7c01-3b1b-ba45-5c1f-14d948be8456@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2341.0960999999998
+Received a request message : {
+  user_id: 'hfd0lq8arr96rp3hpw1uzl',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$gX2StHcgoQUhgx0c6OEoQ.glk5nAeRRW90MflYhiF3MKavDvRk8BG',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 11.8037
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 31.610599999999998
+Received a request message : {
+  user_id: 'l02snajfqadyhj47u8ucp',
+  email: '18217028@std.stei.itb.ac.id',
+  password: '$2b$10$4HF3Z0fd2jKNCyIgYwUeFuGgZ2udExx5f7O83pXg.1yoQAEbHGKZy',
+  nama_lengkap: 'Nicholaus Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 5.1112
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 225,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(18217028@std.stei.itb.ac.id) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: '18217028@std.stei.itb.ac.id',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 26.1113
+Received a request message : {
+  user_id: 'm6awcksrnvxnw38kvpcqb',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$wSVYMysoKpmCesnhqKuiE.clO.j2le8Iyt0dcwbXU.bY9cUPM0frW',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 4.614599999999999
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 34.176899999999996
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 21.8247
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 18.470599999999997
+Received a request message : {
+  user_id: 'tjz0dn1qkpztn6c1licdo',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$9NDh5ThKNyn8W.R8phhKRe/jecB3JOVdY.aRA5QSME8xAs46DORLq',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 11.1916
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 38.9128
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 27.442
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 12.4155
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 11.574
+Received a request message : {
+  user_id: 't8x62hsw7cqecbfmzw0ga',
+  email: 'nicdanyos@gmail.com',
+  password: '$2b$10$Si3gfhLLh4oPzgG7bLWzGucHe27i4Pxx3saPBgj41DNJN.jMqytoW',
+  nama_lengkap: 'Nicholaus DY',
+  action: 'registerAccount'
+}
+Time to write to DB: 10.4954
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 217,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(nicdanyos@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'nicdanyos@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 41.4084
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 16.6292
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjIxNjAxOSwiZXhwIjoxNTkyMzAyNDE5fQ.ifrBf-VXFNiIGFxbx8hmaU12sXBfjZpqqMBqRp6-QpVhpssHyI0PLxNlwbI4vRSaIf_SezY7HfaWTaJyRMCeJemyhSGX_wE-WdfZRidu0YhOTFeXfZvmfaVPeIV13n85pUIfAX1ZNqqra02rcPMBbvIuckq7Sx7Iu4hlakTYInaBF6zjAVhZwNohKeJEJ-WhJEqRi4xc4Z9OIaSRAgVLSTX9sTupACVog6Ldv4KL86pNJUc6bUq07aOUmuBW1Mm5umMnCqIZqkW5RO5FfchRo99MbF49YjlrS9XIMZnsBSVrJMx31v-WRZtLV0b53LU8Q-uzJwuytBVFTN9uLGBVizUyfbLFjCOl-YeBjA3qcFS4xRxlq8Jo740mWkoOeItb73y2g9IvwQP6MlQ5mNEprpM1BHU7uqftIFx52vruHk1MvKP68vYUsO1ATt3SM0W7OwPRxNng9huzgM2xvZxWbykMBheZ1esTg9rlsDRBRMh7662PUoMyF7R9myDBuz_81rJ4ii3ii2kCq7SOx8uzt8VPkOiKVP5dv0VYgoevmivPWeMLzuM-oCEKFTuJXvVZs8cjB5cLUQy__yyqKDiM7Gl9K2Dq6ckH1dLVkZIRyqnrXhHfF6yTo1_IdIOuBKNj4V_sDRrVwXn37YkbjpHrFr7G4Z_Jw5Y8PSBRReNXg4Q',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjIxNjAxOSwiZXhwIjoxNTkyMzAyNDE5fQ.ifrBf-VXFNiIGFxbx8hmaU12sXBfjZpqqMBqRp6-QpVhpssHyI0PLxNlwbI4vRSaIf_SezY7HfaWTaJyRMCeJemyhSGX_wE-WdfZRidu0YhOTFeXfZvmfaVPeIV13n85pUIfAX1ZNqqra02rcPMBbvIuckq7Sx7Iu4hlakTYInaBF6zjAVhZwNohKeJEJ-WhJEqRi4xc4Z9OIaSRAgVLSTX9sTupACVog6Ldv4KL86pNJUc6bUq07aOUmuBW1Mm5umMnCqIZqkW5RO5FfchRo99MbF49YjlrS9XIMZnsBSVrJMx31v-WRZtLV0b53LU8Q-uzJwuytBVFTN9uLGBVizUyfbLFjCOl-YeBjA3qcFS4xRxlq8Jo740mWkoOeItb73y2g9IvwQP6MlQ5mNEprpM1BHU7uqftIFx52vruHk1MvKP68vYUsO1ATt3SM0W7OwPRxNng9huzgM2xvZxWbykMBheZ1esTg9rlsDRBRMh7662PUoMyF7R9myDBuz_81rJ4ii3ii2kCq7SOx8uzt8VPkOiKVP5dv0VYgoevmivPWeMLzuM-oCEKFTuJXvVZs8cjB5cLUQy__yyqKDiM7Gl9K2Dq6ckH1dLVkZIRyqnrXhHfF6yTo1_IdIOuBKNj4V_sDRrVwXn37YkbjpHrFr7G4Z_Jw5Y8PSBRReNXg4Q',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.5545
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicdanyos@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicdanyos@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.4539999999999997
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'nicdanyo@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'nicdanyo@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.029
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'nicdanyo@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'nicdanyo@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.2641999999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2MTE0LCJleHAiOjE1OTIzMDI1MTR9.xW9TtkD7R1DOq89U5MaxV7N9XG_7vDBNpNZKjsHNeISEDs8ZHBz-F-91GEu9fz8muR0wJgr--zM23toBXuM6CGF1SpA0pN0IcNfCtLErPyJZB-nT5T60iHg9F4_buAdRsyZAJlaP-VQYviBKFOi8IL5WzhSn1KSVtkAR-ATfeO1ZCGq2wj5TWYhUq8V_aXsXLrMUZCs0BrCE8Cnj2fvKgZ2UL01qi5xS8tXQj-6-HODxWkFcBt7-xTzSz3qzVaqtCBhhW_9WUlXdAjFRlnf4NXMAMbsbo46cc3GFwPwOZWChvOvcDBgbkUJ5Sa38vays7BMXlpaWE--vKhv_H9w9E-h6zHFFa53WyFpVStCwc9NylW7KZbxTATmhg81bxL7l1Y9iPyO-HAX96f8NBOi4acHNrid3KzlrfI0B8BNOVZbiBNdx_Gg4dEC8EA72wBiw55R9rhim-BLw5YVq3yZPseuF1CxF5nRqeXtmL_61HCRW6UnADUvr0lI0-YcZw_6ZJP4-2pOXcCYlllFGtrXqyPFGP5vUBRA7lbrrORBvjNMVfOcNt0ACT70FbBvOEQxKpCcmMOndWgfdHiIqTjryX9Iq5OpvkXvHkmaqJazE5a2TucPq8Wlpg25G1VfkHJKdEMCs8pTPOk0WwyW-umZBbwEcZYTuYWLxsNtUyLzcXPs',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2MTE0LCJleHAiOjE1OTIzMDI1MTR9.xW9TtkD7R1DOq89U5MaxV7N9XG_7vDBNpNZKjsHNeISEDs8ZHBz-F-91GEu9fz8muR0wJgr--zM23toBXuM6CGF1SpA0pN0IcNfCtLErPyJZB-nT5T60iHg9F4_buAdRsyZAJlaP-VQYviBKFOi8IL5WzhSn1KSVtkAR-ATfeO1ZCGq2wj5TWYhUq8V_aXsXLrMUZCs0BrCE8Cnj2fvKgZ2UL01qi5xS8tXQj-6-HODxWkFcBt7-xTzSz3qzVaqtCBhhW_9WUlXdAjFRlnf4NXMAMbsbo46cc3GFwPwOZWChvOvcDBgbkUJ5Sa38vays7BMXlpaWE--vKhv_H9w9E-h6zHFFa53WyFpVStCwc9NylW7KZbxTATmhg81bxL7l1Y9iPyO-HAX96f8NBOi4acHNrid3KzlrfI0B8BNOVZbiBNdx_Gg4dEC8EA72wBiw55R9rhim-BLw5YVq3yZPseuF1CxF5nRqeXtmL_61HCRW6UnADUvr0lI0-YcZw_6ZJP4-2pOXcCYlllFGtrXqyPFGP5vUBRA7lbrrORBvjNMVfOcNt0ACT70FbBvOEQxKpCcmMOndWgfdHiIqTjryX9Iq5OpvkXvHkmaqJazE5a2TucPq8Wlpg25G1VfkHJKdEMCs8pTPOk0WwyW-umZBbwEcZYTuYWLxsNtUyLzcXPs',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.2453
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.7575
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.132
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.2643999999999997
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.8886
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0362
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.364599999999999
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.i',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.6262
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.7331999999999996
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2MTYwLCJleHAiOjE1OTIzMDI1NjB9.BQ6oZZ_mg9LxBGOoW5ZTGPOO3NeW32ZNIaenpSDB7gyera3xwjfcIhVwJdQNk4n1kQY5F2u5h_Ka9SlRlnj18PI0iLCxbAP7V2BDXlGsve1t-xPRXeSnecOgPch5fVKgrYeIg_OO7DRX4jAjFnBtjDH8eChpgqPQliced3mzRXs30rDg_7U-w9sCDwy-96YVdmpOM6zuwrxIDiOCJIrwykHC3l0MEUQfo10xn2LZtGphpUMBoNHjJZ-C2BhIKg9WQvnKtM37vILfLMYDFap80qvGAW6w7BOUmnI6ODh35b1_dFCM59D18mN5oNvrKmCcfO_MqvvyLCcDsPTq8aDoBETiZ6TzqwVd_oQU30axrn8T9OzoswyY-2Cou2TviVgMDHMHMISVfSvCXdMB9XAIi38WgJdXbqzALdr9NXE3BtCuRVlFbnfPjur-Pw4Dt2TeY39IPp0FpXKOTgb4tkYxV3YnwA3DTgyD7ZYDKOVjVN9y1wZ3DrFexZ5QYwrsCP68TX6lgafy0NASwVKr1BafGtU_KKU3VqwiaXOx8XffjI_0vXDI35BB2IhFjmFJTp-TkNSTDbaCOkVaBWJvA5Xxp3kkU-4hHrowx4jpkFOLqyJtYHaqAhnbmghLKtckrSLoTh8Cj11zsNO4fp30RYrHzS74HM-aatAutl8bivZPfxM',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2MTYwLCJleHAiOjE1OTIzMDI1NjB9.BQ6oZZ_mg9LxBGOoW5ZTGPOO3NeW32ZNIaenpSDB7gyera3xwjfcIhVwJdQNk4n1kQY5F2u5h_Ka9SlRlnj18PI0iLCxbAP7V2BDXlGsve1t-xPRXeSnecOgPch5fVKgrYeIg_OO7DRX4jAjFnBtjDH8eChpgqPQliced3mzRXs30rDg_7U-w9sCDwy-96YVdmpOM6zuwrxIDiOCJIrwykHC3l0MEUQfo10xn2LZtGphpUMBoNHjJZ-C2BhIKg9WQvnKtM37vILfLMYDFap80qvGAW6w7BOUmnI6ODh35b1_dFCM59D18mN5oNvrKmCcfO_MqvvyLCcDsPTq8aDoBETiZ6TzqwVd_oQU30axrn8T9OzoswyY-2Cou2TviVgMDHMHMISVfSvCXdMB9XAIi38WgJdXbqzALdr9NXE3BtCuRVlFbnfPjur-Pw4Dt2TeY39IPp0FpXKOTgb4tkYxV3YnwA3DTgyD7ZYDKOVjVN9y1wZ3DrFexZ5QYwrsCP68TX6lgafy0NASwVKr1BafGtU_KKU3VqwiaXOx8XffjI_0vXDI35BB2IhFjmFJTp-TkNSTDbaCOkVaBWJvA5Xxp3kkU-4hHrowx4jpkFOLqyJtYHaqAhnbmghLKtckrSLoTh8Cj11zsNO4fp30RYrHzS74HM-aatAutl8bivZPfxM',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.8042
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicdanyos@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicdanyos@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.6908
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjIxNjM4MiwiZXhwIjoxNTkyMzAyNzgyfQ.j_PPAsnuJ-Ez3FKuV65JlpK-mOR9YPw6rB2RIQHbR28jgSkTlBy3kNrvTI9rxRU2-0L3z3Tq9AnBYv5nJ_Wvte-GQKFXXCeYYMMIN1HqQM28v2rBDfg2ssgYbGf2nlS7UQIo2D-P35kRP9R71iRr6wcbup1M7tXwvcbf-6Kx62K4vZ3uplA1ZVAI_rFMpTMZjn6lMKvFy_78WcntF-XHTYbHeEOz6OwGRfdmqL3XXJGgVPSe8NcEUZtzMZuq3I56JDGlL5MSpRTqBLS-Fr0zClv4e2NR4z6iAv08DmZxb0bUyDO7gKApq0vzSYj0b26P2DBaKLYJImibQglj2Xo-R9r1rrnD-qbcircoa9oNNRa-Ukc7aIjyUbAudvyaSVQ7eI56QuOtR_uxvF-7KT20LiiEdiO5P9L92grGc4YW4IXFT8w7dZs9i624VQJ9xKGGhHirdF996cYtqghQLmQ63N3M6pCEHKJofg9rgl5B5WyUENk8TK3owh_M1A227eNIBBQ3vmSSLgG-ZqsN6x2UWjeMjwlRCjhWwzsKwQgbozQVBfe8DgCT-HQZ6-vah2i3kozfUcRQjya6ILA50uAeU1P0pX6ExUd9KuiqZAFa6f9H3lTqpD4nl2eynIv_DW6L2hQcq00yuAfZbpzCRnfTD1ywP4age-fKAfP6T1NatO0',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjIxNjM4MiwiZXhwIjoxNTkyMzAyNzgyfQ.j_PPAsnuJ-Ez3FKuV65JlpK-mOR9YPw6rB2RIQHbR28jgSkTlBy3kNrvTI9rxRU2-0L3z3Tq9AnBYv5nJ_Wvte-GQKFXXCeYYMMIN1HqQM28v2rBDfg2ssgYbGf2nlS7UQIo2D-P35kRP9R71iRr6wcbup1M7tXwvcbf-6Kx62K4vZ3uplA1ZVAI_rFMpTMZjn6lMKvFy_78WcntF-XHTYbHeEOz6OwGRfdmqL3XXJGgVPSe8NcEUZtzMZuq3I56JDGlL5MSpRTqBLS-Fr0zClv4e2NR4z6iAv08DmZxb0bUyDO7gKApq0vzSYj0b26P2DBaKLYJImibQglj2Xo-R9r1rrnD-qbcircoa9oNNRa-Ukc7aIjyUbAudvyaSVQ7eI56QuOtR_uxvF-7KT20LiiEdiO5P9L92grGc4YW4IXFT8w7dZs9i624VQJ9xKGGhHirdF996cYtqghQLmQ63N3M6pCEHKJofg9rgl5B5WyUENk8TK3owh_M1A227eNIBBQ3vmSSLgG-ZqsN6x2UWjeMjwlRCjhWwzsKwQgbozQVBfe8DgCT-HQZ6-vah2i3kozfUcRQjya6ILA50uAeU1P0pX6ExUd9KuiqZAFa6f9H3lTqpD4nl2eynIv_DW6L2hQcq00yuAfZbpzCRnfTD1ywP4age-fKAfP6T1NatO0',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.4148
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.5848
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.9878
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2NDAzLCJleHAiOjE1OTIzMDI4MDN9.xWX1_uTj-EIwfG7fKoXxNeDZhzIdQD4iSQG0ODp3rCjMJUeghYbTzcTHgJqNn7yPhe7sadC6_fQ0GyIzokBYeoyeHrFEvBUxLrl855HXvfrtJqWrBFf_-lCUyBs9dK_OkmUCPF0Cp9TExWZ-HPuPZgwOVdupU4XgTI8QI066Hyy4DzLB710hvRKW-8uOCNVnxGx8cS_HnaS8Q0CTLgR-TCxZlp_nUYUdhqVrfIS8wuSQl5WcS1UimTFAA9g0sqb_GjMA02rqFyAeGiG8Uvhmf1_Qso7wwcsPyf24QUlzLN4n7hZSdqNjjt2Fz7zpf_AePxnfKarhCyogu42I_CRjYe3bZKxBTwe7_wkXCJIKGK-H2L_u39NO0RDP7tYUeH1CHFFIzEkCdh2eCb4lz6G_LuAZcmQtSxo2CBYL-DnL5wbxkkfzfmEEHy4v72yvX6kY_RBYuS4J2fn26Kh6-_CmXbW2mMdiYgSPJ07LAjTAoknwpxeFuttKP6O_boQ1oioJulEtNFyMRytTyx9uyqbHwkSoHnOqAWD4N9nHa6C8w8vsnm7MGCSOZnzfJKMmpxkpsQF5-lkkLqMi3IB5McggsZeWNuHLpCLNbI5xCN_Yp60k8p-Z793TEwm87YV4E_xZevvCWGWGzQODxysm7ZeL979auW4aYF9xebQPE1bS1Yg',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2NDAzLCJleHAiOjE1OTIzMDI4MDN9.xWX1_uTj-EIwfG7fKoXxNeDZhzIdQD4iSQG0ODp3rCjMJUeghYbTzcTHgJqNn7yPhe7sadC6_fQ0GyIzokBYeoyeHrFEvBUxLrl855HXvfrtJqWrBFf_-lCUyBs9dK_OkmUCPF0Cp9TExWZ-HPuPZgwOVdupU4XgTI8QI066Hyy4DzLB710hvRKW-8uOCNVnxGx8cS_HnaS8Q0CTLgR-TCxZlp_nUYUdhqVrfIS8wuSQl5WcS1UimTFAA9g0sqb_GjMA02rqFyAeGiG8Uvhmf1_Qso7wwcsPyf24QUlzLN4n7hZSdqNjjt2Fz7zpf_AePxnfKarhCyogu42I_CRjYe3bZKxBTwe7_wkXCJIKGK-H2L_u39NO0RDP7tYUeH1CHFFIzEkCdh2eCb4lz6G_LuAZcmQtSxo2CBYL-DnL5wbxkkfzfmEEHy4v72yvX6kY_RBYuS4J2fn26Kh6-_CmXbW2mMdiYgSPJ07LAjTAoknwpxeFuttKP6O_boQ1oioJulEtNFyMRytTyx9uyqbHwkSoHnOqAWD4N9nHa6C8w8vsnm7MGCSOZnzfJKMmpxkpsQF5-lkkLqMi3IB5McggsZeWNuHLpCLNbI5xCN_Yp60k8p-Z793TEwm87YV4E_xZevvCWGWGzQODxysm7ZeL979auW4aYF9xebQPE1bS1Yg',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.1677999999999997
+Received a request message : {
+  user_id: '8is7sbk8f67hnfk7fysrfb',
+  email: 'nicholaus_yosodipuro@outlook.com',
+  password: '$2b$10$ZU1tudvAypQuOCKc8uXN4OBCkXzR.GAZ4Ju0yfWUVQdlGIsxYPeje',
+  nama_lengkap: 'Nicholaus MS Acc ',
+  action: 'registerAccount'
+}
+Time to write to DB: 37.465399999999995
+Time to send email 3139.2468
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'nicholaus_yosodipuro@outlook.com' ],
+    rejected: [],
+    envelopeTime: 996,
+    messageTime: 875,
+    messageSize: 1427,
+    response: '250 2.0.0 OK  1592216587 u12sm11977681pjy.37 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<1746c493-3566-e1dd-4ad1-7a275df57c3e@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3144.4806
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.0694
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'nicholaus_yosodipuro@outlook.co',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'nicholaus_yosodipuro@outlook.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.7394
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.co',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.1588
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.5996999999999995
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.4366999999999996
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.3937999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: '8is7sbk8f67hnfk7fysrfb',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 22.4237
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.7003
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2hvbGF1c195b3NvZGlwdXJvQG91dGxvb2suY29tIiwidXNlcl9pZCI6IjhpczdzYms4ZjY3aG5mazdmeXNyZmIiLCJpYXQiOjE1OTIyMTY4MTEsImV4cCI6MTU5MjMwMzIxMX0.xm0ZpwmVkxW32V1sSxEvE3eHIEiJwwWbhv_7ZcMBHgMy-879PojMkMt1mZeYUg4hWDYUODk5CMHycegPlwkee0UM1D4CLK5e05TPJJXHx3uyoKsxGPX67Sxyg8lbAAALrWIUofHzdYprm1JFpvqmRBOJTMD5YeaGcdEzqyz5dFyxkrYwutd898rUhs9k905TKgZfQMd3Qg96aZHzv4BNE0H01zF_kmfYcK_x5SjhwgUnHCImegIPtrgaxB_d-YzV7k2KK4KJa-DuQKV-WFJ2pbD146scSz7MZ12wZiRPqnBmyJmzB7RLLD2rPWDc_BVa9UBIvApjiZLZRW7N3K7Gukur0xhe3a7cv8KDnt4b3R5Fk_aXnBbjGiteYLWDjN-i4TFQ82LjigEe3sb4Q7S8fPNeReFqlej-5m-YlC-HkdM-A37OsNYJPaM89mFIpXD8WnI4gsmWahXwfhTAiSUYBb3CpQR5iWuU6Fwk-Ieul-g892q5I3szGr4cPNBSYi7TV6dBeNA71WW_eY7ebxCxSr3cXQ31p1620opa9tI1p_LAfJvNbQSWPMEyMZ9i0xOImW1TC93sql1FCx82aNg2Iv0gS0a7jjSc0JdYQoD0WObveKHxQ7NaCf4LPG49SfxVZCAUZgG7eIZZ7mi3vX4W659CavM_3dols5BXPxPYHXA',
+  User_id: '8is7sbk8f67hnfk7fysrfb',
+  Code: 200,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2hvbGF1c195b3NvZGlwdXJvQG91dGxvb2suY29tIiwidXNlcl9pZCI6IjhpczdzYms4ZjY3aG5mazdmeXNyZmIiLCJpYXQiOjE1OTIyMTY4MTEsImV4cCI6MTU5MjMwMzIxMX0.xm0ZpwmVkxW32V1sSxEvE3eHIEiJwwWbhv_7ZcMBHgMy-879PojMkMt1mZeYUg4hWDYUODk5CMHycegPlwkee0UM1D4CLK5e05TPJJXHx3uyoKsxGPX67Sxyg8lbAAALrWIUofHzdYprm1JFpvqmRBOJTMD5YeaGcdEzqyz5dFyxkrYwutd898rUhs9k905TKgZfQMd3Qg96aZHzv4BNE0H01zF_kmfYcK_x5SjhwgUnHCImegIPtrgaxB_d-YzV7k2KK4KJa-DuQKV-WFJ2pbD146scSz7MZ12wZiRPqnBmyJmzB7RLLD2rPWDc_BVa9UBIvApjiZLZRW7N3K7Gukur0xhe3a7cv8KDnt4b3R5Fk_aXnBbjGiteYLWDjN-i4TFQ82LjigEe3sb4Q7S8fPNeReFqlej-5m-YlC-HkdM-A37OsNYJPaM89mFIpXD8WnI4gsmWahXwfhTAiSUYBb3CpQR5iWuU6Fwk-Ieul-g892q5I3szGr4cPNBSYi7TV6dBeNA71WW_eY7ebxCxSr3cXQ31p1620opa9tI1p_LAfJvNbQSWPMEyMZ9i0xOImW1TC93sql1FCx82aNg2Iv0gS0a7jjSc0JdYQoD0WObveKHxQ7NaCf4LPG49SfxVZCAUZgG7eIZZ7mi3vX4W659CavM_3dols5BXPxPYHXA',
+  User_id: '8is7sbk8f67hnfk7fysrfb',
+  Code: 200,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.6754
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2ODI4LCJleHAiOjE1OTIzMDMyMjh9.pHtQ_wb6aEIaYkkLtcJsnd9sfXifXA3KZdm6JCbudPgN43F3eqDzPnI9FsHktX4Sot8MwLFLkYEkn42bVsBh6P32PwSs8FqLcT2gux2uEl0B1X_o7zByOh9OHiU0BD9hlrOTt3n1pAExaZWRnpH0q_FEKxvvlpLsGXighOmtXVlPABOnldkc8Bi5YCMTwwiV0CDutiDYxW_9lR-cBe_G7UuTx9VcvSM3Q53fPDr1tjlL9vXZIIA7If2awFe-8TPH0lFqmbjfpIvsr4nn0dx1HUE0XmQOa_fEr-pGM0367vJJFXupTastIhFhNuVW3AQ6-8BrvEA0lgmrCsbaEbhq448UBRZpwS24cEfu1ap9tgZEdf1zUEZSydYK3WNGBtaJQDEAaEBWq3WNm9VYtAiaAK7Ex9URDEbDTDXy-XWx76xgakJcYhvBC0QEA-xeW7taJgW-RXr1RsL8O1BpybFMRZkkHxRbUEwUEnl0Jj36uuBCSQh4U8DkB17h6Wqwz1Tc5ZwOps_gjfP_MX4OcVml07LwCLNMl0kL9Z5LtPrLWiK38YNYrORkfIv9pEuopSO3SJaHi_4miqYNgOmwJfEYoac4sQixanAwQMPNKEistlxE88LRzepIqNVjJbY-qc4TOMZmMSoibdDSYz43vwH11qqLoAX3yXNRe6qycReqmUs',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjE2ODI4LCJleHAiOjE1OTIzMDMyMjh9.pHtQ_wb6aEIaYkkLtcJsnd9sfXifXA3KZdm6JCbudPgN43F3eqDzPnI9FsHktX4Sot8MwLFLkYEkn42bVsBh6P32PwSs8FqLcT2gux2uEl0B1X_o7zByOh9OHiU0BD9hlrOTt3n1pAExaZWRnpH0q_FEKxvvlpLsGXighOmtXVlPABOnldkc8Bi5YCMTwwiV0CDutiDYxW_9lR-cBe_G7UuTx9VcvSM3Q53fPDr1tjlL9vXZIIA7If2awFe-8TPH0lFqmbjfpIvsr4nn0dx1HUE0XmQOa_fEr-pGM0367vJJFXupTastIhFhNuVW3AQ6-8BrvEA0lgmrCsbaEbhq448UBRZpwS24cEfu1ap9tgZEdf1zUEZSydYK3WNGBtaJQDEAaEBWq3WNm9VYtAiaAK7Ex9URDEbDTDXy-XWx76xgakJcYhvBC0QEA-xeW7taJgW-RXr1RsL8O1BpybFMRZkkHxRbUEwUEnl0Jj36uuBCSQh4U8DkB17h6Wqwz1Tc5ZwOps_gjfP_MX4OcVml07LwCLNMl0kL9Z5LtPrLWiK38YNYrORkfIv9pEuopSO3SJaHi_4miqYNgOmwJfEYoac4sQixanAwQMPNKEistlxE88LRzepIqNVjJbY-qc4TOMZmMSoibdDSYz43vwH11qqLoAX3yXNRe6qycReqmUs',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.642799999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjIxNjgzNywiZXhwIjoxNTkyMzAzMjM3fQ.Bxs5RzOCaWzI9TV4bWNH9aLvZcqTD-r3rQwuI58Wxs0fPYwj2kMX_rtdUkVgDMM50ligiEAnVBDlSYPKrqmx2oV1ehLyTg_seWohWoiAeU3dzVzl8Ctu7rNAikn8i50d55wuNH8zQsCGTcKcbAYWLvc4sG8urvg0PvOKEpsBqkqIraNEVBAIfm5XdJgni2aC5ET1Kom3znx4ODIYA_bE54GQEtxmUwrj0vA3a3ERFQGnR_CIEEQmykMrD1tcebRpn57bUAqrQTDvGobJMNGwloAVSAzH9f8thyOCjlqe13ZKyHOLlLOiaGQuQkUM8KziHVMnlVCdFfZA8DyFGzLxp5XYyVcN7J0k9CASSj_uF0DVCJgiYhtv4PyMQtFp2amVNvb8X57uVUxXGHUOcoTPrc-VlUkwsBaACDW3E-GYVqTLSjRGwAJ3YI3o-6f7x8mr4hFGtqcdK7H980rTjwXowl-Q7FhXQ3Y4clebMn7-_uJquHKOlGd-HvqdkWpRaLzVW2s95HzonRlF3_PaHq1iFGca27sHMvJh4MC6sPEzo-hEVzAFivC2h7vDlUfXd8_Gd_Zb-o3F5ernv_ZDnxeClyAXwUIntU4Nm3HONPEMlvFuMvLLFX9pwihKZQzfjC0Pz6AyLSBpMRa42vOg7eFcJG7-VNntK104H_exCUb6Ml0',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjIxNjgzNywiZXhwIjoxNTkyMzAzMjM3fQ.Bxs5RzOCaWzI9TV4bWNH9aLvZcqTD-r3rQwuI58Wxs0fPYwj2kMX_rtdUkVgDMM50ligiEAnVBDlSYPKrqmx2oV1ehLyTg_seWohWoiAeU3dzVzl8Ctu7rNAikn8i50d55wuNH8zQsCGTcKcbAYWLvc4sG8urvg0PvOKEpsBqkqIraNEVBAIfm5XdJgni2aC5ET1Kom3znx4ODIYA_bE54GQEtxmUwrj0vA3a3ERFQGnR_CIEEQmykMrD1tcebRpn57bUAqrQTDvGobJMNGwloAVSAzH9f8thyOCjlqe13ZKyHOLlLOiaGQuQkUM8KziHVMnlVCdFfZA8DyFGzLxp5XYyVcN7J0k9CASSj_uF0DVCJgiYhtv4PyMQtFp2amVNvb8X57uVUxXGHUOcoTPrc-VlUkwsBaACDW3E-GYVqTLSjRGwAJ3YI3o-6f7x8mr4hFGtqcdK7H980rTjwXowl-Q7FhXQ3Y4clebMn7-_uJquHKOlGd-HvqdkWpRaLzVW2s95HzonRlF3_PaHq1iFGca27sHMvJh4MC6sPEzo-hEVzAFivC2h7vDlUfXd8_Gd_Zb-o3F5ernv_ZDnxeClyAXwUIntU4Nm3HONPEMlvFuMvLLFX9pwihKZQzfjC0Pz6AyLSBpMRa42vOg7eFcJG7-VNntK104H_exCUb6Ml0',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.6874
