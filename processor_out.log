@@ -6844,3 +6844,251 @@ Published results for : {
   Action: 'standardLog'
 }
 Time to process RabbitMQ queue 4.2802999999999995
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '334223',
+    no_hp: '087343434',
+    email_2: 'tesd@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '334223',
+    no_hp: '087343434',
+    email_2: 'tesd@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 5.9486
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 537442312,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 17.852
+Received a request message : {
+  Status: 'Success',
+  Message: 537442312,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 537442312,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.1772
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 537442312,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1069,
+    messageTime: 864,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592303716 h5sm17309251pfb.120 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<6a01f842-32c7-f291-12a9-68fbf2417f26@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3005.4909
+Received a request message : {
+  Status: 'Success',
+  Message: 537442312,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 537442312,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.4606999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 18.1081
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  password: '$2b$10$0GccItO0b44V7.Sg7jcvjeHr60G.VRr12XTxtUwoRvUB8Sbu1z7NW',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 12.9713
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.2908
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJnNnZja3g0OGhncmNkcjJ0dDd1a2wiLCJpYXQiOjE1OTIzMDM3NzEsImV4cCI6MTU5MjM5MDE3MX0.e5wYsiPpee8Z62_49IIMkLuZcmCr8C7JZ_Jr1dpP-THxmCULUbAZGfb6VMVp494OG_eEzF-qenxMJrOLFvO3xELuVDTHagUWDGhwsVTSUtE6Fp3fz6JKkE3kY9QdmfDqrBBtZ9a-wlXBTrfNjQyXT1sU2IMfmDIMDaIbyjj_5E0x5wCfkvT37bJW7WxT8n2yNR77V3YwXlzQ5R83Jfw2BU1WGOfqAiBYf3CNhJnh4CMnXWtLkKgLNbMkDuCaas0enG9WTbox4Px7RKaUJ_hpquKxauy12hdIaH3sHuutRzFUkPXh6Kasiu2qJcNVImmk-aPYFADifeVpQXmB3ZdX5_lu6JTW9jfcqzKLzaF4uAnjgwKB9_F-SYoywVgdyy62o3vav6-cQEh13KjK901M-XIsIcNfKhm6vZezDBFfOT44GLPWygnQHL86aT4F0EP7UFR6DYZS70pDQ8kQkibapaQv0gevjpWAIKwd5qZDI5FsAy-mlk3iTvivvM4XsK5yrj2WSx3d-ePP6BxCoQYIYynwhVkQL4O-Or1aanW9djh_Rrl5ujJ4gAh3eflJYENSKTULR2WbwTMDtoiS7hTluvJC4dd51avGVYSanCCO5vktdmHvQMrX73sjFkC7_ZUFzspBz2lSNOJv1I7q9eWppdf-gJsSYKFbxnGAIzMNszg',
+  User_id: 'g6vckx48hgrcdr2tt7ukl',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJnNnZja3g0OGhncmNkcjJ0dDd1a2wiLCJpYXQiOjE1OTIzMDM3NzEsImV4cCI6MTU5MjM5MDE3MX0.e5wYsiPpee8Z62_49IIMkLuZcmCr8C7JZ_Jr1dpP-THxmCULUbAZGfb6VMVp494OG_eEzF-qenxMJrOLFvO3xELuVDTHagUWDGhwsVTSUtE6Fp3fz6JKkE3kY9QdmfDqrBBtZ9a-wlXBTrfNjQyXT1sU2IMfmDIMDaIbyjj_5E0x5wCfkvT37bJW7WxT8n2yNR77V3YwXlzQ5R83Jfw2BU1WGOfqAiBYf3CNhJnh4CMnXWtLkKgLNbMkDuCaas0enG9WTbox4Px7RKaUJ_hpquKxauy12hdIaH3sHuutRzFUkPXh6Kasiu2qJcNVImmk-aPYFADifeVpQXmB3ZdX5_lu6JTW9jfcqzKLzaF4uAnjgwKB9_F-SYoywVgdyy62o3vav6-cQEh13KjK901M-XIsIcNfKhm6vZezDBFfOT44GLPWygnQHL86aT4F0EP7UFR6DYZS70pDQ8kQkibapaQv0gevjpWAIKwd5qZDI5FsAy-mlk3iTvivvM4XsK5yrj2WSx3d-ePP6BxCoQYIYynwhVkQL4O-Or1aanW9djh_Rrl5ujJ4gAh3eflJYENSKTULR2WbwTMDtoiS7hTluvJC4dd51avGVYSanCCO5vktdmHvQMrX73sjFkC7_ZUFzspBz2lSNOJv1I7q9eWppdf-gJsSYKFbxnGAIzMNszg',
+  User_id: 'g6vckx48hgrcdr2tt7ukl',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.8072999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '334223',
+    no_hp: '087343434',
+    email_2: 'tesd@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '334223',
+    no_hp: '087343434',
+    email_2: 'tesd@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.6845
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  nama_lengkap: 'James SA',
+  idkaryawan: 'jdhfjhdf',
+  no_hp: '08347374',
+  email_2: 'tesda@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 35.1673
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James SA',
+    idkaryawan: 'jdhfjhdf',
+    no_hp: '08347374',
+    email_2: 'tesda@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James SA',
+    idkaryawan: 'jdhfjhdf',
+    no_hp: '08347374',
+    email_2: 'tesda@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.0493999999999994
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James SA',
+    idkaryawan: 'jdhfjhdf',
+    no_hp: '08347374',
+    email_2: 'tesda@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James SA',
+    idkaryawan: 'jdhfjhdf',
+    no_hp: '08347374',
+    email_2: 'tesda@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.8785
