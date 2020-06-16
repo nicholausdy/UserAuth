@@ -405,7 +405,7 @@ async function verifyRequest(req) {
                 if (verifyResult.Message.user_id != req.params.user_id) {
                     resp.Status = 'Failed';
                     resp.Code = 403;
-                    resp.Message = 'User '.concat(req.params.username, ' attempted to access resources owned by other user');
+                    resp.Message = 'User '.concat(req.params.user_id, ' attempted to access resources owned by other user');
                 }
                 else {
                     resp.Status = verifyResult.Status;

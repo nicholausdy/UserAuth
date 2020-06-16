@@ -8,6 +8,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 const server_1 = require("./errorHandler/server");
 const account_1 = require("./handler/account");
+const profile_1 = require("./handler/profile");
 const perf = require('execution-time')();
 const app = express_1.default();
 app.use(cors_1.default());
@@ -86,6 +87,46 @@ app.put('/api/v1/account/changePassword', async (req, res) => {
     try {
         perf.start();
         const requestResult = await account_1.changePassword(req.body.email, req.body.tempcode, req.body.password);
+        res.status(requestResult.Code);
+        res.json(requestResult);
+    }
+    catch (e) {
+        const errorResult = await server_1.serverError(e);
+        res.status(errorResult.Code);
+        res.json(errorResult);
+    }
+    finally {
+        const result = perf.stop();
+        console.log('Server to client API exec time:', result.time);
+    }
+});
+app.put('/api/v1/profile/updateProfile/:user_id', async (req, res) => {
+    try {
+        perf.start();
+        let requestResult = await account_1.verifyRequest(req);
+        if (requestResult.Status == 'Success') {
+            requestResult = await profile_1.updateProfile(req.params.user_id, req.body.nama_lengkap, req.body.idkaryawan, req.body.no_hp, req.body.email_2);
+        }
+        res.status(requestResult.Code);
+        res.json(requestResult);
+    }
+    catch (e) {
+        const errorResult = await server_1.serverError(e);
+        res.status(errorResult.Code);
+        res.json(errorResult);
+    }
+    finally {
+        const result = perf.stop();
+        console.log('Server to client API exec time:', result.time);
+    }
+});
+app.get('/api/v1/profile/getProfile/:user_id', async (req, res) => {
+    try {
+        perf.start();
+        let requestResult = await account_1.verifyRequest(req);
+        if (requestResult.Status == 'Success') {
+            requestResult = await profile_1.getProfile(req.params.user_id);
+        }
         res.status(requestResult.Code);
         res.json(requestResult);
     }

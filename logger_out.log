@@ -2562,3 +2562,543 @@ Processing result : {
   action: 'logError',
   Action: 'logError'
 }
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicdanyos@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjI5ODg1MiwiZXhwIjoxNTkyMzg1MjUyfQ.fANUjl1410sYSKnxUdrI-4rJyho7DvazY25baTfqZme5u0HV63jlT_W4O-vBwL9XSsF8VL4sc7aEairYW1prxxf9YBSPETNyESnykrJU_CCGK3pFfZ4KHePJ4QUGpx4bPiWvunTIZF6Bp4bIGcWlFkuG7HAlmzlxb_0cLM6yx27-3vq9-0P5EPGegjkwBGsmyooUodxZ-ppqxMqUUMrQw5ZUi-AwUSSkNid7-Kb1PY3p0gNegDqMiARdAFKVwjaSMb2KoyFDqmF56lLDpKGwOa_vqH_2hWNP5e7ztsxlf7Pzj3I_5kTj-5k1jiF6iXkNGgSjl8KGVwJJ2ws8xN-_sBBULkNZ6NsziBqdfMFkWtYcBVHOOBjWGIrxSeRKI2FDNlNlSk0r3F_dYNUzU0FpRgqHxP5s7IGxEiEYXHgPKyjueiJwywpMAA0Z9dKE1rm4yVeledOESo--Sp26SeJh5ze3bTIg2lZn4crkxX_qVJtbMo5eXT6yeLgX5ZoHdBq-8euysQjuA8MaHsGmpi4jRoNLN6vrcNQvOD1h3MYV02crSduvdX3jQXcDj3g0qOI-HI2zoHgxucbth7U6KwpsghivPXReOryYFogP1id0X0MeOtjVg-hEiWwqUfkgIUMt5u--KRnSNg-rLuUTSlh9MNnL-NrqCmPj5BKLWtUPQG8',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiJva3FucXViMzR3YnVvMTZkZGduZDY5IiwiaWF0IjoxNTkyMjk5MTgyLCJleHAiOjE1OTIzODU1ODJ9.gbOd85JIX4tRuRsfWdl0t-FmAbzor9uLmSjhZ6isSRQ_VaON3yx-9VfvuzHBI9O6ganHXnISPw1HItqFgpgKKD5_HGhINcMpMMUz84LzePSHKWwm1jMAT8Ewt2clzNlNQOdTmZmBAOZwjgkAR9CCjld89ExVulsM5Z7iyMnBp3ZrIbz1xBpE73WiQ7S3x0pRwEK8Uj1osW8bbM0fPTFD6ucv1GfIrXW4J6ONZ3eQB27oP1hLecbOvfXqPbMMVpLGq3SSv85UX6Z-lNfqF8Ruo3GOLinHu5c_JtsRskunGQhmPv-j1vllKxZleVQOONfmhBf-feUlsWVd3My-wy4YDs_AnYR6V4FkPBeBcuxJSTtHOCrcADBNreiWKEhTCdeCCM6ALAJ9R5QlGcC1EkPm7XRbClP6Rb6r6dFicGDHSlWRtj1BpWR0G5jvijy8z76cbW6p07Ji8Q0Hks6_Y_58GFfMAbkk2_Fj_5R30uI1z7-3C21MHZVfqcEtKhr79bzyUon4vyn4YchuH40o_TM9JxA8zFaQavnl371XizD3u83prp4cwtFoEgpPX4bjUTflyo1SDmA-hR83bBRO0C7b-CNykAOJstusumURAmW6o_Nus2o4pk_pZdmy2mjsRc29KrOpphouvLo6XAh2aXX6dp6drdSgcuoXkay-MgrxRX4',
+  User_id: 'okqnqub34wbuo16ddgnd69',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '3483473847',
+    no_hp: '0892323234934',
+    email_2: 'tesba@gmail.com'
+  },
+  Code: 200,
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '3483473847',
+    no_hp: '0892323234934',
+    email_2: 'tesba@gmail.com'
+  },
+  Code: 200,
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2Rhbnlvc0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiM3poaGl1ZjlxZ3gzM2swbGgxZXd0NiIsImlhdCI6MTU5MjMwMDQ3MSwiZXhwIjoxNTkyMzg2ODcxfQ.qL8nLXveK5Ekvb-jWeKY3bnpxeK04ZN_dU7RGEnoMP72rvrOLLfS0ATPTmiUi62uMvqwKbeS-5CXbNed5-txXPBfqa_2jzdK5vG6NhvLTWIcqDDH2d1jq_6InN3wtHTaq0p7xPGKsIlEfwaCBQM0XIZVSr4zT8YewspbcMsNeJ0PH2Kx-MK--5n3Jr4GNk0u0xHTMY-POuD51cjMhICm7veiSCJ2Gi00gcS6X_p8fi9aKK_2RvwaVoCALuIJg2Bq4HU4YT3ZmF9I0lptOTjccaQKU2plIcYZJZanIeP9APmQv1JDH1oqX61w2h3bSOfCwiGpoQ9-RjA3aYVUqQ8w_JRtE5wTLFFU6TIPBTuM6HA3anZTjmtdoO5h13EnwCViWMJVVVOXcN_Jbx1TAoqF7oknekGaO3-kp4TyCHjS6Wi8VV98_YH5qM_d_I2UHupnPpKorCVJ83pYxYud0B9peauFDRPXOehlphHH5RrBRkW2F9V1b8vTzjuIMxQ0P76nX16P0LYIUo0DWNKaNS5wt9ox994Mdt6EGLNYG4GyX0mShue2CAcaryNgmWqalp7DnSXmiZxZA7NBI-pdh8XYRElExEw4VfZEcPvRBHcU3wKiFsMEXs-1YL29kvfPTTBxo3jiSTp6nvQy1JHanhh7BK337pt_uOTqmSClbexvf2M',
+  User_id: '3zhhiuf9qgx33k0lh1ewt6',
+  Code: 200,
+  email: 'nicdanyos@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'Nicholaus Padma' },
+  Code: 200,
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Padma',
+    idkaryawan: '888888',
+    no_hp: '083343434',
+    email_2: '18217028@std.stei.itb.ac.id'
+  },
+  Code: 200,
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Padma',
+    idkaryawan: '888888',
+    no_hp: '083343434',
+    email_2: '18217028@std.stei.itb.ac.id'
+  },
+  Code: 200,
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Padma',
+    idkaryawan: '888888',
+    no_hp: '083343434',
+    email_2: '18217028@std.stei.itb.ac.id'
+  },
+  Code: 200,
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Padma',
+    idkaryawan: '888888',
+    no_hp: '083343434',
+    email_2: '18217028@std.stei.itb.ac.id'
+  },
+  Code: 200,
+  user_id: '3zhhiuf9qgx33k0lh1ewt6',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '3483473847',
+    no_hp: '0892323234934',
+    email_2: 'tesba@gmail.com'
+  },
+  Code: 200,
+  user_id: 'okqnqub34wbuo16ddgnd69',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2hvbGF1c195b3NvZGlwdXJvQG91dGxvb2suY29tIiwidXNlcl9pZCI6IjhpczdzYms4ZjY3aG5mazdmeXNyZmIiLCJpYXQiOjE1OTIzMDEzNTgsImV4cCI6MTU5MjM4Nzc1OH0.iLhiQn1myDLeYw8clKfUxqNQH2POJEbkRBBAHWJmKTpBIMPpPbALTCQoOxojv0crU-ZEsh6ZCPsTHymQjfXWqqei_h-MGngn3J26BNy7Zcot0he86uQhc2f1CCz0WDFxx_okfe_euu_bdsnUGKvv6RvdXZ3gHAjvTjK5XpIfY2G5MMLUdEZEbXvBL8zYTPJyKPlRMxPnljobAUKYiTmVEFEv4h1ztU8-WJI8Hv-REdhI8Lo6zuIOwaHZWQ66sHAiBwc48USGCvsMu5gEoymWMAmnHHk3KI6No7hImV0T4IvGiyAa2T506nDLPhHcFHr_RK5NMv7mL9MMXvsVV5k2g6Eqr2dH45GFK07nk-5Lb7R0iFGLq-oVvoA8n1YbAgJmW47XRASAQIAqSxPQgUp0sx8loR6wap8SOXMJvmm-oQHiovrw3qoFip2H89naqNCxdhsjTX7mJ-9hhxFiilhiDXAnsjIhI8KghTjNDaxHeZVdmOT8wMbqAZ9vytcvSFkYSupfqf8701WRLn2REwtSPbo6UNz9O6U3mE6pgesoB2bBQUEHshCkSsXgJZSJRzm6ium-I3JZR8QY3wRzVcm_uyhJporA4w27VNMwp2XVZYS7Wnk91N2gWKadrOQ_Tu7fHzINJkqWlZpPKyQ-X5Vp1gNxeFomGDdj-oQ2Po86oeo',
+  User_id: '8is7sbk8f67hnfk7fysrfb',
+  Code: 200,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Yosodipuro',
+    idkaryawan: '343434',
+    no_hp: '089384934',
+    email_2: 'nicdanyos@gmail.com'
+  },
+  Code: 200,
+  user_id: '8is7sbk8f67hnfk7fysrfb',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1072,
+    messageTime: 969,
+    messageSize: 1415,
+    response: '250 2.0.0 OK  1592301609 l195sm6670299pfd.18 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<b3b1af83-6531-6f9e-490b-9b965a091a7b@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ6c293OGYzb2lqaW5xNXA1MGJndjJmIiwiaWF0IjoxNTkyMzAxNjg1LCJleHAiOjE1OTIzODgwODV9.ivxupPEtMf_ltDZiqYq2XxVAJ8UObBaTnNXlzmyAO_2xyGiYP4QE85JQuHIfgXUM54Y8vdEMF5P7hHzslq8j9b970yRst7CU2KiyexfaXxFTbKFb4OKrQmlFiXduMehEX6TObOiPiMhTZmFPGiqgHEGS1rQkeRhI4x5Nksi5jDlzDiD9wgZSa4IOUpUNpXCXQnAaQclSoyjC57X2HDT4rWNvh83WbouUMEzUqJBd0olrgETBFB7O_L0FRu4Jv3wHHqO8IwrT_6v73hlucItvseSbMwNkno6_UC9NbPb3DYAZaQILKLx96gByFMSVdFTq09IWk-VNErMs4qagMfAaWnQDSRA-7Wz4sY-I3nbRvTNWn43ttTUeSsA0O8L2CS75LjOX9BcUVT4VPVAECcyVaHPay2xJ_VIzbsO8fHFQRBbB1vPwtkDmrC-RwUQenv20EdTABuCFaW50YcO8V00-hVQDr4tY1ms9vMmf1mDo7tyyrY6vPYrqP9SaCRTMcpXtLsGpLilnpRESa4J2TiwocTvtwhXUmId1DzARj8uIHyfiRmt9G3c20ggHf8i7WN5vp75mzHrbAbsPUeNcYipIIGceFTI_3dKaK2ve6WQ-JwnK82rTXUVkljde9h5LL8G7X4e-8Ptn2HZLHnGDqZjPzHARxQh6q2j6mTHryeWfECQ',
+  User_id: 'zsow8f3oijinq5p50bgv2f',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'James', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'zsow8f3oijinq5p50bgv2f',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'James', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'zsow8f3oijinq5p50bgv2f',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ6c293OGYzb2lqaW5xNXA1MGJndjJmIiwiaWF0IjoxNTkyMzAxNzkyLCJleHAiOjE1OTIzODgxOTJ9.ddLffKz5a_tYW_OTxiwzRQfn8VIOcm3rVtPDOIss-XGJT7lmhkngXSvgtU-thoswtMMoGcQgLsZDMx_R2c8gADkp5SfrWRKm9WeLiXlk4s_A5reIzQeGo9y3TSDTY-yEHQuZF7oWNCrr9hNaZ4pxOhfZ60QKY0mlioRrPZ70-_J9I5qVjVpbXeUbbBPMm2DyZljarl2dPWxV-crLJQDhZ-PMTmUSaygHEOOQ_qrv_S4GU4hOewQfk9NlAKET7Hd04HkVmw9GCSC589KChcKtu4erGcyd1ViUW4QfDuHyjZkHwvyL9gb9hfnUOuWyKzEF20q6rnXnFDK0QYe_WClIwNG_yAbM5MOu0ssbEgChfTI7mgRqdZF-_U6qY1qXHUhAPaGcS-QzpNgJhsaRvVJmo7iALnd2JzYN5ebdxzzEJyrgpIOFeSOCQE7kwZ3PXw10XzKeyn4aOHaVJDIPaYs98eORE_LJlpO4Ws7r0WNnHeZjbtdhn1PXZvhJhGshqDRIyGbj0Sc072-WK9O2XwAWQsVab-V-SSkXhrpX-bfddz7Ev3JEtR43_De5xqf9tLRaDGNpMMUJF2Pn87EpBtWqWBr9dBT1AiFjqH2fLed7Hoz-dkCv5noa_X4JLgqJY7t08w4h30tWG8hWpzufhtW_WVhv1zVZQgEgyqY2ONiIzuo',
+  User_id: 'zsow8f3oijinq5p50bgv2f',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'James', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'zsow8f3oijinq5p50bgv2f',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '4545454',
+    no_hp: '08948545',
+    email_2: 'tesca@gmail.com'
+  },
+  Code: 200,
+  user_id: 'zsow8f3oijinq5p50bgv2f',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '4545454',
+    no_hp: '08948545',
+    email_2: 'tesca@gmail.com'
+  },
+  Code: 200,
+  user_id: 'zsow8f3oijinq5p50bgv2f',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 687,
+    messageTime: 1026,
+    messageSize: 1415,
+    response: '250 2.0.0 OK  1592302123 o1sm2134445pja.49 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<4877434f-4bb4-5b40-5184-f8e1b2331252@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ6bmJxdDNnam1hc2VocXd3NTl4a3hxIiwiaWF0IjoxNTkyMzAyMTU1LCJleHAiOjE1OTIzODg1NTV9.YSLuzBgezD9yYDSKRaEg_SjH_NYGesXrAkiU0YVX1o6KRHXVMkNwLxZp6TNhSnwv59aBwgqWNU7tMbnboaH-bTo29tOGx6aYL1JymrJiLAFLtNgCwwqeVYt0HcHBJggp93IiMmLetG3qwHNg7yp0FIoX_35fvjox5B-4RIeH3SSOCu-uqBzCrx3pLyhUwm7gOnnNVbVeZ3lnt92jtNhTRtpriqrkcUaEUepamkPMKtmwCUYOoTugGzeSq_G62BJ7_e_vEYZUbrB_bQtEvpPSnFJEguFRhhXRZrhwTrL2g5sFZaQSR04N5eocY6YOo5cUuaNjcccdNvjARc9O2W0uA5lD-HeUqsL0AG10xp6PDdTTGfw6g16sagnTV421aW4l8BuvjpXB1KJnGXyewTwTN-rYUsFWF_bYncwUr2EKmpnfwEPw-L5PJF8r5Dpv5hmObqC4LGjmedmGAgyFYhhB1PBwB_1w0cqOuf3-tC-NBK_Pg3Gf6f-Ot_qmbMporA4Pvbp54giEuIivucghnnmC54WakkAEZO1t5-qOT4VtYkCmkSQgFWmuHJmsJbNGhpWfLKuwIjQuhDtwSMzw6W1X7xwpOzteONPHkEP6N_4dkl8bgWOYRo0DZmEbNB6-sya-h0QLvDz7nGrPK2tb9Dzu58KJ8BH3yK3RVdYfN9sHAMg',
+  User_id: 'znbqt3gjmasehqww59xkxq',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'James', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'znbqt3gjmasehqww59xkxq',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 701,
+    messageTime: 980,
+    messageSize: 1413,
+    response: '250 2.0.0 OK  1592302286 nl8sm2218838pjb.13 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<e8dda89c-5b01-27e2-e971-139825b2e83e@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJnNnZja3g0OGhncmNkcjJ0dDd1a2wiLCJpYXQiOjE1OTIzMDIzMTksImV4cCI6MTU5MjM4ODcxOX0.I_fs0ku4_-7YO8WygFWezD_NwmKi_oVxiOue0dNX38Lspy736w7Yuf5MaQ9sSmCZ7HdV65Rel-85H8ukhI9p9oEQ25BAFnuO6po1VdKvDocVRCkSucO_Z1hJJkRs9ykDwKAiJZD3ju4md_CO2f4Fh1FBIuZ2-AORTwTuoO40vgbLlmclTC2ssImRYKknmBt8VFCqNBiuFqGfyjYUif0xar3gRQky2TVVplRUXTFsXmq6fD1fGINr6zV2wkGrrmKD14CQNCzK4Pg9E-3axN0OwEo5qCuwbeOsl0mqAgZWBJeTPUsFdWd6Z-sITjIiUz9ULBr2b10VTuhPj3UQA6s_PryZZpr5Lmn_koWdXmtbS6CxNQt5pPrsEmFS54yNmGrIzUe0jrE4GEc6qwE1kojIApgdG0xjhtXZIKg2FEjwCpwjKYDoUIV5kacTfn-SE2gQvpbfE9VNK6ZvJ0Awro5tXNYXoQRKIZK5U7L_mzk2MbNbdBKpMPnSbpOLM96LJgY3U-bvznzXCGQCaANkVm7NY4tmC7DUQ68Z7h81ShoiXMIgsxaYE9Wf9GO_qhWeIhKwHsmBpi8ZG1JGUYx4D8epXkDRmvOsBNKb1AgdMBSQW-MWPavZ0GWgE8SoNwdTFAJRDC-mTR8NOgJMV04AYQ6FsEybjVgJkknAwwXlBzTUnHc',
+  User_id: 'g6vckx48hgrcdr2tt7ukl',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'James', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 397169893,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 829,
+    messageTime: 736,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592302472 a83sm16258196pfa.146 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<8bdf87ab-5639-04a4-c7bf-4544e3a3ce0d@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 397169893,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 397169893,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJnNnZja3g0OGhncmNkcjJ0dDd1a2wiLCJpYXQiOjE1OTIzMDI1OTQsImV4cCI6MTU5MjM4ODk5NH0.rWPmQxPp8O0xhTupwoIbaCSFqiqZgQjclkGireCo_Axw17h6ujxThvN2j8SLZJYYjb_TR2Fgw1N_uP9yDdZr9beq2mY6CsWwUSE3cWZxTs6OOQBbpt4S5iXWPpOJOGdYXwd0fsbgkIRXYhNvC2DX2hozZcWpaNTbi2xBM5Tk_AMYX-sZxE2APP0h2Xui1_DaY6oo1Iu3MiMU6ORz6E89maOYC8yfmixUBFh7LwwrSVVk8F2VczCJoeVeJzXovTiSpPoL73iGU6uet6QMCqwJSRmHaD2fyh5EQf7zNHll6SGo2GRz4czmWl33ngJFkYz2-PWEzOEwMYTp0xb5Cg46fNMHm7ev_JTSdB3oC0ne1nhSIK9hTNv-4-6X57SWv_9QMBRC4Fzw5fS2uUcjJ4em4Sxvtzrq6_wBpUgcOUWV-xR_oAPw1g7FmANNRUzOA_c1wyL-S3yhBzRtrAlwZDQAZlci9IgxEVFyHD_JjjlvhGvGT8KW71QvhuDy9kVJiVdNCaBhUt34fo994zO9joYle7VIt1yTQXdDudKvh-Ozchh3fpRBbktYqvHp6DgYbk7bpZD_NK6iZvAI5otn_TK0P8hxPLTHUOYxYCViESDJo6Kw8IT_7vc2kJeo0MtN9jojQskGmGdWM4gWPz8BoOAKWx2fkA6h-Y2Xv96hSYVmLTM',
+  User_id: 'g6vckx48hgrcdr2tt7ukl',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'James', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'James', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '334223',
+    no_hp: '087343434',
+    email_2: 'tesd@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '334223',
+    no_hp: '087343434',
+    email_2: 'tesd@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'James S',
+    idkaryawan: '334223',
+    no_hp: '087343434',
+    email_2: 'tesd@gmail.com'
+  },
+  Code: 200,
+  user_id: 'g6vckx48hgrcdr2tt7ukl',
+  action: 'standardLog',
+  Action: 'standardLog'
+}

@@ -2,6 +2,7 @@ import * as accountHandler from "./account"
 import * as accountRedisInterface from "../redisInterface/account"
 import { IResponse } from "../interface/interfaceCollection";
 import * as accountDBInterface from "../dbInterface/account"
+import * as profileDBInterface from "../dbInterface/profile"
 require('dotenv').config();
 const amqp = require('amqplib')
 const perf = require('execution-time')();
@@ -128,6 +129,15 @@ async function actionSelector(requestData : any) : Promise<IResponse>  {
       else {
         processingResult.Code = 500
       }
+    }
+    else {
+      processingResult.Code = 500
+    }
+  }
+  else if (requestData.action == 'updateProfile'){
+    processingResult = await profileDBInterface.updateProfile(requestData.user_id, requestData.nama_lengkap, requestData.idkaryawan, requestData.no_hp, requestData.email_2)
+    if (processingResult.Status == 'Success'){
+      processingResult.Code = 200
     }
     else {
       processingResult.Code = 500

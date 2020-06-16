@@ -3,7 +3,8 @@ import bodyParser from "body-parser"
 import cors from "cors"
 import {IResponse} from "./interface/interfaceCollection"
 import {serverError} from "./errorHandler/server"
-import { registerUser,changeVerificationStatus,login,requestChangePassword, changePassword } from "./handler/account"
+import { registerUser,changeVerificationStatus,login,requestChangePassword, changePassword, verifyRequest } from "./handler/account"
+import { updateProfile, getProfile } from "./handler/profile"
 const perf = require('execution-time')();
 
 
@@ -89,6 +90,48 @@ app.put('/api/v1/account/changePassword', async(req:any, res: any) => {
     try {
         perf.start();
         const requestResult : IResponse = await changePassword(req.body.email, req.body.tempcode, req.body.password)
+        res.status(requestResult.Code)
+        res.json(requestResult)
+    }
+    catch (e) {
+        const errorResult : IResponse = await serverError(e)
+        res.status(errorResult.Code)
+        res.json(errorResult)
+    }
+    finally {
+        const result : any = perf.stop()
+        console.log('Server to client API exec time:',result.time) 
+    }
+})
+
+app.put('/api/v1/profile/updateProfile/:user_id', async(req:any, res:any) => {
+    try {
+        perf.start();
+        let requestResult : IResponse = await verifyRequest(req)
+        if (requestResult.Status == 'Success'){
+            requestResult  = await updateProfile(req.params.user_id, req.body.nama_lengkap, req.body.idkaryawan, req.body.no_hp, req.body.email_2)
+        }
+        res.status(requestResult.Code)
+        res.json(requestResult)
+    }
+    catch (e) {
+        const errorResult : IResponse = await serverError(e)
+        res.status(errorResult.Code)
+        res.json(errorResult)
+    }
+    finally {
+        const result : any = perf.stop()
+        console.log('Server to client API exec time:',result.time) 
+    }
+})
+
+app.get('/api/v1/profile/getProfile/:user_id', async(req:any, res:any) => {
+    try {
+        perf.start();
+        let requestResult : IResponse = await verifyRequest(req)
+        if (requestResult.Status == 'Success'){
+            requestResult  = await getProfile(req.params.user_id)
+        }
         res.status(requestResult.Code)
         res.json(requestResult)
     }

@@ -10,6 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const accountHandler = __importStar(require("./account"));
 const accountRedisInterface = __importStar(require("../redisInterface/account"));
 const accountDBInterface = __importStar(require("../dbInterface/account"));
+const profileDBInterface = __importStar(require("../dbInterface/profile"));
 require('dotenv').config();
 const amqp = require('amqplib');
 const perf = require('execution-time')();
@@ -122,6 +123,15 @@ async function actionSelector(requestData) {
             else {
                 processingResult.Code = 500;
             }
+        }
+        else {
+            processingResult.Code = 500;
+        }
+    }
+    else if (requestData.action == 'updateProfile') {
+        processingResult = await profileDBInterface.updateProfile(requestData.user_id, requestData.nama_lengkap, requestData.idkaryawan, requestData.no_hp, requestData.email_2);
+        if (processingResult.Status == 'Success') {
+            processingResult.Code = 200;
         }
         else {
             processingResult.Code = 500;
