@@ -102,11 +102,11 @@ async function actionSelector(requestData : any) : Promise<IResponse>  {
     processingResult.Action = requestData.action
   }
   else if (requestData.action == 'insertTempCode'){
-   processingResult = await accountDBInterface.updateTempCode(requestData.username,requestData.tempcode)
+   processingResult = await accountDBInterface.updateTempCode(requestData.email,requestData.tempcode)
    processingResult.Code = 200 
   }
   else if (requestData.action == 'deleteTempCode'){
-    processingResult = await accountDBInterface.deleteTempCode(requestData.username)
+    processingResult = await accountDBInterface.deleteTempCode(requestData.email)
     processingResult.Code = 200
   }
   else if (requestData.action == 'requestChangePassword'){
@@ -119,9 +119,9 @@ async function actionSelector(requestData : any) : Promise<IResponse>  {
     }
   }
   else if (requestData.action == 'changePassword'){
-    processingResult = await accountDBInterface.updatePassword(requestData.username, requestData.password)
+    processingResult = await accountDBInterface.updatePassword(requestData.email, requestData.password)
     if (processingResult.Status == 'Success') {
-      processingResult = await accountDBInterface.deleteTempCode(requestData.username)
+      processingResult = await accountDBInterface.deleteTempCode(requestData.email)
       if (processingResult.Status == 'Success'){
         processingResult.Code = 200
       }

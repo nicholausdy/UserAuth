@@ -169,11 +169,11 @@ async function updateVerificationField(user_id, isverified) {
     }
 }
 exports.updateVerificationField = updateVerificationField;
-async function updateTempCode(username, tempcode) {
+async function updateTempCode(user_id, tempcode) {
     let resp = { Status: '', Message: '' };
     const redisClient = new ioredis_1.default();
     try {
-        const key = "account:".concat(username);
+        const key = "account:".concat(user_id);
         const updateResult = await redisClient.hset(key, "tempcode", tempcode.toString());
         resp.Status = 'Success';
         resp.Message = updateResult;
@@ -189,11 +189,11 @@ async function updateTempCode(username, tempcode) {
     }
 }
 exports.updateTempCode = updateTempCode;
-async function updatePassword(username, password) {
+async function updatePassword(user_id, password) {
     let resp = { Status: '', Message: '' };
     const redisClient = new ioredis_1.default();
     try {
-        const key = "account:".concat(username);
+        const key = "account:".concat(user_id);
         const updateResult = await redisClient.hset(key, "password", password);
         resp.Status = 'Success';
         resp.Message = updateResult;

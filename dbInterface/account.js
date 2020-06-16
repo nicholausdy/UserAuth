@@ -104,11 +104,11 @@ async function readProfile(user_id) {
 }
 exports.readProfile = readProfile;
 //updatePassword
-async function updatePassword(username, password) {
+async function updatePassword(email, password) {
     let resp = { Status: '', Message: '' };
     try {
-        const text = 'UPDATE account SET password=$2 WHERE username=$1';
-        const values = [username, password];
+        const text = 'UPDATE account SET password=$2 WHERE email=$1';
+        const values = [email, password];
         const query_result = await dbConfig_1.db.query(text, values);
         if (query_result.rowCount != 0) {
             resp.Status = 'Success';
@@ -156,11 +156,11 @@ async function updateVerification(username, isverified) {
 }
 exports.updateVerification = updateVerification;
 //updateTempCode
-async function updateTempCode(username, tempcode) {
+async function updateTempCode(email, tempcode) {
     let resp = { Status: '', Message: '' };
     try {
-        const text = 'UPDATE account SET tempcode=$2 WHERE username=$1';
-        const values = [username, tempcode];
+        const text = 'UPDATE account SET tempcode=$2 WHERE email=$1';
+        const values = [email, tempcode];
         const query_result = await dbConfig_1.db.query(text, values);
         if (query_result.rowCount != 0) {
             resp.Status = 'Success';
@@ -182,11 +182,11 @@ async function updateTempCode(username, tempcode) {
 }
 exports.updateTempCode = updateTempCode;
 //deleteTempCode
-async function deleteTempCode(username) {
+async function deleteTempCode(email) {
     let resp = { Status: '', Message: '' };
     try {
-        const text = 'UPDATE account SET tempcode=0 WHERE username=$1';
-        const values = [username];
+        const text = 'UPDATE account SET tempcode=0 WHERE email=$1';
+        const values = [email];
         const query_result = await dbConfig_1.db.query(text, values);
         if (query_result.rowCount != 0) {
             resp.Status = 'Success';
@@ -207,11 +207,11 @@ async function deleteTempCode(username) {
     }
 }
 exports.deleteTempCode = deleteTempCode;
-async function deleteAccount(username) {
+async function deleteAccount(user_id) {
     let resp = { Status: '', Message: '' };
     try {
-        const text = 'DELETE FROM account WHERE username=$1';
-        const values = [username];
+        const text = 'DELETE FROM account WHERE user_id=$1';
+        const values = [user_id];
         const query_result = await dbConfig_1.db.query(text, values);
         if (query_result.rowCount != 0) {
             resp.Status = 'Success';
@@ -233,11 +233,11 @@ async function deleteAccount(username) {
 }
 exports.deleteAccount = deleteAccount;
 //getTempCode
-async function getTempCode(username) {
+async function getTempCode(user_id) {
     let resp = { Status: '', Message: '' };
     try {
-        const text = 'SELECT tempcode FROM account WHERE username=$1';
-        const values = [username];
+        const text = 'SELECT tempcode FROM account WHERE user_id=$1';
+        const values = [user_id];
         const query_result = await dbConfig_1.db.query(text, values);
         if (typeof query_result.rows[0] === 'undefined') {
             resp.Status = 'Failed';

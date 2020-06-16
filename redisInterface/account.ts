@@ -166,11 +166,11 @@ export async function updateVerificationField(user_id:string, isverified:boolean
     }
 }
 
-export async function updateTempCode(username:string, tempcode:number) : Promise<IResponse> {
+export async function updateTempCode(user_id:string, tempcode:number) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
     const redisClient : any = new Redis()
     try {
-        const key : string = "account:".concat(username)
+        const key : string = "account:".concat(user_id)
         const updateResult : any = await redisClient.hset(key,"tempcode",tempcode.toString())
         resp.Status = 'Success'
         resp.Message = updateResult
@@ -186,11 +186,11 @@ export async function updateTempCode(username:string, tempcode:number) : Promise
     }
 }
 
-export async function updatePassword(username:string, password:string) : Promise<IResponse> {
+export async function updatePassword(user_id:string, password:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
     const redisClient : any = new Redis()
     try {
-        const key : string = "account:".concat(username)
+        const key : string = "account:".concat(user_id)
         const updateResult : any = await redisClient.hset(key,"password",password)
         resp.Status = 'Success'
         resp.Message = updateResult

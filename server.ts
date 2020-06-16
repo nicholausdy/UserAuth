@@ -67,10 +67,10 @@ app.post('/api/v1/account/login', async(req:any, res:any) => {
     }
 })
 
-app.get('/api/v1/account/requestPasswordChange/:username', async(req:any, res:any)=> {
+app.post('/api/v1/account/requestPasswordChange', async(req:any, res:any)=> {
     try {
         perf.start();
-        const requestResult : IResponse = await requestChangePassword(req.params.username)
+        const requestResult : IResponse = await requestChangePassword(req.body.email)
         res.status(requestResult.Code)
         res.json(requestResult)
     }
@@ -85,10 +85,10 @@ app.get('/api/v1/account/requestPasswordChange/:username', async(req:any, res:an
     }
 })
 
-app.post('/api/v1/account/changePassword/:username', async(req:any, res: any) => {
+app.put('/api/v1/account/changePassword', async(req:any, res: any) => {
     try {
         perf.start();
-        const requestResult : IResponse = await changePassword(req.params.username, req.body.tempcode, req.body.password)
+        const requestResult : IResponse = await changePassword(req.body.email, req.body.tempcode, req.body.password)
         res.status(requestResult.Code)
         res.json(requestResult)
     }

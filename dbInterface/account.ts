@@ -104,11 +104,11 @@ export async function readProfile(user_id:string) : Promise<IResponse> {
     }
 }
 //updatePassword
-export async function updatePassword(username: string, password: string) : Promise<IResponse> {
+export async function updatePassword(email: string, password: string) : Promise<IResponse> {
     let resp : IResponse = {Status:'', Message:''}
     try {
-        const text: string = 'UPDATE account SET password=$2 WHERE username=$1'
-        const values: any = [username,password]
+        const text: string = 'UPDATE account SET password=$2 WHERE email=$1'
+        const values: any = [email,password]
         const query_result: any = await db.query(text,values)
         if (query_result.rowCount != 0){
             resp.Status = 'Success'
@@ -155,11 +155,11 @@ export async function updateVerification(username:string, isverified: boolean) :
 }
 
 //updateTempCode
-export async function updateTempCode(username:string, tempcode:number) : Promise<IResponse> {
+export async function updateTempCode(email:string, tempcode:number) : Promise<IResponse> {
     let resp : IResponse = {Status:'', Message:''}
     try {
-        const text:string = 'UPDATE account SET tempcode=$2 WHERE username=$1'
-        const values:any = [username,tempcode]
+        const text:string = 'UPDATE account SET tempcode=$2 WHERE email=$1'
+        const values:any = [email,tempcode]
         const query_result = await db.query(text,values)
         if (query_result.rowCount != 0) {
             resp.Status = 'Success'
@@ -182,11 +182,11 @@ export async function updateTempCode(username:string, tempcode:number) : Promise
 }
 
 //deleteTempCode
-export async function deleteTempCode(username:string) : Promise<IResponse> {
+export async function deleteTempCode(email:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'', Message:''}
     try {
-        const text:string = 'UPDATE account SET tempcode=0 WHERE username=$1'
-        const values:any = [username]
+        const text:string = 'UPDATE account SET tempcode=0 WHERE email=$1'
+        const values:any = [email]
         const query_result = await db.query(text,values)
         if (query_result.rowCount != 0) {
             resp.Status = 'Success'
@@ -207,11 +207,11 @@ export async function deleteTempCode(username:string) : Promise<IResponse> {
     }
 }
 
-export async function deleteAccount(username:string) : Promise<IResponse> {
+export async function deleteAccount(user_id:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'', Message:''}
     try {
-        const text:string = 'DELETE FROM account WHERE username=$1'
-        const values:any = [username]
+        const text:string = 'DELETE FROM account WHERE user_id=$1'
+        const values:any = [user_id]
         const query_result = await db.query(text,values)
         if (query_result.rowCount != 0) {
             resp.Status = 'Success'
@@ -232,11 +232,11 @@ export async function deleteAccount(username:string) : Promise<IResponse> {
     }
 }
 //getTempCode
-export async function getTempCode(username:string) : Promise<IResponse> {
+export async function getTempCode(user_id:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'', Message:''}
     try {
-        const text:string = 'SELECT tempcode FROM account WHERE username=$1'
-        const values:any = [username]
+        const text:string = 'SELECT tempcode FROM account WHERE user_id=$1'
+        const values:any = [user_id]
         const query_result = await db.query(text,values)
         if (typeof query_result.rows[0] === 'undefined'){
             resp.Status = 'Failed'

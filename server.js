@@ -65,10 +65,10 @@ app.post('/api/v1/account/login', async (req, res) => {
         console.log('Server to client API exec time:', result.time);
     }
 });
-app.get('/api/v1/account/requestPasswordChange/:username', async (req, res) => {
+app.post('/api/v1/account/requestPasswordChange', async (req, res) => {
     try {
         perf.start();
-        const requestResult = await account_1.requestChangePassword(req.params.username);
+        const requestResult = await account_1.requestChangePassword(req.body.email);
         res.status(requestResult.Code);
         res.json(requestResult);
     }
@@ -82,10 +82,10 @@ app.get('/api/v1/account/requestPasswordChange/:username', async (req, res) => {
         console.log('Server to client API exec time:', result.time);
     }
 });
-app.post('/api/v1/account/changePassword/:username', async (req, res) => {
+app.put('/api/v1/account/changePassword', async (req, res) => {
     try {
         perf.start();
-        const requestResult = await account_1.changePassword(req.params.username, req.body.tempcode, req.body.password);
+        const requestResult = await account_1.changePassword(req.body.email, req.body.tempcode, req.body.password);
         res.status(requestResult.Code);
         res.json(requestResult);
     }

@@ -404,7 +404,7 @@ export async function verifyRequest(req:any) : Promise<IResponse>{
         if (token){
             const verifyResult : IResponse = await verifyJWT(token) 
             if (verifyResult.Status == 'Success'){
-                if (verifyResult.Message.username != req.params.username) {
+                if (verifyResult.Message.user_id != req.params.user_id) {
                     resp.Status = 'Failed'
                     resp.Code = 403
                     resp.Message = 'User '.concat(req.params.username,' attempted to access resources owned by other user')
@@ -454,33 +454,34 @@ export async function createTempCode(): Promise<IResponse> {
     }
 }
 
-async function insertTempCode(username:string) : Promise<IResponse> {
+async function insertTempCode(email:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
     let req : any
     const tempcode_result : IResponse = await createTempCode()
     const tempcode : number = tempcode_result.Message
-    const fetchFromRedis : IResponse = await accountRedisInterface.getAccount(username)
-    if (fetchFromRedis.Status == 'Failed'){
-        const fetchFromDB : IResponse = await accountDBInterface.readAccount(username)
+    const fetchUserIDFromRedis : IResponse = await accountRedisInterface.getUserID(email)
+    if (fetchUserIDFromRedis.Status == 'Failed'){
+        const fetchFromDB : IResponse = await accountDBInterface.readAccountByEmail(email)
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB
             req = resp
-            req.username = username
+            req.email = email
             req.action = 'logError' 
         }
         else {
-            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.username, fetchFromDB.Message.password, fetchFromDB.Message.email, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, fetchFromDB.Message.nama_lengkap)
+            const getNamaLengkap : IResponse = await accountDBInterface.readProfile(fetchFromDB.Message.user_id)
+            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap)
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis
                 req = resp
-                req.username = username
+                req.email = email
                 req.action = 'logError'
             } 
             else {
-                const tempcode_insert_result : IResponse = await accountRedisInterface.updateTempCode(username,tempcode)
+                const tempcode_insert_result : IResponse = await accountRedisInterface.updateTempCode(fetchFromDB.Message.user_id,tempcode) 
                 resp = tempcode_insert_result
                 req = resp
-                req.username = username
+                req.email = email
                 if (tempcode_insert_result.Status == 'Failed'){
                     req.action = 'logError'
                 }
@@ -492,9 +493,9 @@ async function insertTempCode(username:string) : Promise<IResponse> {
         }
     }
     else {
-        resp = await accountRedisInterface.updateTempCode(username,tempcode)
+        resp = await accountRedisInterface.updateTempCode(fetchUserIDFromRedis.Message.user_id,tempcode)
         req = resp
-        req.username = username
+        req.email = email
         if (resp.Status == 'Failed'){
             req.action = 'logError'
         }
@@ -507,32 +508,33 @@ async function insertTempCode(username:string) : Promise<IResponse> {
     return resp
 }
 
-async function getTempCode(username:string) : Promise<IResponse> {
+async function getTempCode(email:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
     let req : any
-    const fetchFromRedis : IResponse = await accountRedisInterface.getAccount(username)
-    if (fetchFromRedis.Status == 'Failed'){
-        const fetchFromDB : IResponse = await accountDBInterface.readAccount(username)
+    const fetchUserIDFromRedis : IResponse = await accountRedisInterface.getUserID(email)
+    if (fetchUserIDFromRedis.Status == 'Failed'){
+        const fetchFromDB : IResponse = await accountDBInterface.readAccountByEmail(email)
         if (fetchFromDB.Status == 'Failed'){
             resp = fetchFromDB
             req = resp
-            req.username = username
+            req.email = email
             req.action = 'logError'
         }
         else {
-            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.username, fetchFromDB.Message.password, fetchFromDB.Message.email, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, fetchFromDB.Message.nama_lengkap)
+            const getNamaLengkap : IResponse = await accountDBInterface.readProfile(fetchFromDB.Message.user_id)
+            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap)
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis
                 req = resp
-                req.username = username
+                req.email = email
                 req.action = 'logError'
             } 
             else {
-                const tempcode_query_result : IResponse = await accountRedisInterface.getAccount(username)
+                const tempcode_query_result : IResponse = await accountRedisInterface.getAccount(fetchFromDB.Message.user_id)
                 if (tempcode_query_result.Status == 'Failed'){
                     resp = tempcode_query_result
                     req = resp
-                    req.username = username
+                    req.email = email
                     req.action = 'logError'
                 }
                 else {
@@ -540,7 +542,7 @@ async function getTempCode(username:string) : Promise<IResponse> {
                     resp.Status = 'Success'
                     resp.Message = tempcode
                     req = resp
-                    req.username = username
+                    req.email = email
                     req.action = 'standardLog'
                 }
 
@@ -548,21 +550,23 @@ async function getTempCode(username:string) : Promise<IResponse> {
         }
     }
     else {
+        const fetchTempcodeFromRedis : IResponse = await accountRedisInterface.getAccount(fetchUserIDFromRedis.Message.user_id)
         resp.Status = 'Success'
-        resp.Message = fetchFromRedis.Message.tempcode
+        resp.Message = fetchTempcodeFromRedis.Message.tempcode
         req = resp
-        req.username = username
+        req.email = email
         req.action = 'standardLog' 
     }
     const sendToQueue = await requestHandler(req)
     return resp
 }
-async function removeTempCode(username:string) : Promise<IResponse> {
+async function removeTempCode(email:string) : Promise<IResponse> {
     let resp: IResponse = {Status:'', Message:''}
     let req:any
-    resp = await accountRedisInterface.updateTempCode(username,0)
+    const fetchUserIDFromRedis : IResponse = await accountRedisInterface.getUserID(email)
+    resp = await accountRedisInterface.updateTempCode(fetchUserIDFromRedis.Message.user_id,0)
     req = resp
-    req.username = username
+    req.email = email
     if (resp.Status == 'Failed'){
         req.action = 'logError'
     }
@@ -588,7 +592,7 @@ export async function mailerForChangingPassword(email:string, tempcode:number) :
         const mailOptions:any = {
             from: process.env.EMAIL_USER,
             to: email,
-            subject: 'Change Your Digitrans Questionnaire Platform Account Password',
+            subject: 'Change Your Account Password',
             text: 'Enter this passcode on our web to continue changing your password: '.concat(tempcode.toString())
         };
 
@@ -606,13 +610,14 @@ export async function mailerForChangingPassword(email:string, tempcode:number) :
 }
 
 //get token to change password handler
-export async function requestChangePassword(username:string) : Promise<IResponse> {
+export async function requestChangePassword(email:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
-    const tempcode_insert_result : IResponse = await insertTempCode(username)
+    const tempcode_insert_result : IResponse = await insertTempCode(email)
     let req : any
     if (tempcode_insert_result.Status == 'Success'){
-        const tempcode_query_result : IResponse = await getTempCode(username)
-        const account_information : IResponse = await accountRedisInterface.getAccount(username)
+        const tempcode_query_result : IResponse = await getTempCode(email)
+        const getUserIDFromRedis : IResponse = await accountRedisInterface.getUserID(email)
+        const account_information : IResponse = await accountRedisInterface.getAccount(getUserIDFromRedis.Message.user_id)
         // get tempcode failed
         if (tempcode_query_result.Status == 'Failed'){
             resp = tempcode_query_result
@@ -620,15 +625,14 @@ export async function requestChangePassword(username:string) : Promise<IResponse
         }
         else {
             const tempcode : number = tempcode_query_result.Message
-            const email : string = account_information.Message.email
             // account has not been verified
             if (!(account_information.Message.isverified)){
-                const deleteResult : IResponse = await removeTempCode(username)
+                const deleteResult : IResponse = await removeTempCode(email)
                 resp.Status = 'Failed'
                 resp.Message = 'Account has not been verified. '.concat(deleteResult.Message)
                 resp.Code = 500
                 req = resp
-                req.username = username
+                req.email = email
                 req.action = 'logError'
                 const sendToQueue = await requestHandler(req)
             }
@@ -637,7 +641,6 @@ export async function requestChangePassword(username:string) : Promise<IResponse
                 resp.Message = 'Please wait for email to change password'
                 resp.Code = 200
                 req = resp
-                req.username = username
                 req.email = email
                 req.tempcode = tempcode
                 req.action = 'requestChangePassword'
@@ -650,7 +653,7 @@ export async function requestChangePassword(username:string) : Promise<IResponse
         resp = tempcode_insert_result
         resp.Code = 500
         req = resp
-        req.username = username
+        req.email = email
         req.action = 'logError'
         const sendToQueue = await requestHandler(req)
     }
@@ -658,37 +661,38 @@ export async function requestChangePassword(username:string) : Promise<IResponse
 }
 
 //change password handler using generated token
-export async function changePassword (username: string, tempcode:number, newpassword: string) : Promise<IResponse> {
+export async function changePassword (email: string, tempcode:number, newpassword: string) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
     let req : any
-    const fetchFromRedis : IResponse = await accountRedisInterface.getAccount(username)
-    if (fetchFromRedis.Status == 'Failed'){
-        const fetchFromDB : IResponse = await accountDBInterface.readAccount(username)
+    const fetchUserIDFromRedis : IResponse = await accountRedisInterface.getUserID(email)
+    if (fetchUserIDFromRedis.Status == 'Failed'){
+        const fetchFromDB : IResponse = await accountDBInterface.readAccountByEmail(email)
         if (fetchFromDB.Status == 'Failed'){
             resp = fetchFromDB
             resp.Code = 404
             req = resp
-            req.username = username
+            req.email = email
             req.action = 'logError'
         }
         else {
-            const insertToRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.username, fetchFromDB.Message.password, fetchFromDB.Message.email, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, fetchFromDB.Message.nama_lengkap)
+            const getNamaLengkap : IResponse = await accountDBInterface.readProfile(fetchFromDB.Message.user_id)
+            const insertToRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap)
             if (insertToRedis.Status == 'Failed') {
                 resp = insertToRedis
                 resp.Code = 500
                 req = resp
-                req.username = username
+                req.email = email
                 req.action = 'logError'
             }
         }
     }
-    const tempcode_query_result = await getTempCode(username)
+    const tempcode_query_result = await getTempCode(email)
     // get tempcode failed
     if (tempcode_query_result.Status == 'Failed'){
         resp = tempcode_query_result
         resp.Code = 403
         req = resp
-        req.username = username
+        req.email = email
         req.action = 'logError'
 
     }
@@ -699,19 +703,18 @@ export async function changePassword (username: string, tempcode:number, newpass
             resp.Code = 403
             resp.Message = 'Wrong code. Unable to change password'
             req = resp
-            req.username = username
+            req.email = email
             req.action = 'logError'
         }
         else {
-            const hashedPasswordResult : string = await hashPassword(newpassword)
-            //hashing failed
-            const change_password_result : IResponse = await accountRedisInterface.updatePassword(username,hashedPasswordResult)
+            const [getUserIDResult, hashedPasswordResult] = await Promise.all([accountRedisInterface.getUserID(email), hashPassword(newpassword)])
+            const change_password_result : IResponse = await accountRedisInterface.updatePassword(getUserIDResult.Message.user_id,hashedPasswordResult)
             //update failed
             if (change_password_result.Status == 'Failed'){
                 resp = change_password_result
                 resp.Code = 500
                 req = resp
-                req.username = username
+                req.email = email
                 req.action = 'logError'
             }
             else {
@@ -719,10 +722,10 @@ export async function changePassword (username: string, tempcode:number, newpass
                 resp.Message = 'Password successfully changed'
                 resp.Code = 200
                 req = resp
-                req.username = username
+                req.email = email
                 req.password = hashedPasswordResult
                 req.action = 'changePassword'
-                    const deleteResult : any = await removeTempCode(username)
+                    const deleteResult : any = await removeTempCode(email)
             }
         }
     }
