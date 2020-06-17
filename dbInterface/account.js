@@ -3,12 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dbConfig_1 = require("./dbConfig");
 const database_1 = require("../errorHandler/database");
 const perf = require('execution-time')();
-async function registerAccount(user_id, email, password, isverified, tempcode, nama_lengkap) {
+async function registerAccount(user_id, email, password, isverified, tempcode, nama_lengkap, isloggedin) {
     perf.start();
     let resp = { Status: '', Message: '' };
     try {
-        const text1 = 'INSERT INTO account(user_id, email, password, isverified, tempcode) VALUES ($1,$2,$3,$4,$5)';
-        const values1 = [user_id, email, password, isverified, tempcode];
+        const text1 = 'INSERT INTO account(user_id, email, password, isverified, tempcode, isloggedin) VALUES ($1,$2,$3,$4,$5,$6)';
+        const values1 = [user_id, email, password, isverified, tempcode, isloggedin];
         const text2 = 'INSERT INTO profile(user_id, nama_lengkap) VALUES ($1,$2)';
         const values2 = [user_id, nama_lengkap];
         const insertResult1 = await dbConfig_1.db.query(text1, values1);
@@ -181,6 +181,31 @@ async function updateTempCode(email, tempcode) {
     }
 }
 exports.updateTempCode = updateTempCode;
+async function updateLoggedInStatus(user_id, isloggedin) {
+    let resp = { Status: '', Message: '' };
+    try {
+        const text = 'UPDATE account SET isloggedin=$2 WHERE user_id=$1';
+        const values = [user_id, isloggedin];
+        const query_result = await dbConfig_1.db.query(text, values);
+        if (query_result.rowCount != 0) {
+            resp.Status = 'Success';
+            resp.Message = 'Login status successfully updated';
+        }
+        else {
+            resp.Status = 'Failed';
+            resp.Message = 'Username not found';
+        }
+    }
+    catch (e) {
+        resp.Status = 'Failed';
+        resp.Message = await database_1.databaseError(e);
+        resp.Detail = e;
+    }
+    finally {
+        return resp;
+    }
+}
+exports.updateLoggedInStatus = updateLoggedInStatus;
 //deleteTempCode
 async function deleteTempCode(email) {
     let resp = { Status: '', Message: '' };

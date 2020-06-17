@@ -4,12 +4,12 @@ import { IResponse } from "../interface/interfaceCollection"
 const perf = require('execution-time')();
 
 
-export async function registerAccount(user_id : string, email : string, password : string, isverified : boolean, tempcode : number, nama_lengkap : string) : Promise<IResponse>{
+export async function registerAccount(user_id : string, email : string, password : string, isverified : boolean, tempcode : number, nama_lengkap : string, isloggedin : boolean) : Promise<IResponse>{
     perf.start();
     let resp : IResponse = {Status:'',Message:''}
     try {
-        const text1:string = 'INSERT INTO account(user_id, email, password, isverified, tempcode) VALUES ($1,$2,$3,$4,$5)'
-        const values1:any = [user_id, email, password, isverified, tempcode]
+        const text1:string = 'INSERT INTO account(user_id, email, password, isverified, tempcode, isloggedin) VALUES ($1,$2,$3,$4,$5,$6)'
+        const values1:any = [user_id, email, password, isverified, tempcode, isloggedin]
         const text2 : string = 'INSERT INTO profile(user_id, nama_lengkap) VALUES ($1,$2)'
         const values2:any = [user_id, nama_lengkap]
         const insertResult1 : any = await db.query(text1,values1)
@@ -164,6 +164,32 @@ export async function updateTempCode(email:string, tempcode:number) : Promise<IR
         if (query_result.rowCount != 0) {
             resp.Status = 'Success'
             resp.Message = 'Tempcode successfully generated'
+        }
+        else {
+            resp.Status = 'Failed'
+            resp.Message = 'Username not found'
+        }
+        
+    }
+    catch (e) {
+        resp.Status = 'Failed'
+        resp.Message = await databaseError(e)
+        resp.Detail = e
+    }
+    finally {
+        return resp
+    }
+}
+
+export async function updateLoggedInStatus(user_id:string, isloggedin:boolean) : Promise<IResponse> {
+    let resp : IResponse = {Status:'', Message:''}
+    try {
+        const text:string = 'UPDATE account SET isloggedin=$2 WHERE user_id=$1'
+        const values:any = [user_id, isloggedin]
+        const query_result = await db.query(text,values)
+        if (query_result.rowCount != 0) {
+            resp.Status = 'Success'
+            resp.Message = 'Login status successfully updated'
         }
         else {
             resp.Status = 'Failed'

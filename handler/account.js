@@ -55,7 +55,7 @@ async function registerUser(email, password, nama_lengkap) {
     else {
         resp = await accountRedisInterface.getAccount(user_id);
         if (resp.Status == 'Failed') {
-            resp = await accountRedisInterface.registerAccount(user_id, email, hashResult, false, 0, nama_lengkap);
+            resp = await accountRedisInterface.registerAccount(user_id, email, hashResult, false, 0, nama_lengkap, false);
             if (resp.Status == 'Success') {
                 let req = {};
                 req.user_id = user_id;
@@ -82,13 +82,13 @@ async function registerUser(email, password, nama_lengkap) {
 exports.registerUser = registerUser;
 async function commitAccounttoDB(data) {
     let resp = { Status: '', Message: '' };
-    resp = await accountDBInterface.registerAccount(data.user_id, data.email, data.password, false, 0, data.nama_lengkap);
+    resp = await accountDBInterface.registerAccount(data.user_id, data.email, data.password, false, 0, data.nama_lengkap, false);
     if (resp.Status == 'Success') {
         const url = await getURL();
         //add token to url for added security
         const privateKey = fs.readFileSync(__dirname.concat('/jwtRS256.key'));
         const passphrase = process.env.JWT_PASSPHRASE;
-        const token = jwt.sign({ user_id: data.user_id, email: data.email }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: 1800 });
+        const token = jwt.sign({ user_id: data.user_id, email: data.email, type: 'verification_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: 1800 });
         resp = await mailerForVerification(data.email, url.concat('/account/verify', '/', data.user_id, '/', token));
         if (resp.Status == 'Success') {
             resp.Code = 200;
@@ -110,6 +110,65 @@ async function commitAccounttoDB(data) {
     return resp;
 }
 exports.commitAccounttoDB = commitAccounttoDB;
+async function resendVerificationEmail(email) {
+    let resp = { Status: '', Message: '' };
+    let req;
+    const fetchUserIDfromRedis = await accountRedisInterface.getUserID(email);
+    if (fetchUserIDfromRedis.Status == 'Failed') {
+        const fetchAccountfromDB = await accountDBInterface.readAccountByEmail(email);
+        if (fetchAccountfromDB.Status == 'Failed') {
+            resp = fetchAccountfromDB;
+            resp.Code = 404;
+            req = resp;
+            req.email = email;
+            req.action = 'logError';
+        }
+        else {
+            const getNamaLengkap = await accountDBInterface.readProfile(fetchAccountfromDB.Message.user_id);
+            const insertRedisResult = await accountRedisInterface.registerAccount(fetchAccountfromDB.Message.user_id, fetchAccountfromDB.Message.email, fetchAccountfromDB.Message.password, fetchAccountfromDB.Message.isverified, fetchAccountfromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchAccountfromDB.Message.isloggedin);
+            if (insertRedisResult.Status == 'Failed') {
+                resp = insertRedisResult;
+                resp.Code = 500;
+                req = resp;
+                req.email = email;
+                req.action = 'logError';
+            }
+            else {
+                let url = await getURL();
+                const user_id = fetchAccountfromDB.Message.user_id;
+                resp = insertRedisResult;
+                resp.Message = 'Please wait for verification email';
+                resp.Code = 200;
+                const privateKey = fs.readFileSync(__dirname.concat('/jwtRS256.key'));
+                const passphrase = process.env.JWT_PASSPHRASE;
+                const token = jwt.sign({ user_id: user_id, email: email, type: 'verification_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: 1800 });
+                url = url.concat('/account/verify', '/', user_id, '/', token);
+                req = resp;
+                req.email = email;
+                req.url = url;
+                req.action = 'resendVerificationEmail';
+            }
+        }
+    }
+    else {
+        let url = await getURL();
+        const user_id = fetchUserIDfromRedis.Message.user_id;
+        resp = fetchUserIDfromRedis;
+        resp.Message = 'Please wait for verification email';
+        resp.Code = 200;
+        const privateKey = fs.readFileSync(__dirname.concat('/jwtRS256.key'));
+        const passphrase = process.env.JWT_PASSPHRASE;
+        const token = jwt.sign({ user_id: user_id, email: email, type: 'verification_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: 1800 });
+        url = url.concat('/account/verify', '/', user_id, '/', token);
+        req = resp;
+        req.email = email;
+        req.url = url;
+        req.action = 'resendVerificationEmail';
+    }
+    const sendToQueue = await rabbitRequest_1.requestHandler(req);
+    return resp;
+}
+exports.resendVerificationEmail = resendVerificationEmail;
 async function mailerForVerification(email, url) {
     perf.start();
     let resp = { Status: '', Message: '' };
@@ -182,7 +241,7 @@ async function changeVerificationStatus(user_id, token) {
                 }
                 else {
                     const getNamaLengkap = await accountDBInterface.readProfile(user_id);
-                    const insertRedisResult = await accountRedisInterface.registerAccount(getfromDB.Message.user_id, getfromDB.Message.email, getfromDB.Message.password, getfromDB.Message.isverified, getfromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap);
+                    const insertRedisResult = await accountRedisInterface.registerAccount(getfromDB.Message.user_id, getfromDB.Message.email, getfromDB.Message.password, getfromDB.Message.isverified, getfromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, getfromDB.Message.isloggedin);
                     if (insertRedisResult.Status == 'Failed') {
                         resp = insertRedisResult;
                         resp.Code = 500;
@@ -255,7 +314,7 @@ async function validateCredentials(email, password) {
         }
         else {
             const fetchNamaLengkap = await accountDBInterface.readProfile(passwordFetchDB.Message.user_id);
-            const insertRedisResult = await accountRedisInterface.registerAccount(passwordFetchDB.Message.user_id, passwordFetchDB.Message.email, passwordFetchDB.Message.password, passwordFetchDB.Message.isverified, passwordFetchDB.Message.tempcode, fetchNamaLengkap.Message.nama_lengkap);
+            const insertRedisResult = await accountRedisInterface.registerAccount(passwordFetchDB.Message.user_id, passwordFetchDB.Message.email, passwordFetchDB.Message.password, passwordFetchDB.Message.isverified, passwordFetchDB.Message.tempcode, fetchNamaLengkap.Message.nama_lengkap, passwordFetchDB.Message.isloggedin);
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult;
                 resp.Code = 500;
@@ -322,16 +381,19 @@ async function login(email, password) {
             else {
                 const privateKey = fs.readFileSync(__dirname.concat('/jwtRS256.key'));
                 const passphrase = process.env.JWT_PASSPHRASE;
-                const token = jwt.sign({ email: email, user_id: emailFetchRedis.Message.user_id }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: '24h' });
+                const access_token = jwt.sign({ email: email, user_id: emailFetchRedis.Message.user_id, type: 'access_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: '24h' });
+                const refresh_token = jwt.sign({ email: email, user_id: emailFetchRedis.Message.user_id, type: 'refresh_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: '5d' });
                 resp.Status = 'Success';
-                resp.Detail = token;
+                resp.Detail = { access_token: access_token, refresh_token: refresh_token };
                 resp.User_id = emailFetchRedis.Message.user_id;
                 resp.Message = 'User authentication successful';
                 resp.Code = isCredentialValid.Code;
                 req = resp;
                 req.email = email;
-                req.action = 'standardLog';
-                const sendToQueue = await rabbitRequest_1.requestHandler(req);
+                req.action = 'updateLoggedInStatus';
+                const updateRedisLoggedInStatus = accountRedisInterface.updateLoggedInStatus(emailFetchRedis.Message.user_id, true);
+                const sendToQueue = rabbitRequest_1.requestHandler(req);
+                await Promise.all([updateRedisLoggedInStatus, sendToQueue]);
             }
         }
         else {
@@ -402,15 +464,22 @@ async function verifyRequest(req) {
         if (token) {
             const verifyResult = await verifyJWT(token);
             if (verifyResult.Status == 'Success') {
-                if (verifyResult.Message.user_id != req.params.user_id) {
-                    resp.Status = 'Failed';
-                    resp.Code = 403;
-                    resp.Message = 'User '.concat(req.params.user_id, ' attempted to access resources owned by other user');
+                if (verifyResult.Message.type == 'access_token') {
+                    if (verifyResult.Message.user_id != req.params.user_id) {
+                        resp.Status = 'Failed';
+                        resp.Code = 403;
+                        resp.Message = 'User '.concat(req.params.user_id, ' attempted to access resources owned by other user');
+                    }
+                    else {
+                        resp.Status = verifyResult.Status;
+                        resp.Code = verifyResult.Code;
+                        resp.Message = verifyResult.Message;
+                    }
                 }
                 else {
-                    resp.Status = verifyResult.Status;
-                    resp.Code = verifyResult.Code;
-                    resp.Message = verifyResult.Message;
+                    resp.Status = 'Failed';
+                    resp.Code = 403;
+                    resp.Message = 'Wrong token type provided';
                 }
             }
             else {
@@ -423,6 +492,36 @@ async function verifyRequest(req) {
     return resp;
 }
 exports.verifyRequest = verifyRequest;
+async function verifyRefreshToken(req) {
+    let resp = { Status: '', Message: '' };
+    const verifyResult = await verifyJWT(req.body.refresh_token);
+    if (verifyResult.Status == 'Success') {
+        if (verifyResult.Message.type == 'refresh_token') {
+            if (verifyResult.Message.user_id != req.params.user_id) {
+                resp.Status = 'Failed';
+                resp.Code = 403;
+                resp.Message = 'User '.concat(req.params.user_id, ' attempted to access resources owned by other user');
+            }
+            else {
+                resp.Status = verifyResult.Status;
+                resp.Code = verifyResult.Code;
+                resp.Message = verifyResult.Message;
+            }
+        }
+        else {
+            resp.Status = 'Failed';
+            resp.Code = 403;
+            resp.Message = 'Wrong token type provided';
+        }
+    }
+    else {
+        resp.Status = verifyResult.Status;
+        resp.Code = verifyResult.Code;
+        resp.Message = verifyResult.Message;
+    }
+    return resp;
+}
+exports.verifyRefreshToken = verifyRefreshToken;
 //create random 4 digit temp token
 async function createTempCode() {
     let resp = { Status: '', Message: '' };
@@ -467,7 +566,7 @@ async function insertTempCode(email) {
         }
         else {
             const getNamaLengkap = await accountDBInterface.readProfile(fetchFromDB.Message.user_id);
-            const insertRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap);
+            const insertRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin);
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis;
                 req = resp;
@@ -518,7 +617,7 @@ async function getTempCode(email) {
         }
         else {
             const getNamaLengkap = await accountDBInterface.readProfile(fetchFromDB.Message.user_id);
-            const insertRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap);
+            const insertRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin);
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis;
                 req = resp;
@@ -667,7 +766,7 @@ async function changePassword(email, tempcode, newpassword) {
         }
         else {
             const getNamaLengkap = await accountDBInterface.readProfile(fetchFromDB.Message.user_id);
-            const insertToRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap);
+            const insertToRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin);
             if (insertToRedis.Status == 'Failed') {
                 resp = insertToRedis;
                 resp.Code = 500;
@@ -723,3 +822,132 @@ async function changePassword(email, tempcode, newpassword) {
     return resp;
 }
 exports.changePassword = changePassword;
+async function refreshToken(user_id) {
+    let resp = { Status: '', Message: '' };
+    let req;
+    const fetchFromRedis = await accountRedisInterface.getAccount(user_id);
+    if (fetchFromRedis.Status == 'Failed') {
+        const fetchFromDB = await accountDBInterface.readAccount(user_id);
+        if (fetchFromDB.Status == 'Failed') {
+            resp = fetchFromDB;
+            resp.Code = 404;
+            req = resp;
+            req.user_id = user_id;
+            req.action = 'logError';
+        }
+        else {
+            const getNamaLengkap = await accountDBInterface.readProfile(user_id);
+            const insertRedisResult = await accountRedisInterface.registerAccount(user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin);
+            if (!(fetchFromDB.Message.isloggedin)) {
+                resp.Status = 'Failed';
+                resp.Message = 'User is not logged in';
+                resp.Code = 404;
+                req = resp;
+                req.user_id = user_id;
+                req.action = 'logError';
+            }
+            else {
+                const privateKey = fs.readFileSync(__dirname.concat('/jwtRS256.key'));
+                const passphrase = process.env.JWT_PASSPHRASE;
+                const access_token = jwt.sign({ email: fetchFromDB.Message.email, user_id: user_id, type: 'access_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: '24h' });
+                resp.Status = 'Success';
+                resp.Detail = { access_token: access_token };
+                resp.Message = 'Token refreshed';
+                resp.Code = 200;
+                req = resp;
+                req.user_id = user_id;
+                req.action = 'standardLog';
+            }
+        }
+    }
+    else {
+        if (!(fetchFromRedis.Message.isloggedin)) {
+            resp.Status = 'Failed';
+            resp.Message = 'User is not logged in';
+            resp.Code = 404;
+            req = resp;
+            req.user_id = user_id;
+            req.action = 'logError';
+        }
+        else {
+            const privateKey = fs.readFileSync(__dirname.concat('/jwtRS256.key'));
+            const passphrase = process.env.JWT_PASSPHRASE;
+            const access_token = jwt.sign({ email: fetchFromRedis.Message.email, user_id: user_id, type: 'access_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: '24h' });
+            resp.Status = 'Success';
+            resp.Message = 'Token refreshed';
+            resp.Detail = { access_token: access_token };
+            resp.Code = 200;
+            req = resp;
+            req.user_id = user_id;
+            req.action = 'standardLog';
+        }
+    }
+    const sendToQueue = await rabbitRequest_1.requestHandler(req);
+    return resp;
+}
+exports.refreshToken = refreshToken;
+async function logout(user_id) {
+    let resp = { Status: '', Message: '' };
+    let req;
+    const fetchFromRedis = await accountRedisInterface.getAccount(user_id);
+    if (fetchFromRedis.Status == 'Failed') {
+        const fetchFromDB = await accountDBInterface.readAccount(user_id);
+        if (fetchFromDB.Status == 'Failed') {
+            resp = fetchFromDB;
+            resp.Code = 404;
+            req = resp;
+            req.user_id = user_id;
+            req.action = 'logError';
+        }
+        else {
+            const getNamaLengkap = await accountDBInterface.readProfile(user_id);
+            const insertRedisResult = await accountRedisInterface.registerAccount(user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin);
+            if (insertRedisResult.Status == 'Failed') {
+                resp = insertRedisResult;
+                resp.Code = 500;
+                req = resp;
+                req.user_id = user_id;
+                req.action = 'logError';
+            }
+            else {
+                const updateResult = await accountRedisInterface.updateLoggedInStatus(user_id, false);
+                if (updateResult.Status == 'Failed') {
+                    resp = updateResult;
+                    resp.Code = 500;
+                    req = resp;
+                    req.user_id = user_id;
+                    req.action = 'logError';
+                }
+                else {
+                    resp = updateResult;
+                    resp.Message = 'Logout successful';
+                    resp.Code = 200;
+                    req = resp;
+                    req.user_id = user_id;
+                    req.action = 'logout';
+                }
+            }
+        }
+    }
+    else {
+        const updateResult = await accountRedisInterface.updateLoggedInStatus(user_id, false);
+        if (updateResult.Status == 'Failed') {
+            resp = updateResult;
+            resp.Code = 500;
+            req = resp;
+            req.user_id = user_id;
+            req.action = 'logError';
+        }
+        else {
+            resp = updateResult;
+            resp.Message = 'Logout successful';
+            resp.Code = 200;
+            req = resp;
+            req.user_id = user_id;
+            req.action = 'logout';
+        }
+    }
+    const sendToQueue = await rabbitRequest_1.requestHandler(req);
+    return resp;
+}
+exports.logout = logout;

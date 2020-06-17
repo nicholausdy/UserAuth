@@ -1,7 +1,7 @@
 import Redis from "ioredis"
 import { IResponse } from "../interface/interfaceCollection"
 
-export async function registerAccount(user_id : string, email : string, password : string, isverified : boolean, tempcode : number, nama_lengkap : string) : Promise<IResponse> {
+export async function registerAccount(user_id : string, email : string, password : string, isverified : boolean, tempcode : number, nama_lengkap : string, isloggedin : boolean) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''} 
     const redisClient : any = new Redis() //default port 6379
     try {
@@ -10,13 +10,14 @@ export async function registerAccount(user_id : string, email : string, password
         const insertResult2 = redisClient.hset(key,"password",password)
         const insertResult3 = redisClient.hset(key,"isverified", isverified.toString())
         const insertResult4 = redisClient.hset(key,"tempcode",tempcode)
+        const insertResult5 = redisClient.hset(key,"isloggedin",isloggedin.toString())
         //insert to profile
         const key2 : string = "profile:".concat(user_id)
-        const insertResult5 = redisClient.hset(key2,"nama_lengkap",nama_lengkap)
+        const insertResult6 = redisClient.hset(key2,"nama_lengkap",nama_lengkap)
         //mapping user_id -> email
         const key3 : string = "account_mapping:".concat(email)
-        const insertResult6 = redisClient.hset(key3,"user_id", user_id)
-        await Promise.all([insertResult1, insertResult2, insertResult3, insertResult4, insertResult5, insertResult6])
+        const insertResult7 = redisClient.hset(key3,"user_id", user_id)
+        await Promise.all([insertResult1, insertResult2, insertResult3, insertResult4, insertResult5, insertResult6, insertResult7])
         await Promise.all([redisClient.expire(key, 86400), redisClient.expire(key2, 86400), redisClient.expire(key3, 86400)]) // expiry : 1 day -> 86400 seconds
         resp.Status = 'Success'
         resp.Message = 'Redis insert successful'
@@ -70,7 +71,9 @@ export async function getAccount(user_id:string) : Promise<IResponse> {
         }
         else {
             getResult.tempcode = Number(getResult.tempcode)
-            getResult.isverified = await convertToBool(getResult.isverified)
+            const [isverified, isloggedin] = await Promise.all([convertToBool(getResult.isverified), convertToBool(getResult.isloggedin)])
+            getResult.isverified = isverified
+            getResult.isloggedin = isloggedin
             resp.Status = 'Success'
             resp.Message = getResult
         }
@@ -198,6 +201,26 @@ export async function updatePassword(user_id:string, password:string) : Promise<
     catch (e) {
         resp.Status = 'Failed'
         resp.Message = 'Redis update password failed'
+        resp.Detail = e
+    }
+    finally {
+        redisClient.quit()
+        return resp
+    }
+}
+
+export async function updateLoggedInStatus(user_id:string, isloggedin:boolean) : Promise<IResponse> {
+    let resp : IResponse = {Status:'',Message:''}
+    const redisClient : any = new Redis()
+    try {
+        const key : string = "account:".concat(user_id)
+        const updateResult : any = await redisClient.hset(key,"isloggedin",isloggedin)
+        resp.Status = 'Success'
+        resp.Message = updateResult
+    }
+    catch (e) {
+        resp.Status = 'Failed'
+        resp.Message = 'Redis update log in status failed'
         resp.Detail = e
     }
     finally {

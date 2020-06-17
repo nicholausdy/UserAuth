@@ -32,6 +32,23 @@ app.post('/api/v1/account/register', async (req, res) => {
         console.log('Server to client API exec time:', result.time);
     }
 });
+app.post('/api/v1/account/resendVerification', async (req, res) => {
+    try {
+        perf.start();
+        const sendResult = await account_1.resendVerificationEmail(req.body.email);
+        res.status(sendResult.Code);
+        res.json(sendResult);
+    }
+    catch (e) {
+        const errorResult = await server_1.serverError(e);
+        res.status(errorResult.Code);
+        res.json(errorResult);
+    }
+    finally {
+        const result = perf.stop();
+        console.log('Server to client API exec time:', result.time);
+    }
+});
 app.get('/api/v1/account/verify/:user_id/:token', async (req, res) => {
     try {
         perf.start();
@@ -126,6 +143,47 @@ app.get('/api/v1/profile/getProfile/:user_id', async (req, res) => {
         let requestResult = await account_1.verifyRequest(req);
         if (requestResult.Status == 'Success') {
             requestResult = await profile_1.getProfile(req.params.user_id);
+        }
+        res.status(requestResult.Code);
+        res.json(requestResult);
+    }
+    catch (e) {
+        const errorResult = await server_1.serverError(e);
+        res.status(errorResult.Code);
+        res.json(errorResult);
+    }
+    finally {
+        const result = perf.stop();
+        console.log('Server to client API exec time:', result.time);
+    }
+});
+// body: {refresh_token : }
+app.post('/api/v1/account/refreshToken/:user_id', async (req, res) => {
+    try {
+        perf.start();
+        let requestResult = await account_1.verifyRefreshToken(req);
+        if (requestResult.Status == 'Success') {
+            requestResult = await account_1.refreshToken(req.params.user_id);
+        }
+        res.status(requestResult.Code);
+        res.json(requestResult);
+    }
+    catch (e) {
+        const errorResult = await server_1.serverError(e);
+        res.status(errorResult.Code);
+        res.json(errorResult);
+    }
+    finally {
+        const result = perf.stop();
+        console.log('Server to client API exec time:', result.time);
+    }
+});
+app.get('/api/v1/account/logout/:user_id', async (req, res) => {
+    try {
+        perf.start();
+        let requestResult = await account_1.verifyRequest(req);
+        if (requestResult.Status == 'Success') {
+            requestResult = await account_1.logout(req.params.user_id);
         }
         res.status(requestResult.Code);
         res.json(requestResult);

@@ -51,7 +51,7 @@ export async function registerUser(email:string, password: string, nama_lengkap:
     else {
         resp = await accountRedisInterface.getAccount(user_id)
         if (resp.Status == 'Failed') { // username haven't existed yet
-            resp = await accountRedisInterface.registerAccount(user_id, email, hashResult, false, 0, nama_lengkap)
+            resp = await accountRedisInterface.registerAccount(user_id, email, hashResult, false, 0, nama_lengkap, false)
             if (resp.Status == 'Success') {
                 let req : any = {}
                 req.user_id = user_id
@@ -80,13 +80,13 @@ export async function registerUser(email:string, password: string, nama_lengkap:
 
 export async function commitAccounttoDB(data : any) : Promise<IResponse> { //used in RabbitMQ processor worker (rabbitProcessor.ts)
     let resp : IResponse = {Status:'',Message:''}
-    resp = await accountDBInterface.registerAccount(data.user_id, data.email, data.password, false, 0, data.nama_lengkap)
+    resp = await accountDBInterface.registerAccount(data.user_id, data.email, data.password, false, 0, data.nama_lengkap, false)
     if (resp.Status == 'Success') {
         const url:string = await getURL()
         //add token to url for added security
         const privateKey : Buffer = fs.readFileSync(__dirname.concat('/jwtRS256.key'))
         const passphrase : any = process.env.JWT_PASSPHRASE
-        const token : string = jwt.sign({user_id:data.user_id, email: data.email}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: 1800});
+        const token : string = jwt.sign({user_id:data.user_id, email: data.email, type:'verification_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: 1800});
         resp = await mailerForVerification(data.email, url.concat('/account/verify','/',data.user_id,'/',token))
         if (resp.Status == 'Success'){
             resp.Code = 200
@@ -106,6 +106,66 @@ export async function commitAccounttoDB(data : any) : Promise<IResponse> { //use
             resp.Action = 'existingUsernameFailure'
         }
     }
+    return resp
+}
+
+export async function resendVerificationEmail(email:string) : Promise<IResponse> {
+    let resp : IResponse = {Status:'', Message:''}
+    let req : any
+    const fetchUserIDfromRedis : IResponse = await accountRedisInterface.getUserID(email)
+    if (fetchUserIDfromRedis.Status == 'Failed'){
+        const fetchAccountfromDB : IResponse = await accountDBInterface.readAccountByEmail(email)
+        if (fetchAccountfromDB.Status == 'Failed'){
+            resp = fetchAccountfromDB
+            resp.Code = 404
+            req = resp
+            req.email = email
+            req.action = 'logError'
+            
+        }
+        else {
+            const getNamaLengkap : IResponse = await accountDBInterface.readProfile(fetchAccountfromDB.Message.user_id)
+            const insertRedisResult : IResponse = await accountRedisInterface.registerAccount(fetchAccountfromDB.Message.user_id, fetchAccountfromDB.Message.email, fetchAccountfromDB.Message.password, fetchAccountfromDB.Message.isverified, fetchAccountfromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchAccountfromDB.Message.isloggedin)
+            if (insertRedisResult.Status == 'Failed'){
+                resp = insertRedisResult
+                resp.Code = 500
+                req = resp
+                req.email = email
+                req.action = 'logError' 
+            }
+            else {
+                let url : string = await getURL()
+                const user_id : string = fetchAccountfromDB.Message.user_id
+                resp = insertRedisResult
+                resp.Message = 'Please wait for verification email'
+                resp.Code = 200
+                const privateKey : Buffer = fs.readFileSync(__dirname.concat('/jwtRS256.key'))
+                const passphrase : any = process.env.JWT_PASSPHRASE
+                const token : string = jwt.sign({user_id:user_id, email: email, type:'verification_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: 1800});
+                url = url.concat('/account/verify','/',user_id,'/',token)
+                req = resp
+                req.email = email
+                req.url = url
+                req.action = 'resendVerificationEmail'
+            }
+        }
+    }
+    else {
+        let url : string = await getURL()
+        const user_id : string = fetchUserIDfromRedis.Message.user_id
+        resp = fetchUserIDfromRedis
+        resp.Message = 'Please wait for verification email'
+        resp.Code = 200
+        const privateKey : Buffer = fs.readFileSync(__dirname.concat('/jwtRS256.key'))
+        const passphrase : any = process.env.JWT_PASSPHRASE
+        const token : string = jwt.sign({user_id:user_id, email: email, type:'verification_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: 1800});
+        url = url.concat('/account/verify','/',user_id,'/',token)
+        req = resp
+        req.email = email
+        req.url = url
+        req.action = 'resendVerificationEmail'
+    }
+    const sendToQueue = await requestHandler(req)
     return resp
 }
 
@@ -183,7 +243,7 @@ export async function changeVerificationStatus(user_id:string, token:string) : P
                 }
                 else { // fetch record success -> insert into Redis
                     const getNamaLengkap : IResponse = await accountDBInterface.readProfile(user_id)
-                    const insertRedisResult : IResponse = await accountRedisInterface.registerAccount(getfromDB.Message.user_id, getfromDB.Message.email, getfromDB.Message.password, getfromDB.Message.isverified,getfromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap)
+                    const insertRedisResult : IResponse = await accountRedisInterface.registerAccount(getfromDB.Message.user_id, getfromDB.Message.email, getfromDB.Message.password, getfromDB.Message.isverified,getfromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, getfromDB.Message.isloggedin)
                     if (insertRedisResult.Status == 'Failed'){
                         resp = insertRedisResult
                         resp.Code = 500
@@ -256,7 +316,7 @@ async function validateCredentials(email : string,password : string) : Promise<I
         }  
         else { // record does exist on DB -> insert to Redis
             const fetchNamaLengkap : IResponse = await accountDBInterface.readProfile(passwordFetchDB.Message.user_id)
-            const insertRedisResult : IResponse = await accountRedisInterface.registerAccount(passwordFetchDB.Message.user_id, passwordFetchDB.Message.email, passwordFetchDB.Message.password, passwordFetchDB.Message.isverified, passwordFetchDB.Message.tempcode, fetchNamaLengkap.Message.nama_lengkap)
+            const insertRedisResult : IResponse = await accountRedisInterface.registerAccount(passwordFetchDB.Message.user_id, passwordFetchDB.Message.email, passwordFetchDB.Message.password, passwordFetchDB.Message.isverified, passwordFetchDB.Message.tempcode, fetchNamaLengkap.Message.nama_lengkap, passwordFetchDB.Message.isloggedin)
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult
                 resp.Code = 500
@@ -324,16 +384,19 @@ export async function login(email : string, password : string) : Promise<IRespon
             else {
                 const privateKey : Buffer = fs.readFileSync(__dirname.concat('/jwtRS256.key'))
                 const passphrase : any = process.env.JWT_PASSPHRASE
-                const token : string = jwt.sign({email: email, user_id: emailFetchRedis.Message.user_id}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: '24h'});
+                const access_token : string = jwt.sign({email: email, user_id: emailFetchRedis.Message.user_id, type:'access_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: '24h'});
+                const refresh_token : string = jwt.sign({email: email, user_id: emailFetchRedis.Message.user_id, type:'refresh_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: '5d'});
                 resp.Status = 'Success'
-                resp.Detail = token
+                resp.Detail = {access_token: access_token, refresh_token: refresh_token}
                 resp.User_id = emailFetchRedis.Message.user_id
                 resp.Message = 'User authentication successful'
                 resp.Code = isCredentialValid.Code
                 req = resp
                 req.email = email
-                req.action = 'standardLog'
-                const sendToQueue = await requestHandler(req)
+                req.action = 'updateLoggedInStatus'
+                const updateRedisLoggedInStatus = accountRedisInterface.updateLoggedInStatus(emailFetchRedis.Message.user_id, true)
+                const sendToQueue = requestHandler(req)
+                await Promise.all([updateRedisLoggedInStatus, sendToQueue])
             }       
         }
         else {
@@ -367,6 +430,8 @@ export async function login(email : string, password : string) : Promise<IRespon
         return resp
     }
 }
+
+
 //jwt verify
 async function verifyJWT(token:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
@@ -404,15 +469,22 @@ export async function verifyRequest(req:any) : Promise<IResponse>{
         if (token){
             const verifyResult : IResponse = await verifyJWT(token) 
             if (verifyResult.Status == 'Success'){
-                if (verifyResult.Message.user_id != req.params.user_id) {
-                    resp.Status = 'Failed'
-                    resp.Code = 403
-                    resp.Message = 'User '.concat(req.params.user_id,' attempted to access resources owned by other user')
+                if (verifyResult.Message.type == 'access_token'){
+                    if (verifyResult.Message.user_id != req.params.user_id) {
+                        resp.Status = 'Failed'
+                        resp.Code = 403
+                        resp.Message = 'User '.concat(req.params.user_id,' attempted to access resources owned by other user')
+                    }
+                    else {
+                        resp.Status = verifyResult.Status
+                        resp.Code = verifyResult.Code
+                        resp.Message = verifyResult.Message
+                    }
                 }
                 else {
-                    resp.Status = verifyResult.Status
-                    resp.Code = verifyResult.Code
-                    resp.Message = verifyResult.Message
+                    resp.Status = 'Failed'
+                    resp.Code = 403
+                    resp.Message = 'Wrong token type provided'
                 }
             }
             else {
@@ -421,6 +493,36 @@ export async function verifyRequest(req:any) : Promise<IResponse>{
                     resp.Message = verifyResult.Message
             }
         }
+    }
+    return resp
+}
+
+export async function verifyRefreshToken(req : any) : Promise<IResponse>{
+    let resp : IResponse = {Status:'',Message:''}
+    const verifyResult : IResponse = await verifyJWT(req.body.refresh_token) 
+    if (verifyResult.Status == 'Success'){
+        if (verifyResult.Message.type == 'refresh_token'){
+            if (verifyResult.Message.user_id != req.params.user_id) {
+                resp.Status = 'Failed'
+                resp.Code = 403
+                resp.Message = 'User '.concat(req.params.user_id,' attempted to access resources owned by other user')
+            }
+            else {
+                resp.Status = verifyResult.Status
+                resp.Code = verifyResult.Code
+                resp.Message = verifyResult.Message
+            }
+        }
+        else {
+            resp.Status = 'Failed'
+            resp.Code = 403
+            resp.Message = 'Wrong token type provided'
+        }
+    }
+    else {
+        resp.Status = verifyResult.Status
+        resp.Code = verifyResult.Code
+        resp.Message = verifyResult.Message
     }
     return resp
 }
@@ -470,7 +572,7 @@ async function insertTempCode(email:string) : Promise<IResponse> {
         }
         else {
             const getNamaLengkap : IResponse = await accountDBInterface.readProfile(fetchFromDB.Message.user_id)
-            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap)
+            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin)
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis
                 req = resp
@@ -522,7 +624,7 @@ async function getTempCode(email:string) : Promise<IResponse> {
         }
         else {
             const getNamaLengkap : IResponse = await accountDBInterface.readProfile(fetchFromDB.Message.user_id)
-            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap)
+            const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin)
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis
                 req = resp
@@ -676,7 +778,7 @@ export async function changePassword (email: string, tempcode:number, newpasswor
         }
         else {
             const getNamaLengkap : IResponse = await accountDBInterface.readProfile(fetchFromDB.Message.user_id)
-            const insertToRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap)
+            const insertToRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin)
             if (insertToRedis.Status == 'Failed') {
                 resp = insertToRedis
                 resp.Code = 500
@@ -727,6 +829,135 @@ export async function changePassword (email: string, tempcode:number, newpasswor
                 req.action = 'changePassword'
                     const deleteResult : any = await removeTempCode(email)
             }
+        }
+    }
+    const sendToQueue : any = await requestHandler(req)
+    return resp
+}
+
+export async function refreshToken(user_id:string) : Promise<IResponse> {
+    let resp : IResponse = {Status:'',Message:''}
+    let req : any
+    const fetchFromRedis : IResponse = await accountRedisInterface.getAccount(user_id)
+    if (fetchFromRedis.Status == 'Failed'){
+        const fetchFromDB : IResponse = await accountDBInterface.readAccount(user_id)
+        if (fetchFromDB.Status == 'Failed'){
+            resp = fetchFromDB
+            resp.Code = 404
+            req = resp
+            req.user_id = user_id
+            req.action = 'logError'
+        }
+        else {
+            const getNamaLengkap : IResponse = await accountDBInterface.readProfile(user_id)
+            const insertRedisResult : IResponse = await accountRedisInterface.registerAccount(user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin)
+            if (!(fetchFromDB.Message.isloggedin)){
+                resp.Status = 'Failed'
+                resp.Message = 'User is not logged in'
+                resp.Code = 404
+                req = resp
+                req.user_id = user_id
+                req.action = 'logError'
+            }
+            else {
+                const privateKey : Buffer = fs.readFileSync(__dirname.concat('/jwtRS256.key'))
+                const passphrase : any = process.env.JWT_PASSPHRASE
+                const access_token : string = jwt.sign({email: fetchFromDB.Message.email, user_id: user_id, type:'access_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: '24h'});
+                resp.Status = 'Success'
+                resp.Detail = {access_token:access_token}
+                resp.Message = 'Token refreshed'
+                resp.Code = 200
+                req = resp
+                req.user_id = user_id
+                req.action = 'standardLog'
+            }
+        }
+    }
+    else {
+        if (!(fetchFromRedis.Message.isloggedin)){
+            resp.Status = 'Failed'
+            resp.Message = 'User is not logged in'
+            resp.Code = 404
+            req = resp
+            req.user_id = user_id
+            req.action = 'logError'
+        }
+        else {
+            const privateKey : Buffer = fs.readFileSync(__dirname.concat('/jwtRS256.key'))
+            const passphrase : any = process.env.JWT_PASSPHRASE
+            const access_token : string = jwt.sign({email: fetchFromRedis.Message.email, user_id: user_id, type:'access_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: '24h'});
+            resp.Status = 'Success'
+            resp.Message = 'Token refreshed'
+            resp.Detail = {access_token:access_token}
+            resp.Code = 200
+            req = resp
+            req.user_id = user_id
+            req.action = 'standardLog'
+        }
+    }
+    const sendToQueue : any = await requestHandler(req)
+    return resp
+}
+
+export async function logout(user_id : string) : Promise<IResponse> {
+    let resp : IResponse = {Status:'',Message:''}
+    let req : any
+    const fetchFromRedis : IResponse = await accountRedisInterface.getAccount(user_id)
+    if (fetchFromRedis.Status == 'Failed'){
+        const fetchFromDB : IResponse = await accountDBInterface.readAccount(user_id)
+        if (fetchFromDB.Status == 'Failed') {
+            resp = fetchFromDB
+            resp.Code = 404
+            req = resp
+            req.user_id = user_id
+            req.action = 'logError'
+        }
+        else {
+            const getNamaLengkap : IResponse = await accountDBInterface.readProfile(user_id)
+            const insertRedisResult : IResponse = await accountRedisInterface.registerAccount(user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin)
+            if (insertRedisResult.Status == 'Failed') {
+                resp = insertRedisResult
+                resp.Code = 500
+                req = resp
+                req.user_id = user_id
+                req.action = 'logError'
+            }
+            else {
+                const updateResult : IResponse = await accountRedisInterface.updateLoggedInStatus(user_id, false)
+                if (updateResult.Status == 'Failed') {
+                    resp = updateResult
+                    resp.Code = 500
+                    req = resp
+                    req.user_id = user_id
+                    req.action = 'logError'
+                }
+                else {
+                    resp = updateResult
+                    resp.Message = 'Logout successful'
+                    resp.Code = 200 
+                    req = resp
+                    req.user_id = user_id
+                    req.action = 'logout'
+                }
+            }
+        }
+    }
+    else {
+        const updateResult : IResponse = await accountRedisInterface.updateLoggedInStatus(user_id, false)
+        if (updateResult.Status == 'Failed') {
+            resp = updateResult
+            resp.Code = 500
+            req = resp
+            req.user_id = user_id
+            req.action = 'logError'
+        }
+        else {
+            resp = updateResult
+            resp.Message = 'Logout successful'
+            resp.Code = 200 
+            req = resp
+            req.user_id = user_id
+            req.action = 'logout'
         }
     }
     const sendToQueue : any = await requestHandler(req)

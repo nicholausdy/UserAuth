@@ -86,7 +86,7 @@ async function actionSelector(requestData : any) : Promise<IResponse>  {
       if (processingResult.Message == 'Username already exists'){
         const getResult : IResponse = await accountDBInterface.readAccountByEmail(requestData.email)
         const getNamaLengkapResult : IResponse = await accountDBInterface.readProfile(getResult.Message.user_id)
-        const insertRedis : IResponse = await accountRedisInterface.registerAccount(getResult.Message.user_id, getResult.Message.email, getResult.Message.password, getResult.Message.isverified, getResult.Message.tempcode, getNamaLengkapResult.Message.nama_lengkap)
+        const insertRedis : IResponse = await accountRedisInterface.registerAccount(getResult.Message.user_id, getResult.Message.email, getResult.Message.password, getResult.Message.isverified, getResult.Message.tempcode, getNamaLengkapResult.Message.nama_lengkap, getResult.Message.isloggedin)
       }
     }
   }
@@ -136,6 +136,33 @@ async function actionSelector(requestData : any) : Promise<IResponse>  {
   }
   else if (requestData.action == 'updateProfile'){
     processingResult = await profileDBInterface.updateProfile(requestData.user_id, requestData.nama_lengkap, requestData.idkaryawan, requestData.no_hp, requestData.email_2)
+    if (processingResult.Status == 'Success'){
+      processingResult.Code = 200
+    }
+    else {
+      processingResult.Code = 500
+    }
+  }
+  else if (requestData.action == 'updateLoggedInStatus'){
+    processingResult = await accountDBInterface.updateLoggedInStatus(requestData.User_id,true)
+    if (processingResult.Status == 'Success'){
+      processingResult.Code = 200
+    }
+    else {
+      processingResult.Code = 500
+    }
+  }
+  else if (requestData.action == 'resendVerificationEmail'){
+    processingResult = await accountHandler.mailerForVerification(requestData.email, requestData.url)
+    if (processingResult.Status == 'Success'){
+      processingResult.Code = 200
+    }
+    else {
+      processingResult.Code = 500
+    }
+  }
+  else if (requestData.action == 'logout'){
+    processingResult = await accountDBInterface.updateLoggedInStatus(requestData.user_id, false)
     if (processingResult.Status == 'Success'){
       processingResult.Code = 200
     }
