@@ -4548,3 +4548,65 @@ Processing result : {
   action: 'logError',
   Action: 'logError'
 }
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yosodiputo',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}

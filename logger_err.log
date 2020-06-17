@@ -58,3 +58,1097 @@ Emitted 'error' event on ChannelModel instance at:
 (node:11662) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
 (node:12121) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
 (node:12121) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:17680) UnhandledPromiseRejectionWarning: Error: connect ECONNREFUSED 192.168.43.85:5672
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16)
+(node:17680) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17680) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17688) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17688) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17688) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17723) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17723) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17723) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17804) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17804) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17804) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17820) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17820) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17820) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17836) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17836) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17836) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17852) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17852) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17852) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17868) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17868) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17868) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17884) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17884) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17884) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:17900) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:17900) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:17900) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18005) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18005) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18005) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18021) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18021) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18021) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18037) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18037) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18037) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18053) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18053) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18053) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18069) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18069) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18069) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18085) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18085) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18085) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18101) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18101) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18101) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18117) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18117) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18117) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18133) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18133) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18133) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18149) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18149) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18149) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18164) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18164) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18164) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18180) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18180) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18180) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18196) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18196) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18196) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18212) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18212) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18212) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18228) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18228) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18228) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18244) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18244) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18244) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18260) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18260) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18260) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18276) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18276) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18276) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18292) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18292) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18292) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18308) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18308) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18308) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18324) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18324) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18324) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18340) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18340) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18340) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18356) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18356) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18356) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18376) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18376) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18376) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18455) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18455) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18455) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18471) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18471) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18471) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18487) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18487) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18487) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18503) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18503) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18503) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18519) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18519) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18519) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18535) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18535) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18535) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18551) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18551) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18551) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18567) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18567) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18567) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18583) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18583) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18583) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18599) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18599) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18599) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18615) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18615) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18615) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18631) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18631) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18631) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18647) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18647) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18647) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18663) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18663) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18663) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18679) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18679) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18679) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18695) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18695) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18695) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18711) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18711) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18711) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18727) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18727) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18727) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18743) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18743) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18743) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18759) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18759) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18759) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18775) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18775) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18775) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18848) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18848) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18848) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18921) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18921) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18921) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:18991) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:18991) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:18991) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19007) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19007) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19007) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19023) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19023) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19023) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19039) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19039) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19039) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19055) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19055) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19055) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19071) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19071) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19071) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19087) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19087) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19087) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19103) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19103) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19103) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19119) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19119) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19119) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19135) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19135) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19135) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19151) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19151) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19151) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19167) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19167) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19167) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19183) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19183) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19183) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19199) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19199) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19199) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19215) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19215) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19215) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19231) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19231) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19231) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19247) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19247) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19247) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19263) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19263) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19263) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19279) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19279) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19279) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19295) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19295) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19295) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19311) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19311) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19311) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19327) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19327) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19327) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19343) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19343) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19343) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19359) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19359) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19359) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19375) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19375) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19375) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19391) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19391) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19391) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19407) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19407) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19407) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19423) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19423) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19423) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19439) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19439) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19439) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19455) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19455) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19455) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19471) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19471) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19471) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19487) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19487) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19487) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19503) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19503) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19503) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19519) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19519) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19519) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19535) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19535) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19535) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19551) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19551) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19551) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19567) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19567) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19567) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19583) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19583) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19583) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19599) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19599) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19599) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19615) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19615) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19615) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19631) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19631) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19631) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19647) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19647) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19647) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19663) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19663) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19663) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19679) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19679) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19679) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19695) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19695) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19695) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19711) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19711) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19711) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19727) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19727) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19727) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19743) UnhandledPromiseRejectionWarning: Error: Handshake terminated by server: 403 (ACCESS-REFUSED) with message "ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile."
+    at afterStartOk (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:220:12)
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19743) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19743) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19759) UnhandledPromiseRejectionWarning: Error: Expected ConnectionOpenOk; got <ConnectionClose channel:0>
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:168:14
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19759) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19759) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19774) UnhandledPromiseRejectionWarning: Error: Expected ConnectionOpenOk; got <ConnectionClose channel:0>
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:168:14
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19774) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19774) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19790) UnhandledPromiseRejectionWarning: Error: Expected ConnectionOpenOk; got <ConnectionClose channel:0>
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:168:14
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19790) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19790) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19807) UnhandledPromiseRejectionWarning: Error: Expected ConnectionOpenOk; got <ConnectionClose channel:0>
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:168:14
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19807) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19807) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:19823) UnhandledPromiseRejectionWarning: Error: Expected ConnectionOpenOk; got <ConnectionClose channel:0>
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:168:14
+    at /home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:160:12
+    at Socket.recv (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/amqplib/lib/connection.js:499:12)
+    at Object.onceWrapper (events.js:417:28)
+    at Socket.emit (events.js:311:20)
+    at emitReadable_ (_stream_readable.js:562:12)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21)
+(node:19823) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:19823) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.

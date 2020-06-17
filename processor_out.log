@@ -10063,3 +10063,145 @@ Published results for : {
   Action: 'logError'
 }
 Time to process RabbitMQ queue 2.727
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 12.4925
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiIzMHk1ZDE2dmRpZDIwaTJtcW1xMXF0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjM5MDA3NSwiZXhwIjoxNTkyNDc2NDc1fQ.nYVIIJO-FxDhW79lLAoQBbzh1kFQoH-DWQzbgn0ICoy-F54PEyTwPI2bbcB_dTBNLaqqJEEnSsM02P3MnudXtt1L53Sn1vZY8RZZeSCghdrpCsI0v5x-ohrzExqiodeYemcPYWvH_ZslB7vf3r_7hnEhkvzRibgPFfkw4-VhDXRM7sSzV3n5TjHT9sX49NCD7gYVELDqpyYCsdGjJy_dNmwgbLoobK86u5k6oy3r399L270byqZV0fhGZoVr_7K6DacW6UclKL_xtKPnQBEUwb7ynXQlX3Y3mXcVb_e_l0_F8HRYjzanmWd7Re0YOl9TTSjm42xNRMJhdLL5CgG9WJi4EIRcNujs-piuLZd6OXgGUkxMahGzA0tJe_54m-PiZCLUlnGS19D7SoVLuBvA1-4S83HhOElvfwY9xYX5300Ut8Keie_KhMy6sqIHkiwb_lo2j-r1_xhwWGm3CuV22sV5bes3jFMpqQ-a3ThDzQjeIWIjj-ysooLD5YgLBUspcEPV-32TwQsve3SWp6QGbNkNNjYryLF7RSlht253t8tzaAgSmLrELuVZpvcJPeaiYCpzy53g1lMBDLeWqQ0TjPAvXI1jFhr96GQ38J7HfpvT_AGyQolgCHhtzHnJp9I74Z0sZL6BkFfNOzafog56fzDRxvihYXm-N0NXpMWNqVM',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjE4MjE3MDI4QHN0ZC5zdGVpLml0Yi5hYy5pZCIsInVzZXJfaWQiOiIzMHk1ZDE2dmRpZDIwaTJtcW1xMXF0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTIzOTAwNzUsImV4cCI6MTU5MjgyMjA3NX0.wnwRa_Al9O8LVLv7KSKGfdxrVW3zz245U0YFapRqhe_3o3wstERLEWlvbm1pJcK3XlhCXfwUkORXJqNtrwVqDjQH7w8rNLO_CZl5ail9PCe4gi0k3NVPXDDls5BAJdxaZpif0ICLcFLm1wWoQWiKWx1oevjcneQoLntJz4Jjy3GflcoS4IvBD3VYXrQkgGuS4Yb_3I7UGrH5ys8WF19AC5fZIdBCbSVKW1ps36tE8mqu57omTxPH5r4CI8fJIbz63xeNFkaTtOW1KJ-QrjMn21Q73GMxWG7AA3xDrP0EZ13hs0cOM91W1RtxqTEl2ssltGxWNTY5f3d3XBJv9i65KWyXZsUGx2drT9U8mIAGW1vxhsnlNXn2gWMAd1cENU2Pad5P0H5fpiLH4cIwllAlMGpJF2dWpepBF9xw7DrD4a7Fi-L1Knc8NIwGFpGZKpyDGXnxbdRoER9Zn5McbT8SCn4-dYH6cKyu3_k4pWOzxgbmsX3RBUQcHpYRN7NK_xDhJC4mKYAGn0XgeagVbrT-u4TVZZ7JUCUAE7PzcQe82Coox5m8_GhmuY0Osa9uoh8UnukZ6YBYGIpuy9YzBKlsab53NrjreXPKAaTiTxPSspH5GoHc15McGaiLP39LltHQuCBaDcht1TbIkSYL03EL4Hbk_Bp4YBcgryk0nZy4ydY'
+  },
+  User_id: '30y5d16vdid20i2mqmq1qt',
+  Code: 200,
+  email: '18217028@std.stei.itb.ac.id',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 32.3692
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 50.614399999999996
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yoso',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 11.3989
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  nama_lengkap: 'Nicholaus D Yosodiputo',
+  idkaryawan: '83555554734834',
+  no_hp: '08345555734743',
+  email_2: 'tes2@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 35.0186
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yosodiputo',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus D Yosodiputo',
+    idkaryawan: '83555554734834',
+    no_hp: '08345555734743',
+    email_2: 'tes2@gmail.com'
+  },
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 8.5197
+Received a request message : {
+  Status: 'Success',
+  Message: 'Logout successful',
+  Code: 200,
+  user_id: '30y5d16vdid20i2mqmq1qt',
+  action: 'logout'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 19.7009
