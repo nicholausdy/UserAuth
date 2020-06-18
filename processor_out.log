@@ -12564,3 +12564,93 @@ Published results for : {
   Code: 200
 }
 Time to process RabbitMQ queue 21.2364
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 5.6181
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0907999999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.4505
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.2196
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.9456999999999995
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.8164

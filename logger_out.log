@@ -5729,3 +5729,48 @@ Processing result : {
   Message: 'Login status successfully updated',
   Code: 200
 }
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
