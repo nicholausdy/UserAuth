@@ -787,7 +787,7 @@ async function changePassword(email, tempcode, newpassword) {
     }
     else {
         //check if inserted tempcode equals to stored tempcode or not.
-        if (tempcode_query_result.Message != tempcode) {
+        if ((tempcode_query_result.Message != tempcode) || (tempcode_query_result.Message == 0)) {
             resp.Status = 'Failed';
             resp.Code = 403;
             resp.Message = 'Wrong code. Unable to change password';
