@@ -5599,3 +5599,133 @@ Processing result : {
   action: 'logError',
   Action: 'logError'
 }
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 699414478,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicholaus_yosodipuro@outlook.com' ],
+    rejected: [],
+    envelopeTime: 1472,
+    messageTime: 982,
+    messageSize: 389,
+    response: '250 2.0.0 OK  1592473809 f6sm2653539pfe.174 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<80f4e71e-6660-b24e-ec39-ab929aac3bdb@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 699414478,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Danispadmanaba Y',
+    idkaryawan: '3434156',
+    no_hp: '082518434',
+    email_2: 'tesaja@gmail.com'
+  },
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Danispadmanaba Y',
+    idkaryawan: '3434156',
+    no_hp: '082518434111',
+    email_2: 'tesaja@gmail.com'
+  },
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}

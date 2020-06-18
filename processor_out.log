@@ -12283,3 +12283,284 @@ Published results for : {
   Action: 'logError'
 }
 Time to process RabbitMQ queue 2.5425
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  tempcode: 699414478,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 197.0433
+Received a request message : {
+  Status: 'Success',
+  Message: 699414478,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 699414478,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.6777
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  tempcode: 699414478,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'nicholaus_yosodipuro@outlook.com' ],
+    rejected: [],
+    envelopeTime: 1472,
+    messageTime: 982,
+    messageSize: 389,
+    response: '250 2.0.0 OK  1592473809 f6sm2653539pfe.174 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<80f4e71e-6660-b24e-ec39-ab929aac3bdb@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3507.7378
+Received a request message : {
+  Status: 'Success',
+  Message: 699414478,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 699414478,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.1629
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 22.9183
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  password: '$2b$10$YsVVnRNkIh73ONGitcm9TeQr0WyhemnMMMzHkzNU.ZYymy31p0UKC',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 12.0307
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.3313999999999995
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 11.9872
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.861599999999999
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 7.2726
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2hvbGF1c195b3NvZGlwdXJvQG91dGxvb2suY29tIiwidXNlcl9pZCI6InJ6ZDM2b3MwbW5tY3A3b3d6M2szNHQiLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNTkyNDczODc2LCJleHAiOjE1OTI1NjAyNzZ9.ufuJilRGThmnd6p9WFa43IDyZupK0B3OOml4T1UgGKuF4zzUAHWZuVuMBKmmgbwotEv60k0KvjnrldhjwBIiapB_hyBr4DCPRhvt5csUWhSI8xijJ_OnCPRbYBiAeIudapY2hi85N7BcezuF59UmNfbZnW-NSW8z82hfuFYymsoPivrFI7YIHTWDawLbFgQGeHduGCqmYvU8skTqaHG00T9Zzh2HRCnzx2E1-wk5IdB7jFVIRStCGB_olACWmo9eHrtqu0VpJ7HvlwpMPzkj_HQHym-rg6WCCbjADVXspC5Hq8RxJZrOI4Dc6fjs_54VG3-5FLEdZyNUgdloAQ4mn4WHJqoM3Y3uDfz_vpZgk2512KrOxiJvu4NYCK27Qpzc0xZ3ZKVP_HvClQutPsJq8pgsFIMkuLNG_PzSuPClLwaeX3ZaJPQy_bGV7x6uo-QwaKOfYqtoahxU8GJxeasLK69-4biqwqmHOSUa_0iDFXLohWOU3iINo9_p15p_0Irswoo1QDZZqtu4WkdSoTTVHc_-xmp2e2VWjAOQw3BfUMZ57SWvdPQw1i5c_2egarPijzvUfq-Q1h4HdncwpnLibUGzcvqgWo3Rwg0WXGtMA2SHqp7RKeZ-xu4rl8ekwIKfnYx9YxaSVdwePgc0zALpSPXarGJ1AbsR_jcq68J0UVY',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5pY2hvbGF1c195b3NvZGlwdXJvQG91dGxvb2suY29tIiwidXNlcl9pZCI6InJ6ZDM2b3MwbW5tY3A3b3d6M2szNHQiLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImlhdCI6MTU5MjQ3Mzg3NiwiZXhwIjoxNTkyOTA1ODc2fQ.s8cQ3kvSd2T1uYgYulbJWrMNVOAo8BGkDn0qh7i2W_BR48pZW298jKJ08clR0RSi6g1HrddhaRtap1Ys7nA9aDimmCSZIqC8837-9PrjQkp7WSLcon6DcuP7yey-rFn6lcmjhbdJ8Vca4DeDxEmCEN2jyCccU1h0IR2EK9O13d1h9ubZa6EVzJfHx_Iolikv_LboK3qyy8sUKKUw87-mmIwkuz0rGKmDbJoDD1BGbh1wEF08Mq9VLpzY5yrNBZQfztaPQsHrAphZFhzJITiBtX52AvVJXXMyvNQWbjqZHggLgu-7NcvtrnxnvpaQNr6qaG216YkuRdWCM3QWJAtpfe8wCm-0-HIV6uYO3bq71eZA51zBb7X9T8_a1vlWeRDNI5DdGeWI2B1MtHtP5GPAJu_0IF_XvrZYYvvVJjU-xhFp8y_ApruYmGPpULqC58cZw48Ls7kKxwQIxFcP3BLY_d5Vo4YTLDMwVj9ZlEvmwXkdmrLMcprJWa8x6TGJx60FAXmJ1c-zusL3lQg7GEREOQ1astdXBzRyg-40_x077Y_hy7j_CKpN5Cf0x3HLH0Vy-B_ZwNInBplmYL_DqS1wKUyG-DDm37-orQXRgshhU1VRbC4o1OMAmHmAeVx3uS8ob2j8MCn7sjrnlQzWZEKSTQFlKbTSHfwpAHAlHXkkewE'
+  },
+  User_id: 'rzd36os0mnmcp7owz3k34t',
+  Code: 200,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 16.3021
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Danispadmanaba Y',
+    idkaryawan: '3434156',
+    no_hp: '082518434',
+    email_2: 'tesaja@gmail.com'
+  },
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Danispadmanaba Y',
+    idkaryawan: '3434156',
+    no_hp: '082518434',
+    email_2: 'tesaja@gmail.com'
+  },
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.0709
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  nama_lengkap: 'Nicholaus Danispadmanaba Y',
+  idkaryawan: '3434156',
+  no_hp: '082518434111',
+  email_2: 'tesaja@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 30.2655
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Danispadmanaba Y',
+    idkaryawan: '3434156',
+    no_hp: '082518434111',
+    email_2: 'tesaja@gmail.com'
+  },
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nicholaus Danispadmanaba Y',
+    idkaryawan: '3434156',
+    no_hp: '082518434111',
+    email_2: 'tesaja@gmail.com'
+  },
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.962199999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.9951
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.650799999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Logout successful',
+  Code: 200,
+  user_id: 'rzd36os0mnmcp7owz3k34t',
+  action: 'logout'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 21.2364
