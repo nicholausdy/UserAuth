@@ -6,6 +6,9 @@ server.cert
 .env
 logger_err.log
 logger_out.log
+processor.err.log
 processor_out.log
 server_out.log
+server_err.log
+
 
