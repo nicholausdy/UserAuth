@@ -1158,3 +1158,5 @@ Emitted 'error' event on ChannelModel instance at:
 (node:1804) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
 (node:769) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
 (node:769) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:1606) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:1606) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit

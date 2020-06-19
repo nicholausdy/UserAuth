@@ -5774,3 +5774,564 @@ Processing result : {
   action: 'logError',
   Action: 'logError'
 }
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1087,
+    messageTime: 929,
+    messageSize: 1453,
+    response: '250 2.0.0 OK  1592543900 h15sm3992219pgl.12 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<d1056de2-4d6b-7517-5657-3efbe24139de@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 676,
+    messageTime: 1053,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1592544412 i12sm4495335pfk.180 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<4db5ffb2-081b-c34f-18c6-ccb366bae8f1@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Notification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 817,
+    messageTime: 801,
+    messageSize: 400,
+    response: '250 2.0.0 OK  1592544488 191sm4387784pfy.161 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<38b09a9e-1c7a-26d7-aa7f-cc629fef94ab@gmail.com>'
+  }
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1111,
+    messageTime: 773,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1592545382 x197sm4404556pfc.13 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<67d44745-ae66-c4c0-5d94-572d83e29d13@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 702,
+    messageTime: 779,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1592545465 x1sm4347386pfn.76 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<047fdd00-5817-0af5-88cc-e40eaec78eca@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 393773334,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 949,
+    messageTime: 742,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592546815 j17sm4015446pgn.87 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<a765434a-3504-9153-4951-4ddbfdeedb0d@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 847378684,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 666,
+    messageTime: 756,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592546830 d4sm1784828pgf.9 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<d5fa4e1b-55a6-e819-9401-e2dd27578bab@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Code: 500,
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 568995884,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 684,
+    messageTime: 830,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592547159 4sm4666552pfn.205 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<03edfa94-c4b6-4bff-9181-b12face6a0b5@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 568995884,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danis',
+    idkaryawan: '',
+    no_hp: '',
+    email_2: ''
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjYwNSwiZXhwIjoxNTkyNjQzMDA1fQ.Z5EhD45PrOYENPL6Kk-nWve3XTM7LmC-Xr6w-UL7HvSFgi67ZGn1eoX92wGTalxBkRww5_LtuYOWhkYje1aTnyu41lUh4QN44_F9x4kz2HWEZam3INLBnCqwi-VYmZhS5fEQtj3uEObCnwMRkpqphuughJMZ5CI2BuZsGxctIOQScMpKhE0TyPaR7-lzPNnKDvrKCxhS3Rc5HqEGicvtLxutOKgiPqrRDbAV6PVvK59-GX6ww8XxsggUN3a4nHWsIwHRf86QC9n0ZQPBr_XcE4ldC9MPCERZyYMf-QtvjX2uGsqZ82nOlJLx_6p11apCyis2zgMbu2ei6qdXt_4NRoNfJe-TLKoT4L9RuArwQoo4LhpozmBB5_iOBn1aMjKwHxHdwMaYRNW46IEGwhZ7EN6IUh68Xpxz8FuBUCTGQE-UXTpoTJDWhkokYOnqC8Jm8FFuOrTnsBmxwVBEoq_vZkEmGfoGU3Par0J8hgoQsLfRwHxdZ2lBOEkDGbnA3GwFfoiwjTMM45WSXJ9FjAtMFG7cNEgB5ODf3bV3P-O-GHRGVKSF_6m79XpLHLIHAnYIlCgQ3oxUlu-K-SSqxF4g8jsWgy7C6ctgvj2n70OTXggs4KGlVTz81-9uSlx4YPeldkjdHI-9CBeKiw1nsueinwD5EgpHgbN28noYEmr8UEM'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgxNiwiZXhwIjoxNTkyNjQzMjE2fQ.lOMPyMfjR3sf05UHwtmFFg51GoTmg1G7FPpZEpPCvQxqi5JdnOOULxX0okSK6Pr5bYI7YZPhYAGddTtQk8kWSrWH8GgvOVHz_ZqzOL7QO9vWmWhxK8eYX7v3IjTNLXUnIlj4g3ZMxsAOyoqKzA8AbI5lwLZFwUqJ8TXMS5YFAzKTfQmxRtGunUIb_Szyiw7FKkyk9AiX9zIbquzQHHhqZYeOJfeJ_IJIesJ0a3fdm9dSU0KOjBIsxiG_gfCzpXxVjKMpLVc-StXWuMxEc7CmDwcroHhnA_2TNKk-eagWE7uRqVYcHjNgVnWhlilCJUy1NjaKmSuSZa82n0sdri89ki04XJeP-UOMjObUvL1DDjaBFdksM9SkdnA8bh0dM2m8IkUN81En0z3c39QHzdBx2fIYnn-BYDhHUsq6DiS6ogIp2o1hXx5Gbg-E6ZJlbUcGA4Bx-QPO1xqal4MvR0EiWihJ0EIIgJgCwKslkeUkJKFbFKZcoT7sbs_Nizyo8sKLmm5i5QfmYD-UVZTaMbjiICDh2tP5AWvDXwkCQRV0BYUju2eEvdUVyLFqTQ5DCZcuyEJJDccoxqacRrwAGCC3BnZYmLIqto0qQdiPIYtwYkRuvSKUZQEL7HlvuIYHSuUvoO2BTccL7VbvWGe7olGC95vdf639VevRQzPE0JofMKY'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgyNiwiZXhwIjoxNTkyNjQzMjI2fQ.h4SsTWOJgoGK4qVa4-9T4Wt8hjxnctN0jfFtSEHUdSaeBKpraxMMSdBMiUvKdNcnmqebL9fYq8Q_tpAyFcO1rBGjcdMZN4k4Ni0rT9TfJNJLTYpA2kTKKhr6gKxBbYyzATyxHUKlkf0uSfuTkGxxtLiWlhnPtI7UhDPZUVJN1yBUvbjDfp29Ppq17tHoPrLowxVfN1_3CY1sKnzUJ7RfbcOO1shK3WMujYZQ9ysR5n4PcBBCLqnTg-lHno6ley6Igc_t7HhBM6P02eFr7O1TMlKnBkIMH2Tm45F72tb4pPIGq6PhNNSU6Hp-arM6POH1fXhAfMGlUqbOYoysPzysjfxHUGP58wHuTb0IIhbYduusNllyn23cePyETeO-osUYwy8CKoVQ0hoapo6WCOwdFjrWy58lrScPGvGmIpOGUZUGOpTNCnj2_VJXFfwxWYaIPFV-QBRBPLbPeFYa-lRr_NistkTspDRVpt4Nt_4Y131t7SkDBtvSUJirp_zeHoUrQ_2MDvbuwl2rkccFkud2gVnpj63VuapIlsvN_B8doS7iMUTV8jnWPE8xPbQstkRB2s_pMstHeom_YDJ7GHHntFek123mC-2GFYjG9n__DCYZJjk9N-O3vQBIVgrdXif5tMmQnu_UdlpLIub-e-2YDi1UcT-I_mr-9almYEQYDcg'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NzYzNiwiZXhwIjoxNTkyNjQ0MDM2fQ.xJ6DYca1EV8HubN17uNNcvVdjDqZ4hAbH82DL-aoD3zVLPFtoGcLRb_6tBy8c-HPT3NotOoxRZH8-lhqzEL4g4nreS6DDx4ea9BlHBj3wKPsBWatowL83Ec-QeGa9LVzsBiPDCa6p5xybBDI25gF4Csw6tKpMEwxT4KNxMe7IxGNWuFxdquzmabqsdnAVyeZW5pRPJxzs_f_aFrEFJb9s2QbOlpEUCydVxnbMQ2cnzWRryn4uDUoQ37DMZu-7yq0yyJ2TgcL6AgVpHvgSQUA3fkhZok0WAXpH5YfSqTIgHJ7P07szNLey4Ykj9DlAry9gcqcu61F8tp7oGFW11wUxr0Uyide3Tkskg3UaVcABpTZLcFxpG5fxrSi84mJaa-kP8VYCG9aFQWUyiwTHphTiNPTffdQO_54Sp5xQDZiy9RTjaDloc0macq7WZt5cqf_FomnSwnwitVJ1W9pzBh_2cZ7C2ARPCNmqTGnerFnviCMKxMEYPlRQndyVxeBh2alwcAO-0K1WqPS7reRKQOxpYwGQaWiokTo1IYixip-ydlk6H3kEeYbH2LItliq36yLQZnKCcYy5MRj_RRjiGiboIAG-MYoilByu6vxAGinc01wiLd1sBMOp6W1vANdJ6HaoGC0fdkWyyzWd1qY0QGHu7_hyP9pSncYcoSKpzam11I'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1Nzk0MSwiZXhwIjoxNTkyNjQ0MzQxfQ.x9yZ5jveFCNoJwAF4TwxJn2w9JCPwiveEtD7Y4cfkux5ZPuUHnTW6W6s9B0z6Jjw_d4B5uJf58S0P4gWzXQh4y_-UZ3lkNgmEHZuiHjPc8Vj_NnUADBTXaWzZr2kyWsZjgOrs8dShYrt7eEGjoRueuZxW9uiKpU6Wb4EA710UnW9vgVbrI4dCCgT1_-FjtiDZI7s-jujUQrUlRhadJnf-XkFnAvcWXcHe2lGWS8BPbbhi-_kEBHHa7DhZupR1PNZBu2_j4JEz6xDGw3GxJnnfrvSdFqLor3TehtWDF1mrwFOtywOeLN1tO6SfFw9dEwoM2Mv3tDEMBqRY1qOnhn5m9WJUpYModA2ulDY8rbz4mzrLcD90xcGP9_eKwFnZt3T1HHWuigvYoSyeMA9Y7K0mdmzftew1LveUaHsAXhRSUYfYX99Lq4uP5O2Yy21oDVuCoOpvM5A82zRzqo-F7-rpXfRt1edgvFHdRKQ3ObrQJ0KdAtdT0dHV7vE_uxL_LhGc4hs_ODyOf8eHXShA2__xj1MRL3MPWS1iuS7rqTIfO1HpBIFmom9dr4Yx8-RthOycxHcTQ_tqvfum7ElHlgXeYowgo1nMkXIg2Rq1Apq2gk4Mpe9Qdiyeo7EpE_WGHDyFsrGw2NqzKaFTZE5eOgzLhb8iHQzhfLiYdF5FPezFw4'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError',
+  Action: 'logError'
+}

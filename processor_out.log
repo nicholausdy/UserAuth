@@ -12654,3 +12654,1307 @@ Published results for : {
   Action: 'logError'
 }
 Time to process RabbitMQ queue 2.8164
+Received a request message : {
+  user_id: '0y4bcipmlnskuov6056bw',
+  email: 'digitrans.noreply@gmail.com',
+  password: '$2b$10$Avl0zG7hVCp8hRKJrcpRcuN002Qrgdf32SyTN8fqnBWorTu5zj3.2',
+  nama_lengkap: 'Nico Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 21.4868
+Time to send email 3016.0719
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1087,
+    messageTime: 929,
+    messageSize: 1453,
+    response: '250 2.0.0 OK  1592543900 h15sm3992219pgl.12 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<d1056de2-4d6b-7517-5657-3efbe24139de@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 3023.0045
+Received a request message : {
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  email: 'digitrans.noreply@gmail.com',
+  password: '$2b$10$HiEkASKS.vV.gPUkK91jc.7bGB2aB3EfUvlZo/EOjgot0fAxAVujW',
+  nama_lengkap: 'Nico Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 35.399899999999995
+Time to send email 2635.5904
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 676,
+    messageTime: 1053,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1592544412 i12sm4495335pfk.180 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<4db5ffb2-081b-c34f-18c6-ccb366bae8f1@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2639.0861999999997
+Received a request message : {
+  user_id: '99deobwoaz7o96vtq8680b',
+  email: 'digitrans.noreply@gmail.com',
+  password: '$2b$10$7NSDyZZ4X3prIAklThEIiOK6Rq/v0SKpWtEk7fMG5vkGM.KuoD.y2',
+  nama_lengkap: 'Nico Danis',
+  action: 'registerAccount'
+}
+Time to write to DB: 16.539099999999998
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username already exists',
+  Detail: error: duplicate key value violates unique constraint "account_email_key"
+      at Parser.parseErrorMessage (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:241:15)
+      at Parser.handlePacket (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:89:29)
+      at Parser.parse (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/parser.js:41:38)
+      at Socket.<anonymous> (/home/cinnamon/ThinkMatch/RealTimeProcessing/node_modules/pg-protocol/dist/index.js:8:42)
+      at Socket.emit (events.js:311:20)
+      at addChunk (_stream_readable.js:294:12)
+      at readableAddChunk (_stream_readable.js:275:11)
+      at Socket.Readable.push (_stream_readable.js:209:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 225,
+    name: 'error',
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (email)=(digitrans.noreply@gmail.com) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'account',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'account_email_key',
+    file: 'nbtinsert.c',
+    line: '434',
+    routine: '_bt_check_unique'
+  },
+  Code: 500,
+  Email: 'digitrans.noreply@gmail.com',
+  Action: 'existingUsernameFailure'
+}
+Time to process RabbitMQ queue 41.8916
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.1008999999999998
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.3392
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for verification email',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  url: 'http://127.0.0.1:3000/api/v1/account/verify/wnpwpvsxdsnggybm3axg0t/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoid25wd3B2c3hkc25nZ3libTNheGcwdCIsImVtYWlsIjoiZGlnaXRyYW5zLm5vcmVwbHlAZ21haWwuY29tIiwidHlwZSI6InZlcmlmaWNhdGlvbl90b2tlbiIsImlhdCI6MTU5MjU0NTM3OSwiZXhwIjoxNTkyNTQ3MTc5fQ.lCcnWNK2N2M9I-QajgO6DrSl9FZwMUyqjMklVnp59cVl4odoDLtBYWigzEOhVhuPhaMUzxGGrstDMDe627GZc5QPQMBI74MijDOQjBHb5n3HwA2N-bF4M2kT0cV2N8Jk1XaMR35TiyaSklB-pX3_BnSbTpgxzZqQjjgyAkMpOCj9uifnuY3EBBaEAnoNaOMpPU2-TUpyYxG1zldmrthfMa4rDbuN3We6ckoG0BQxDcHX8sLxCFBKspRZxW4FzGLoqch1sCCU7AskPjvtdAmb7dS4xqm7Zzhl7DV0ngRxbmt2k2JZgn_xAMWbtH7ALkQ0r0lTVcu5ud2NBSMnezEv9th6_QKGKJ4ioErqXwTyInGsXZKPuMLRwvLFruN1PNl16_blbO3-hur8zg6XDLQGnWdZontdbtll6iwbkE-PiSeJh78PUBZppzv5J_v-y8zdn_EgwxGcQkS0yz45VH8yQ1vHOz-h-0D14SowlkPu4-mAhuSUagBU3iyo0Inc0U8HK5Qe8aivGyUu7RtSJjW3P3hd1sehVo9NIPd_C-cPBi7Okgk-VXrE5iG0TdFae017VGeH3Jzxf1XdYglheMykyKrc9yDVHFi_M07ZDdfyb-u_vfMvrkS2OfuQRlwu-ul302GfbSxnnSfSoqqb_HpKM_xhZ75Tb8ZkkApbsnHWZwM',
+  action: 'resendVerificationEmail'
+}
+Time to send email 2787.7342
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1111,
+    messageTime: 773,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1592545382 x197sm4404556pfc.13 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<67d44745-ae66-c4c0-5d94-572d83e29d13@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2792.0649
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 31.3451
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for verification email',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  url: 'http://127.0.0.1:3000/api/v1/account/verify/wnpwpvsxdsnggybm3axg0t/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoid25wd3B2c3hkc25nZ3libTNheGcwdCIsImVtYWlsIjoiZGlnaXRyYW5zLm5vcmVwbHlAZ21haWwuY29tIiwidHlwZSI6InZlcmlmaWNhdGlvbl90b2tlbiIsImlhdCI6MTU5MjU0NTQ2MiwiZXhwIjoxNTkyNTQ3MjYyfQ.vE47ok5CgahceHYQR2_zDxApUHrtJ4f4oz4Zv5YSZdLjnBMgOxn9WcGJCIY-o57r1_uGRRLLD65DseKwBeqKFML403BL37KroGOesxsFIvCGDOgx9GT-d19JGjcOOjvfDShaTSzlD3DBucxswMP0bMT4SswEUe6ORBhACryVhBCAqJvRlu9Fkxj_7sv6nxGhnzDBdqzg9jYwQ4WYRSfaSOmqTs1StSeGyvRASTxvX2yO_o8jAcJXqfki5oW34bRSB7gf49a6x0Y0RiN7UEwpzfBMSJGlU-OGPQVjN6KdGcZ3YCIYgJm1xfOYBOx7wwIVyoBj-67VPxxcq_lRTdR8VPNXp37xHbt3tnDWfaoQS6O86JutPwrlV7heTsAOZniruIX13fxtqnd4rj_hDPCemfbbVgxEywSVnrdTtDhq47x-Q2oz086y_idTn5uVlHsQSz65m-BOpCHdY-UAibjZtX0VJ6kvR9wMj53RfMRUlVM8fDCzMDSLWAHrdP07btWetZaVvJHAsBkQsMURg46XWIKGUcxI69iM7xaIiD-TwwnrC-H23RwT48uPEfDdC_YOKd3JPNK_FKrck02TSMz7jXDTy940mMgbu1i3sGJL4SRE36RwCSfJfrUxpRY59im_T1F7UlkilHsiAVnZoyziYifBegf4rbOT-2XcIwFUOpk',
+  action: 'resendVerificationEmail'
+}
+Time to send email 2325.408
+Published results for : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 702,
+    messageTime: 779,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1592545465 x1sm4347386pfn.76 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<047fdd00-5817-0af5-88cc-e40eaec78eca@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2327.7923
+Received a request message : {
+  Status: 'Success',
+  Message: 'Account has been verified',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'updateVerification'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Time to process RabbitMQ queue 20.3711
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0NTUxOCwiZXhwIjoxNTkyNjMxOTE4fQ.ymm68UBS6dkMc24xIAzbdAnRZqmhPZMd0I3RF1xk_kQwt3-Ce3boIomIM3RzySuGT74iOXd9AFIc1ZzBJOP1XwGsq8D-Asp-tbJ-mu2YSERY9tV6BR81Uk__s4Xn82eL6Zt6nFwGdFWuDb__lWSOYf4AAOyBvfGByKWxqCUhrJ-jU0hTuopTsV0_EsZb2Z13_BLq-CDW9EkJmsyPPG8Rqvzp5ujKUXWkkfJMprGMqPxp2rJK8U1VsbI2cHknaSDX9xYZ-dQc03OvlMz8rzuvm0-Oz1rqV1Yz8UBJvlR8DrTPIS1CSo0jbrqaVganqytZ4RUhKZ8dHUgZ9iniGJzW7IadQ5BXhThTrlmbICGgtFyMmJkxmz7DguQviq7x476LdxY_9kY0AdmOkOn14Af6QOdI-AEQcV7NnvRe5-naJJTGH4w51o7niLHwRG4AhR5I1fBTeqVZq2aKHXGfSby9sI84WXhtdqi5uekhI3yhUndZSclX4H3drcSotz5OldaZXEd7JSr6EZqWOwR9hVVGjdtBfGGKSkG4p1i0Px2t6HF6cQf3otS3TSatwdBjXqV16o3Znn12_cb09nLQXCUJWU_rcp29XUAs_9ewcdZ221ZgTR1cG81sWcgI30ic-ef-6TItlHgDQcSty1lVQgSy91nJRuc7_xXSmyYILOVPmP0',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDU1MTgsImV4cCI6MTU5Mjk3NzUxOH0.WoiTX7c6AqKYKYSTn8_QJLOxe2Gov8AWyEu2JKaeF97XmG-E4Ucja_V25h9P2PZCCKIe6pv9EGiC5AHqFx2ng87YPcBisU50poetF6kPCATWQMUywJ9oEElEo55xbNgpBuAPCkIrRN3ODH4FAS3zu-PXFDbIz-16Hn9uxWPpR0enx5SaVZ41FDXtqxiviEhzCW33DCBS_V___rDGGxTnI0_X4_txYe3xzoDD94HDexmm0rypxuY-ZbZVJ5OJ6WD3sVeGTu9NweYhH_XiQgdCZ4Qg5dwWZgN2vsk0gF5XK-p0i7pqSBd-1zNBj-A3GiuGVptPdvCvZw0ObQX-V4zFLcBD-b2q7hBtIiNAbdFZnTMNWrvOOrqia9m6at5j6Bnj-6XkchiQWYPQZ8L8wTYfoZvryQYr9VgKbiDkIw3_LNhuHIPjv37ImhR4DzY6daFZZzdwfECQVaUeQjL6-DnlE3H_uXuYjAjeeyhrbaObP649MBmpvf5IAGyL880KdW4-B4i-71OFHc6bvBzxN5LnwmDUK7EPu9XYOC_hWK2DTbkgfsYVWMdjTdwEDTXXTAZeLZbQOxcpyVRfhcJF-_BC2PkkxXAYBFT03Ervgi7cgjRwqC5AtJWYJcqkmkECZpJleIphboUQfoyy5bLkmHvV2466NPOH1tPjoacElOrHpPI'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 18.949199999999998
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.0865
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.1985
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.3011
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0NTY2MSwiZXhwIjoxNTkyNjMyMDYxfQ.zkZmsS-fncwo2OJu50DNuP0oCq7JhG6zxJpqwWvj0rDB8bCqu1dNlxcRVhwoy1KEJ6UdIoB7qO_LsBQ8maEZWa6yBtIb_Lwkk6AfMwSkLNgXgTwZwag4lLSeg3X9T01cX-6QIwFF86aOiHl7DXDNYKGrwQbpjEb1Ey6e8WoRZYyOrmhrv2UwU-tzLnnGZt-gMTAwb7GUM5-CRVf5B0EmfSvMvNEOW3BoP7CqLfQagocJLFdNFdGuuCVXyLSnSsd9wy8qYZ9l7SmIXG6Cwe_U5LUC8AGREwgwIpO6FqC-R4DY3_ACJ-fJ1G5rBly9XG9u2Y6mTktR1XPIPfGlMuffpShLwpBbGjIzXnJQRIIYqMtl__h3qyIv_1eAXacF4DIcoNFUbGDRF4-_v66Z7RmVgBRm2eUcCtljxhVpBjux8KOU6wMVsPYzSyxb06EZApPdBwnTkBvlDn9TqVHx0dDqfgJWeL7Sp2RNOLHRT-41AY8zTMqyrIDIITYpkP2TK-aHI9rZZsV0Jw6Rn01kE0EteQ-1cLJDAi2QksZTEu1ie5bMSbEsn0gslfPMmnlyIJCCXnNt0Kr2f0qzRi20y1NjNiGIQbcPKwfOc1NYac5xdA0Xr48EpojiTj5DQ2gQxPp1uT5cr79ZKlINnyKFKxPrddQ9jXGiTWg_8dZdwC0wvqY',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDU2NjEsImV4cCI6MTU5Mjk3NzY2MX0.LWOKzsv6n63ct97L1nLkDnr0lIKC__Bx9z-GUth7QcvsvvoNN1jiduXhPBP6cW6cK7PLV-SFLewaKBy23aKqkxkXFVCLBrT-0em5pwRjjSgGhfHJI7TlZANhCCiK485S6kE3CzEOkgXM8EthpnrZUj5O2v8RGi-md_rLkvAWH6qJubtxXPIpNNJNUHLnlYMJvQnQR1jd8NlP-wk0NEdPJ5PgCodGO7VIhwcW9Qf0Ckit58xdgt4EghkiEmCbtX5enmIgOZm4CoG-aklXMA9OzHR-FlWUkvq6N1Fa76VZ60XNNkXKnJJ0amMfwORbGIpgINmtzpq0Zk7XzKlgt769TlvJWDKLI8E6PS1pdeMKamMGWfSfy5Y0ffpwssy_y4UfdrXoS3SyiwKu-xTBKbQGmaqS2n4cMsgWUtPvIlKk5R5Fm022EAzBMOxcNR9n22X2NW9DUYfpMgVhD8l4teMu37u4l5LpFdCB-gySBfY69-qDnIAmbB5Ph0RYHSUkX0Hk9fZEylhwVO8H-gn85Af0Wi_jmbRF0T0Aq_SsOai0swQvDNm2nUEA0PxhXkEniFoQfgojnuvVuW_KZuPWkXx9TEzUxOV-cY5kzA-Je2gX8LiROjSrRfWckibZLuZvnm4f-kJK-V8R-uUl7FHAfpqz2CoKKsXn2WwiYKP3yFHeAQc'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 13.573799999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0NTY4MSwiZXhwIjoxNTkyNjMyMDgxfQ.P7ZKhrWhAM8muo2XPdzTmBI9KChOUpmmjxjgjziFJ7DFboat_w4bCOwzR2I730v-62UXZ9jieAnDoL90e9P8CzMRl8PaSqfuyTizp3l2t_yBC1QWc96mVKhbaXCzO-cRALQi5xqYsZVPSBdX0ocZRfvhCIPR9UWfcON7fsNrtAirXRAC7DL3pSyHO6h4FAdmTYIsUPmbA2ikpwda5HDTqqoLUrj_cqc4xKLq6LjdfWIUs6hDAjZRk7fDDBUjLBis5RjVzGoSFoGnwUzg9K5Y73gKZmN1MrflABwoDr9IuH7bJh7A5KS_e70D7f385M4IpTePQbLnLTBQOwlmpk3bvZDH07d9oXSbgUf2onfFZudEgOFtTEuQOUY4P9bRwLgmaQsP5kQLc78v173GA8wumqT8JAtMl5AQwswKdagnPnNx0u0Kqq75tX3L-q3MgvZ7grYh6rlyb-BNBMLx1mxZa-yMtwunj3TTtAAIYUPn_-Toq8yXREkjq6D_zi9Kp6suXTh6FTZzLsoyk_mOBRoNftjHvu1iXuj0pTf_WwpYUJrchwTxRhIRMefo9mzAuUGl1ORZc8B07o_1Eoe3qU7RT57_3tMGuJ__VIwLes0GXixRNKf1kCO-E0k1_zzPe3l4rOdErGxC1hadmQfUV6rzD2C2y9wcT-qLRpg5WAICE0I',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDU2ODEsImV4cCI6MTU5Mjk3NzY4MX0.X8-ztFy0ULW3PWNcJvo9-qxm1yFdfPFWCLL0cQ5iy8yl-KH5r7hTeCcA-5W_EmGnE506HYR5gLJKm8IKG_zdjnqFMPmNnsvZrKHht8X30gkOuIk_dGa_5ipLMPjE3mqdmimHGO10G1kswP45PUTdayxr51lBW6wQFhosUX_U8Ab03Ie8-bGheeksTqG5tdjvIUkzE7oBie-zJ09wlBXZk4K7hWzMUT6fN93rjR7F4kzIvP4NP-FYPq_0K9dfWvA0FDK6lTwwnK-xCo-VRhpVVE7kSYe-Ys8YiuEHNzCH3YaeyfCWOLfk1VohFo9r4--lx42m8XrFXMTE6I3ywJB5L5gw_pTzOHZ3D9lP2b06EC4pKOWv0rksoCBV-J-9ebEtxMCS1iBRwWmpnETkzUVc9CIVjhSt_CywVYRvFZGNnmu9NZncC_nzBqPipBgwKYD3KlKvdnc2kM5uSV20guEjdcMLb6lvhcii-1FTPb3wukA_zdgQUhOl9QPxC58uejk2tFz6rfP_vsdk-SIteKB41xSZe-oFJxCzRaVwba1fYyn3_3S_Syl0a9Ad386bC2iKCLU8FjHLhVXHrxHVxCvhFwb6v6c_nvhAfpgRBbS4CvMKzJV0I7xdswfS9avVko4FTTuz7sHpMfHtBUU3Tdb6RojqHJzF2lHn0DUIC9q6lbE'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 19.698999999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0NjgxMSwiZXhwIjoxNTkyNjMzMjExfQ.QeV7B2FKfknjYnEg-5v09nTHyqlbBilYo9uQGnCyPA8NfPyBbt-j4c0DcQ2X0iAKyb-eQJtDuSzxPrXCOwxfC3R9FypT9811dovnp2f4MTvdgeA_e-RQTI0B_4gJF-DmcmvA5Q5MH62kLbglnQR80F0nxhQpf0kuvZnPh-GNYHqhBboehmlOVwoXTifEylPusu1GKXzrrU_rBb3HbpTZy-uuCKz5rljBtMxmhXQcQk8AtFAEsib0XcPodPUyOkTkRuzk7FcVxLfwNuihh_Cw4Bv-6ahP7BS4milSE8vM1V5GG762N5azSXSrjaGa0-8VlVfDKrjvrAkgKk2beySGwl97zpUE1eS5chcDClhPyq7_28Ql5KNJCWNw4ueP_bLYgN_XDfXAAQ3kMeu9VY-61LCh4M6jOgW48GxMRceM1CeVcLjOgj95pEJrl2077Zc-na5na5k_lxCoZqFw05jjwPcXL1unhtneCFHhwQ4A7KOj2PdWSxkSI8eJ0_GQSnSuGGLhsSB-fWv2LWqFlk1A3NugGh_V2Rl7OwoJDVX7axg9FdXT2LA1Cq7u9NFk5FwlVG71ODXPzgfILGJLqzhQXFdfj3HUvuzjHJO4rI86fO99BKyyzucFjCQSv0_FovRH8_UvikfXog43UkYq5KeiV-oBAFCsip2abS7-cyEza6w',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDY4MTEsImV4cCI6MTU5Mjk3ODgxMX0.OE-SzzmCJSuF_nngk4Z-jhNuSTdcHruA7UkfKUQ38zeBWfqOQN54baKg2KuOqQgfAemGuSpJEZH2Ex-GRIiYbYQTIvcUJppW9a7Bhdi9aZIGsbc40zUNdokc5Ym6PhkF4Rbh554hcMumw0nNSeg3mvipxgrBY_CnoGmY_oIJawww_RjdllK_euRVltMD_HUaAfxu_5kZ3i0yVvlHFB2RwfPdWqNS-VLmVgowCRcliF0eUq4Jqedo-zBiTYQmtqtfnmb1mUSTRfEoh0EELudqgMBBrTj8q5AHYAkHdK1fYbHrRzXV2nuFXBIa1SnhtqQXEMpKh8IY4ZaVPbGelgh_MWhrzW5dPU_XsUAogNRJSxQv51mH5lz35jmhQqy4w3peF4qR8RdPNtTLtMFXAC8-7JYpe60WZ6V0U1SOr2y-BURhYAv05kf-jbYCiDdEDbQe75-tOFqhQpSIwWwtwe1swT3S0MCymI-uNzf6H4zvUGkxRJyqoQy2OHdSjW1n7yb5O2zSSFB34h498hNyV8cphsMscIKxHJb2GCx8qNRdM8SNiLXesv7-C1al8YlD6bmwklCLUAKwZxSOYDqkeDmwjldpK5HxkenGNTfeu8CWQj2LQ6djuAnulrKbneSnKag2_wuH75cSUJRzo9twKgMhqjGT5JDZao0MY9oS-ObWbng'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 1578.2394
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 393773334,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 7.7192
+Received a request message : {
+  Status: 'Success',
+  Message: 393773334,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 393773334,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.4954
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 393773334,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 949,
+    messageTime: 742,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592546815 j17sm4015446pgn.87 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<a765434a-3504-9153-4951-4ddbfdeedb0d@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2577.194
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0NjgyNywiZXhwIjoxNTkyNjMzMjI3fQ.rxkSEWZzRXdNex7PGjykgoO2cVvD1zIuQ_MArf8lRaxt-vxBfk-8P7jn7wtWTGjAZFOYpCBNYp6AAWeyyYFf47Cu_o2W4sg0r41JVmqapsc4SIJCuomgkHi_k4G2zcV9XDvUkA-H1JO1lzBcBqemcNKY4aKTi8fXsofKPMUxxT9bS6W6S1T46uSZZzBaTgj3GqIHB1iPY8xaHxeoye7Gjde4zJ0LVBZOhUTMmZ3Fcm3m2GdFUz6UuM9WAdWODrdEhu-9le3dFd66goMfZOniQsORiY45bhaxKB0B7cRJtYiz8fl5ES9xv3R6pk8cV1RGFO61Bpzc87LcpqbzJr-1GLWVzh_xUrR9cLgtxg_dkTpadsU5VMluBc8k2FoMKJaqFiALmvkreWBIWsPY94fDNSbHfyaB6TQVLKZTHP68aQinSNRz7m2XDz0uMoP3wmkW-R-4vZH6qOkRri1rOBmiGfiULtTOJRx88bqTyMow2YHXzZSOG0y_FT6MJx9kcLu_Y3d5p4YFjQ83QzaS1HCRgbwsyxjG5XEu6pMeM7Er16BsUYSxGKjd8FSOi0rj4gcKwuNIRXzHqi7qByWtg3x6CK-rrdVIGDX-GmgXXdDCzyQZYQPEIvzI4D5tBrhdqAbbK3eUwpjULRJOXlTTEBO4mZt_LG9L4KQJf7_wxHuzKNA',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDY4MjcsImV4cCI6MTU5Mjk3ODgyN30.tTRtGxi1mwLi81MxnmPi08wRXxKdWb3xDo81eBcs-9wLTHiWK51MUsw6X7IEFXM5IMdxnqsFggGtlVghO0O8UYi2MeGel193J5nbFfI3sMzaADnat4sQU1dnCFye7HQ2ip92UmfUeWfedDWfSj8hxH46Stokom0Pb2D9syxtnkBPkhq1Z3EP3sMagx0C7BVxJy41b6MBOuIokg4hKUXg9hu4jp6REpgu1xRumniPa40_Arc8Mn9MmI-OjgiEQ0PesftTaq57HU7njsr4EUBSTWJ4G3jXqA6QInRcVOj3AVhUoSZLw2E_RDF_CHRLbdaiCBCP27iTCghgu9BeVxmcdofMkRhomexrDCLYuYjNo-oKNMbn-WaOZaMTlR3HN5oXFR4jfmvLuM92zzNraxGqAoOfKxtreWcT8P59Ik9bCGCiekC9ScHgW_oCLh74r8MJU_cEW4EKy_emB24U3zdzZXqh5ym07NcOXO4R2s7sxFhywA64lmfKGSYjGl6VMDyJ_qUd3YnL7qsbTcuSLuQn20_qBwFu9IUJt-XB5AU_sYyWSuar2h_dKYW6NmiGufv5XouvsBygdZczqBJg24SdFkMeyRqEzLcpGwgIt1w3beVRJ9byuBwhusPJ10Zn8Sp1qMCZQFM1FcaDB1LQLkkbvVFfm48sCkNaQVIdMznp6eU'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 27.2795
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 847378684,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 7.0023
+Received a request message : {
+  Status: 'Success',
+  Message: 847378684,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 847378684,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.4566
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 847378684,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 666,
+    messageTime: 756,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592546830 d4sm1784828pgf.9 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<d5fa4e1b-55a6-e819-9401-e2dd27578bab@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2304.4475
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 7.8077
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.135199999999999
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.7287
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Code: 500
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'digitrans.noreply@gmail.co',
+  action: 'logError',
+  Code: 500,
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.2389
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 568995884,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 11.1974
+Received a request message : {
+  Status: 'Success',
+  Message: 568995884,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 568995884,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.2969
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  tempcode: 568995884,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'digitrans.noreply@gmail.com' ],
+    rejected: [],
+    envelopeTime: 684,
+    messageTime: 830,
+    messageSize: 384,
+    response: '250 2.0.0 OK  1592547159 4sm4666552pfn.205 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<03edfa94-c4b6-4bff-9181-b12face6a0b5@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2432.0576
+Received a request message : {
+  Status: 'Success',
+  Message: 568995884,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 568995884,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.5839
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 19.2505
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  password: '$2b$10$9Uk3T6Y8TL4gY1/5VkK/ZuBpLllSLLlynmHvkK0CfGvSsIHzzq6Xe',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 10.8901
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 5.065799999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0NzMyOSwiZXhwIjoxNTkyNjMzNzI5fQ.BBuLHOlXYsa0TCNFwXYeATzPxZYT6nvb2ibkWdl99_kURJNYzIg9kEncYt1ZhO4p4vfNOPqgpsx_bfRg-7QTaL1wjuhQPNkILnCPcr3-EoA3EiG5ViN_fzsfcQakOoFcH341H9oU0n808FZYJcFE1PplkEXXaJCUQoEdohyYsJXryfWgwaFMbzjG_DxAGmgL60VTAtsYKakN9Hw3TuoW_H4E1IkQk4efFbglYgmk-D44E20vZ1DXjp7M0KhT24971LVKnNZ9M5j3U660HSRAIT0j2Y6hQawRYDmqV0kGKDd2xTM6KNm3YxwPzyEf5HZq7qjShv_toGReZAsUVdUKDnJQakQ5c_4S02uf77uVNVzhuyqlf0X9F6qQ952SiNProkFZT9R6VqvkVvSQDN1KOZELEgMSS9EJg1UHQfusBTDgxLF4yg8rH6cP_6qKPXMX-TLzMWjFWRtXLuGjuJzq8O7HX6OKzPpuPQDBFILcPJOGxGEPlUKxMXx-zmW3-Qx1gNObZT2SYUdv9YC_69C7vS9yDDNHdE0VHCDmzPTn8ANncI5qYS2KO1VegedvO2wxp7m-K5GXkpmJSeFhfeUpodZ8iwE44TR5TaDkonzApzBKHln4a0uRpgwLkNTM9KwWAo2ELr9-DclL2zaeMWiFXoSfzy_1sQ5QZ43EyS2XlHo',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDczMjksImV4cCI6MTU5Mjk3OTMyOX0.QYj2_gDMbl9el7OQTNs670R0kMtHCG7TLQveWu9no5QdgELtFaNSrzFTeq-4XBV-6neXGnjrO_X7hpY3NZa56kwPZALcQXUjhnl-RZ1zZQiP93sYBo7sGjEX0Gz01_6AbDOJeDWaC_bI_1LL0Ay3lUmyC94Ou6nRe4q1TkYBtKAKbYW_wGWPvDTXXdB9QHzdA8MZ3wtaIVucaNJTGgrernUYGiV8MgK2uEQ7C9zoK9BObJH0vvZagktT3wdTH-abtKBOUTajkXMgviS7owXg2LNjHlvpDLQJDqdoWg_PhybiEPJQuV-PY6hNJH-nlx_qKFTMZIeSB2zthkGX0xp2z0qPPp7bqcrucwVvvPNVCIH7-IzotTjp7rDzPnT0L0FjE9LcPpdDjV7Lf6n8OT2bE8RYPZDyGRmEA7t6r-YLLv93HVlhybbPXwGwHkLhkYAwpm1e9a5KrmbjV6Yfvlr0-Ctp5mYU4V-Hu0iuDu80yDmhU2AkgLEtPOsuWxnQYkpXn--Bk7w2RguheNJWv1HuqsDG7dORDgKwQgAk4NknlUs0G541PP1Tm2VKXqNht-VhcNt9za_y7lNoaAyzrYb-864Y56mam53jeofF3fFngzo37P6GpBPz-csO005SiGcDMETJaWqfMovQaQx83udHsxbOP7NnpljwJg1Pz6nMdFQ'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 15.083599999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0NzM0NSwiZXhwIjoxNTkyNjMzNzQ1fQ.gHlzbUITN4x-ppwkYN3DJPH7Ci5n_brTViE-DjxikwID_gRYJaqmpWd_LOo2iQ1lrArvZeD8YvXa-VmS9KW7Ky-b6VssGyjuRv3K-mDWm0xz5aawE4NM-AmkPdL3h9PUgDJfMeA8zNaaO_lIDthZ3JPg1shvmGaFdSNNBjk8DizstCcp1HFWiHLwcEEInjCwJeuyDKuOHlSgjTPIYU3znsv7vKoZMxCXXcXMqMpA5_fzf5wKflYcZtekqkjkcw1wBmcRMjQBo4uPPC9k7QCDycy4oKGoUKQTUEew3yySZWXCKZMttFQLjp4JPCx3w8kg3H3GrIZxJcyXDwodYsaPQ-edO8rCl3DZ-aJi6HQwgqG30DrRacunM6hMumOoNk8qwV227jSwBsSKZb8B9mKsZQ8JPBBsIHr8iHamrlQAtil_67kRhs4ZoO7W_6sjGHNrDNb-Awmh0OrkbHUyshWme_8wUROhVGihBAHaLSv4ngQiGQBAxCOd2dt4gbO9T7MYf7BGEXvik15AIxuB_VTB5Q3noEIDFgfNsO62FED5Sp6Cw1-ctSQgIGQi--wDtZeJa9guRb65Q4J_4dDbGra5JMe-pke3Oy730uZlE35a0A3AThCom9cVjf7ICyTtZgaWeNrAnj1aoypgkkzXinUzHCQ-4_UeuIpaw-PjSyaTHFk',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDczNDUsImV4cCI6MTU5Mjk3OTM0NX0.0S_hCB5pl3FUd-VU1kFI55eDpt1kKACglE0YE_BDzTgJ-K2sQ34NiExnpgwQk2W8RYCdr5SGHtiQDY-Hfa6Re77GA9emsrqCw_yd8nLaeGtW46mqJCuREErOaeq7d63_8H6RjdXWbJEPv-x9AbzMNmvapETR8ubaqfu6OlzKJM5oRLVYtJu-JN-q6jOosB92d5XO-5QrrBdoY4-WIbZ3eYoaIXUZK_AaIklVlrI6qg1XOHbfeo_t6m8kjOg9TKzcmxBeL9vdMjTG1egd6d7Yr6yhas0HnDN0pw-lnOV880l20bbXtObqCOvGDs1UFeuRRIFPU6etvjj01SY6uKN-TUjAQpbhAK9du9t9xZbhG6yKhLlZGzCts6SU1ks-2K3crkV4Xnn0LsSqas72pcCh-DLJARKZJ8lUFUPcewfXiZiyykz9gabSSvSnnbm3rvt32Ez0J8FYNd6WdsBz_BHbj51T4juvoVsyjijNvjtByz11SX1FGlJzz9Y7beNkmZTrg1KyY2ceZGQZR6ZdZVsDa9bggRrJRTRk5pzbVkqzCGd-t2aAswzePIiOw_uzqtakG9VGkv6I-zBzr9kux5SfzlbrP0J3LFJcm7_6J380SRcwah-MKxzE8mJZzo-qo5Bs2Hr4A_XCpXcMW18aGmVpBlSfZYAu_1XfAPgOCdF4tp4'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 12.4872
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU0Nzg4MSwiZXhwIjoxNTkyNjM0MjgxfQ.BlxYH9nTWE9bJZ0Z4DpXsL1nlfnq_MFNYNNfCLmI8LQM-gACCahk1a3a44xdbVWmQQalLpMkxA7Q7kb1kc2zVPvQRagM6eT6FDknd4K6XjRJI5-sDVoczfDVEXmXYrXpwEAsnVv4tt72jquLzVNHoslvrAFnIsEJS-ysvrH57q67Wra-sf8yUvWz7GWmtvlWvAjj0uSTzW3uwcbKaR7b_E13crz3RTt36GX9isJu9tV0jWY5JPrbXLRDFScPEa7YVNHdjIsDkSAi6Uoi8E64G-e1jPtbQAIttSyn1qQscbuvZmdGIWJ99_8UTaFT8O06ZrawLa-IBJEBw0tFQpc54sJc61jcomK1CejrBdL1rgxi9w8GFHpWjwaKCf18GEZuLsfCBKITkANCmoaoHZKMivwyklH9ttDE3v3W2JvrDL_SBMmoc6EA6g6P-ZEuCEjdhANltxAT8OMu_afPUS_fY2-G3HKL85tN8pZCjLaIttgSHkOWnQTaSKr8zDrYpTWeqiPdV4yxtLVmmEKwUxZyrwBdirknypFHEXXmnLu7AYi-mSWpWYTcWrJ8QFknUGDaM2BzurFRoaWXikzv4wkT4jKBSar-t722-ntjepVUt9x5l59vlnJKfliv2w2jsiy-AQEpeBXRfOC3LBkdKTptAXwb_bY60Tg5umd99WgUBLs',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NDc4ODEsImV4cCI6MTU5Mjk3OTg4MX0.V6jEDgbqMXe13AYAPg4mEb6opQ74wNhshS3QZl1P7kztngUb9gcOtSy3M4jqa1K9jm9xC_Qa-0raZAtR5RefJwOshKrmiRkfelpEO6iQPEvohrgyYMT1Nt2Wsb13RHjBSn4UBu8_RQ9IGqZZ0scwXmInrPQ-om4dc9P0Lkf7ejgaEPlrYxLkj7jMHWCdQXoGPH1jm55pfb92KTFWad7gaWbsPQY8PXBEZeSgp2krLQhahO6Xir5H9ayOkMxeHvojE20thuP_rvpnvvdRjtVHvMiCU9Yl7gZFUqAtm-C2v6N-uj0PR2MUW-_n6fVJOxGsB4COruRmgs2W86qQ3LiJGkbGaHOboSz1luZDV4NA2jMJJV_d-FM3DBLKr6mUAXS-FUbIAt-cCoyGKraFQbp6er5X9jMinvJtlNgGcT78Lt4qNJvip0t5QLwLrZsQjqdHY-KuuePieW0xcUyRRKkWAqyw28XUYKDoNm6f3fNDak9k4l6_hf9uRha0jfoJXGUtg49PYCR3Cl7HY_VcQZ9NCBRRLlT0e5fP4KKt14aOsxUwfwkqBurMe3krX2FQAWwACE8U1U286uUyXDJsBiGYko-2vxsls-YraZJSfDx7fbvIuq6QNvZScnyL6NQnHlCJtDEoHOs6b-EWgfXZVi1yhsebT5FqVhaBCp4BpUX_uvQ'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 14.352599999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NTc0OSwiZXhwIjoxNTkyNjQyMTQ5fQ.tuPQqC-YhV9aBYba1U4uD05KqO0ePMmhPm1AEtDuX6uqv5io9X8L0Z7WPp81pff3nqn000kbHFh6bWzq-6HeDLGnfPJaCIfyjXsMqDJqLX9y9r0K7EFZ-IQKGk87SlV8QaqrQaNWiOU8JmYQljkB1ZN25OsS4UJMB-JiSSkhzpZe3rumvdmeTEJdvd86jsItA5fzCirXrr27NAJHrBpiAj_WR7xXlIgj1syDXQoD7BcxIO-P5T9NcneT_saNLXE4ownq0QR2qStwNvf_5uIEfbF62P8-iTthkfg0HdKwS_lpKvBL89Yi712U3EuDQ9H7os8FttJR3a3usnVL4_ciFc811tbdQR8NJvYtTmUJaT46rB1UvF5KO7CFkjCPRA11dI5Kj5sGREjZ_pMIsObtnDr2jTkmkh-_NHnZAUbrdisWLK_ujhf2C_QYrrT6JNDF-ju2hDp-y6H9xIx2KGnsa5RWa-xFeVkoAVXM1Egi0UAvCPEZMu7cPHHVVOecyameD0_Z0PbyGojXxhz_3mBS1UFjG1vIX5S4xYZd7Q_5Rnp3sf389A35MePo6tIHPIVssCsFQ-skPxPr8Pb6Kjf8mHubG9v4fF_0y1ByfoliX7l1TUtb8lK70itBIHYuzTGvC871T8ETn3Yt0JhUTe5nEMl3JJH9UQ2aKy-Y4eZn_Bc',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTU3NDksImV4cCI6MTU5Mjk4Nzc0OX0.zWGvNS8WaEyFDJ5A3EAraxJvZCVl3LuSiPihP48nBFoP7WIhB2iHbsUNRpMTUwezsMXGz9bazB-2AnxeqcYuUZLhVa55_1vTISQY_RhZlogaL-jFYew4EAK5-EcimLC257JwBWEAeZqdjirsKhkIh0xyz_xNZnaw7OKC-UrrbT-ucShoX36rquNIDF_hDIzUFas9jkrW4D39Qs8xTH0-pUyHJuwg9jiq6W2xx4YtuNZ6RVLVkJunqeKCMFAzYktC57w7Hp94vvQMLk7gNeXg7BFzXkH05y4RcX_Y4_73NN2cPpAzW3SbA0_kO0Ax7o8E4o_R3HTcEwIgu_oSe0Fi2WQoTXA1lPNzXz9k73Rilb5fLZ4NwuEv08rtxR_RIPoBQOA9Idpce0MlKFvQ25Fengq4R18a-6dGzWX6xFYAivRizqWYHYqAqsS6_8F5B1u8Qkh6276wia5r_ostYsf2ZTDAe4bpkjxYcJIZUJCU00RgGFFbCKlfkZM2K285I6j6GiwjTgm2R1hFNBWmH1hp9YHVsxcbbS-o14F3tKEDQOVN0A3etkwf7-sxSjpYO9TBY63cgtYF0Pq05gstS-rPjD0i7wiO4YtMtJzIFY1CqAwBoHw2BAqHA_pAIByl_cnHytcAS0bVEEZkMUx6lp6_nug4GhQs1mk034OfuLvYtRg'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 28.7133
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danis',
+    idkaryawan: '',
+    no_hp: '',
+    email_2: ''
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danis',
+    idkaryawan: '',
+    no_hp: '',
+    email_2: ''
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.5762
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjE2NywiZXhwIjoxNTkyNjQyNTY3fQ.NC3YdjKQIMLKLfP0PIZ5ciOFnUB8Wa8ntEUdUSVeJH0IDCmboN4yE4myfOoHf337JSX3mXE63W7u71t7I7_Bhrr6quj3sdGES8ZF89k7IIslhBnHmvDJs1-bXy4B4ffF86zBy1MUbYfaQs5aVfRbtwaZRbWMjpX6nqs0PIZP3DbtegXRUxoWsNpRtaNXCTTjwuqBhiABsYo97IbR1ZNNIs_xmGNlgbVvL5bY2Lf7Ec2Sra51MH7NYChdstewClpPdkeARVuMXNEbLGLxcUyGKRiIgeVKLxucurDHsrsurZH9ikcfe9lWckwjBD3SoWLOoZkvTKX7Qp_uCdKlYFGwEBy0dGu9s9f4bzVnpRsuXpOdfczpxsBU-I2lhKIKa7lI5p-S_4_TczeuWIKby2MvsJMK2Y-MFUDtR6jHMcAaaezPqeVxCeYh-ZM7VUe0xrpOg5DZ4H_vIo0_cxFkvQlrC92pNTsZgP3do06YUbdrcL19DRDVK21T3kLB5ruLTGjI5UJ9LFoW_caOjpZDFe0A3qsAuiUUwOfnNM_Tzau7SzP94ocV1Wq82W_jCREUxMydH_zdiijAyrRjnL9H3fMzggL5mCN0D38iuYjL5sRipvbjQucXEWucvM6EUIcnIWst-5A642gbQy4zdsZDFzhEisM85aXHD9GeXr8-oP4-6VM',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTYxNjcsImV4cCI6MTU5Mjk4ODE2N30.tsGgNwJP7Oug0oZQ6XVzCESKZI9oL2ODayQXqLWODi__43ZyX63CYkAwvIHxXlNBtsAyKYjs04_AJ3xx6diT9mvKu7mXjuRVl4UzoZdypk1qjsj5aRIdrg8dkvqjfW5iM7EShh4BKMggz4G1wAOmhmxGvuiAl-rJfqxpSaJ_-KoVXPopKogLZp4bZRC0hcRqi63m5vYosEmEyxWSPG5brpJoIWfswcFiNAVb9ItscuBRgVDLqQT6LS00zTRHq8n1pNS22R49A01MtGyGmTABawdNJhq_SYTX3RUVPW1CdrLGjCM2nMcW-mcR9t7XGEggG9vAO9VHfhpPgG8oxbitJ668mjdpzkogxVrOXA5JAfBf3ovpkoJqSTHOaMIwRj8Qi8ZXScNYOrqt0EjCj8eCxJVAd624EQyK4rMDCigmlfJ9Qn_PkUySt5fG3C6UZD_ty0UDzOM4n1Tm-5OxJOOWlG_Ss_t4o0RxQ-Pe2zsQYe1tLfuL1R6DGHSXY76t34Wzj9JkLHmXeLiQ6XrTbkstNzyZWQ2PGH79hychHiQ7xmtUpcI7600ymJeJUF3alnmXECJXXw7WEi6Tly2IVF257vE0v2Met3bNfhce6cSGPq0sMlouCsYUZcUn2ZaUcyNCNv-OqVzZvYbuZdj8FOv1HuZYkHrBxj_mEQyp2wp4W6Y'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 16.1314
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjI3OSwiZXhwIjoxNTkyNjQyNjc5fQ.IKqHv4ba_jQzCh5SD3kTFWn331FzFVQyUmFn1aZtUmSODMbNckTLLupkVslL203Uvs4cFLbnTVypoctTqtNEy_vfHHnMe2TKweQE0yt9Nb5kcz3HSkjyTWD2_qEZXbAjYuk5eBLfwQx9xFGAldWZXobMxpHQACwIzLcRJLJ-4QCHI3ME_4vv6ZIfhZ5llH_144cCg8fPnDXgC11lmH2r44bnZaLL_o_w_JH0GtztYI2dVv441qWrePx7SE37rWSIBWKv9D8XHz2vnGVQt0FjF-2phLjDVpG9LEXRSZ_BR484omRTOFGWq21ZDyOZ-qKSwq5gxYN3ARtteaH3c7eHDfTfpcVnR8dYB65x_xh0p_WXPJlCWSSjl41kswOrTt5rurjlJF9F5UN4s_P1Uw00bhP7rXLAcube2O3VRk_YXwbCNz-efXD_uxTuKBs1vXaRiAwcHPYVTqWAYPMzKcheWHCaIhpSIAXo9948mw3coRHcIfCvOx5SSoReVW78Nzf6xkgo6gAHMCTTI-Nz2lD5qZKvxCklXLDCiCv_a5Lkc9HTCFmC1mHzRGJ5yNUh5eBcdKczCwmeFfSmKAsNKlZxFk-y8fRTBPPiPLJCHKIRSof51BoYusz9TvPWWiIMSOR70YwaNrfKd-c5nT7b57ijR66DE5lONP6xALJuCjZvwhY',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTYyNzksImV4cCI6MTU5Mjk4ODI3OX0.dHdN_T10XbUvQ6sq3m9J9Ers0AZztQDwmGSLFLL29nsG9RGrpIv2H6r-Q2ODdDG9ELK8CY0DTuRrOsXmQQhLU7ZlPSrL-ZSeE8I7tqIsPz5dVDxaZAJbz_AAiZLVt-bIvSL_s45A6Tew-dW-yxPg2pPwLbx058hca1ESaFg4L2xxz_rryLFYkGRzcUSUmEnFlt_CMQrncKIgUFta0o-bkohv84rBH_q4GEFDr3Znqdcj1JmGYVG8zmvSr0YRRvr7OWwWCSlkLGsB9UURbUA9kBM-_gzjFkxEu3gfaLiIbn4bU1dEn7Q6X5YllehwD_ElKrbrcEqfA92Bn_wQEJuyUGBEkKrxSMOJxWCBzX2ymwHjHL4jOSHZYla5FEIcccFA14khYLBLg2mUvvSDylFO3gieNPUuAxL01Gs18BHxiiZxUvCq4i4UwGtfF6lzxBoj5TMIBClrrqZ2QcQtEp1K53GTFBDjAyv5eZLI43kGN-k14_z4Ny7wIOA61sFEO4wx0-Gfuimu2rQLCmJ6Jb68MmamR9INm_Ses1DR-hhA6pha1BsHTRnB_iKhN4gBcIft58mciGzIWWIh26nBw1sdK7XvdwGNcChizCULWNIBLGpIGkIK-YHYbidfmKcqPhn6ifbEpIeYeEJlkkCxlKvRpG_yivFzrj0_7nkz4CUTJIw'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 32.8534
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  nama_lengkap: 'Nico Danispadmanaba',
+  idkaryawan: '9771294',
+  no_hp: '085163434',
+  email_2: 'tesdo@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 5.9693
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.2662999999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjYwNSwiZXhwIjoxNTkyNjQzMDA1fQ.Z5EhD45PrOYENPL6Kk-nWve3XTM7LmC-Xr6w-UL7HvSFgi67ZGn1eoX92wGTalxBkRww5_LtuYOWhkYje1aTnyu41lUh4QN44_F9x4kz2HWEZam3INLBnCqwi-VYmZhS5fEQtj3uEObCnwMRkpqphuughJMZ5CI2BuZsGxctIOQScMpKhE0TyPaR7-lzPNnKDvrKCxhS3Rc5HqEGicvtLxutOKgiPqrRDbAV6PVvK59-GX6ww8XxsggUN3a4nHWsIwHRf86QC9n0ZQPBr_XcE4ldC9MPCERZyYMf-QtvjX2uGsqZ82nOlJLx_6p11apCyis2zgMbu2ei6qdXt_4NRoNfJe-TLKoT4L9RuArwQoo4LhpozmBB5_iOBn1aMjKwHxHdwMaYRNW46IEGwhZ7EN6IUh68Xpxz8FuBUCTGQE-UXTpoTJDWhkokYOnqC8Jm8FFuOrTnsBmxwVBEoq_vZkEmGfoGU3Par0J8hgoQsLfRwHxdZ2lBOEkDGbnA3GwFfoiwjTMM45WSXJ9FjAtMFG7cNEgB5ODf3bV3P-O-GHRGVKSF_6m79XpLHLIHAnYIlCgQ3oxUlu-K-SSqxF4g8jsWgy7C6ctgvj2n70OTXggs4KGlVTz81-9uSlx4YPeldkjdHI-9CBeKiw1nsueinwD5EgpHgbN28noYEmr8UEM',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTY2MDUsImV4cCI6MTU5Mjk4ODYwNX0.QM0dAxWH_bMV_4W1E0hB3wtxLkNy08Laxo4clt6b_oEMZheP-SaKlVOdm-vt-X7hDxp32riaH7o1mgnI5XQxWZ2on6FLKLRIcArMv5A5thnd9gKzBUQ1MXvch-o-h_ywy_vRcgbFf4-Di3JlsGg7CRnB0NeABMRF1o0-El6UgF5fVAmMlWcRKDAJq0b8EzbQ8sopi6v_wF-Cd1kmEfpxXnDJU2hQsDByxAQZlj_B4i_jV67ro0Y8dmwxifA4WQ4YjyN7x5h3WZXxLN20tlsCqWwU1McTDGfDzAj7TIPCjj85tObHe-UVJO0cePRrxE1YfPHeBXnzv6AoYNs_EHawclnQNoTT_J-Orj5gYCXrzzTt3a8CzEI4RoACcHBCawtOmUYUCIaHl_7d8cAak5JjcdMcJGw5v2vWYwO7E24nsP9ycjBXP9P0kbbgrsxOBFYU4I9WaUHXyegwflojqCLQJp-5VXutdJZkKoi6m61RSzITCcrg5esrDOOdqI2md1hSLPI_dRDcCtvLfeHN_0eTDryK4NoFD6O4c6PxP7bf5cDRR9DW6UajYtNBndgwNYAWb7NxajYxqZXPpqzaiUJRMl9OOl9huyFq7EzGKTl1-1Y86Zb_5MDgql6JwpeBSHHW66RwiO_bKne_E33ASCKb0ZTmr1Vw7_J1qq1xLezQMNA'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 12.691899999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjYwNSwiZXhwIjoxNTkyNjQzMDA1fQ.Z5EhD45PrOYENPL6Kk-nWve3XTM7LmC-Xr6w-UL7HvSFgi67ZGn1eoX92wGTalxBkRww5_LtuYOWhkYje1aTnyu41lUh4QN44_F9x4kz2HWEZam3INLBnCqwi-VYmZhS5fEQtj3uEObCnwMRkpqphuughJMZ5CI2BuZsGxctIOQScMpKhE0TyPaR7-lzPNnKDvrKCxhS3Rc5HqEGicvtLxutOKgiPqrRDbAV6PVvK59-GX6ww8XxsggUN3a4nHWsIwHRf86QC9n0ZQPBr_XcE4ldC9MPCERZyYMf-QtvjX2uGsqZ82nOlJLx_6p11apCyis2zgMbu2ei6qdXt_4NRoNfJe-TLKoT4L9RuArwQoo4LhpozmBB5_iOBn1aMjKwHxHdwMaYRNW46IEGwhZ7EN6IUh68Xpxz8FuBUCTGQE-UXTpoTJDWhkokYOnqC8Jm8FFuOrTnsBmxwVBEoq_vZkEmGfoGU3Par0J8hgoQsLfRwHxdZ2lBOEkDGbnA3GwFfoiwjTMM45WSXJ9FjAtMFG7cNEgB5ODf3bV3P-O-GHRGVKSF_6m79XpLHLIHAnYIlCgQ3oxUlu-K-SSqxF4g8jsWgy7C6ctgvj2n70OTXggs4KGlVTz81-9uSlx4YPeldkjdHI-9CBeKiw1nsueinwD5EgpHgbN28noYEmr8UEM'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjYwNSwiZXhwIjoxNTkyNjQzMDA1fQ.Z5EhD45PrOYENPL6Kk-nWve3XTM7LmC-Xr6w-UL7HvSFgi67ZGn1eoX92wGTalxBkRww5_LtuYOWhkYje1aTnyu41lUh4QN44_F9x4kz2HWEZam3INLBnCqwi-VYmZhS5fEQtj3uEObCnwMRkpqphuughJMZ5CI2BuZsGxctIOQScMpKhE0TyPaR7-lzPNnKDvrKCxhS3Rc5HqEGicvtLxutOKgiPqrRDbAV6PVvK59-GX6ww8XxsggUN3a4nHWsIwHRf86QC9n0ZQPBr_XcE4ldC9MPCERZyYMf-QtvjX2uGsqZ82nOlJLx_6p11apCyis2zgMbu2ei6qdXt_4NRoNfJe-TLKoT4L9RuArwQoo4LhpozmBB5_iOBn1aMjKwHxHdwMaYRNW46IEGwhZ7EN6IUh68Xpxz8FuBUCTGQE-UXTpoTJDWhkokYOnqC8Jm8FFuOrTnsBmxwVBEoq_vZkEmGfoGU3Par0J8hgoQsLfRwHxdZ2lBOEkDGbnA3GwFfoiwjTMM45WSXJ9FjAtMFG7cNEgB5ODf3bV3P-O-GHRGVKSF_6m79XpLHLIHAnYIlCgQ3oxUlu-K-SSqxF4g8jsWgy7C6ctgvj2n70OTXggs4KGlVTz81-9uSlx4YPeldkjdHI-9CBeKiw1nsueinwD5EgpHgbN28noYEmr8UEM'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.6803999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  nama_lengkap: 'Nico Danispadmanaba',
+  idkaryawan: '9771294',
+  no_hp: '085163434',
+  email_2: 'tesdo@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 5.9645
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 4.5268
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgxNiwiZXhwIjoxNTkyNjQzMjE2fQ.lOMPyMfjR3sf05UHwtmFFg51GoTmg1G7FPpZEpPCvQxqi5JdnOOULxX0okSK6Pr5bYI7YZPhYAGddTtQk8kWSrWH8GgvOVHz_ZqzOL7QO9vWmWhxK8eYX7v3IjTNLXUnIlj4g3ZMxsAOyoqKzA8AbI5lwLZFwUqJ8TXMS5YFAzKTfQmxRtGunUIb_Szyiw7FKkyk9AiX9zIbquzQHHhqZYeOJfeJ_IJIesJ0a3fdm9dSU0KOjBIsxiG_gfCzpXxVjKMpLVc-StXWuMxEc7CmDwcroHhnA_2TNKk-eagWE7uRqVYcHjNgVnWhlilCJUy1NjaKmSuSZa82n0sdri89ki04XJeP-UOMjObUvL1DDjaBFdksM9SkdnA8bh0dM2m8IkUN81En0z3c39QHzdBx2fIYnn-BYDhHUsq6DiS6ogIp2o1hXx5Gbg-E6ZJlbUcGA4Bx-QPO1xqal4MvR0EiWihJ0EIIgJgCwKslkeUkJKFbFKZcoT7sbs_Nizyo8sKLmm5i5QfmYD-UVZTaMbjiICDh2tP5AWvDXwkCQRV0BYUju2eEvdUVyLFqTQ5DCZcuyEJJDccoxqacRrwAGCC3BnZYmLIqto0qQdiPIYtwYkRuvSKUZQEL7HlvuIYHSuUvoO2BTccL7VbvWGe7olGC95vdf639VevRQzPE0JofMKY',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTY4MTYsImV4cCI6MTU5Mjk4ODgxNn0.LSgpXECWVGS_ViTjre46bMySzHmrtlM8Ywwm6emy-PNI68XTkU4NEMO-FMC-FStha7Pk5UHGyNJVARG4OvGXgotZSCVzSiPiCh7V7BZJ_JL86aQkiNnJ5YHsp9offEgCaRC-ZGLNYgTKVT1IyPu4YiGp8iX90N8YjKtmYwe-z-4omdSuILSrEya6h0szAkjdOMgfTlJJ6pRBnWP6jUI0yr8jZc0ce822XclQcOlu7_0O88CJ2C1HNzjhLS-PttNZlRjiIDEfM9HuOgAx2ucH3MLavQWnRUr6Fgtt44Fg7qYQyuMHSNLjmNUr9dI99_G0kzkx_H3VgmHISk9gQJNrWC-Dkn4UmWItuyU7qaV29s2-Bex-hyEDd-5MYeElQ3M8VninCWbbn9Zh41WQsHH-R1UKtWl7f3s5942VnvfF7KVfitVh6dY2XX7hT5ztdYIYZipRFW7sUNshD6LjdMsIXylVr9RXOHb13Zf2kuvz18FnNdUBVQ2O9SreHgGMYXHZFyD5FQo1I9q_1eRsop-390fQDYZf24ahnyXUqW9pO2EOod4r9qq9TFDvGWMmgp63wVmBZ_ZplUBSvIAna61t5UVOZ1ge4PicjCPCfLe_KlR1diK9OfKwaJGqJYXXYfR91My3XFfLrLpxsQsy0VR0GbouuXv-8UQg4BIOo59xNes'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 40.4064
+Received a request message : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgxNiwiZXhwIjoxNTkyNjQzMjE2fQ.lOMPyMfjR3sf05UHwtmFFg51GoTmg1G7FPpZEpPCvQxqi5JdnOOULxX0okSK6Pr5bYI7YZPhYAGddTtQk8kWSrWH8GgvOVHz_ZqzOL7QO9vWmWhxK8eYX7v3IjTNLXUnIlj4g3ZMxsAOyoqKzA8AbI5lwLZFwUqJ8TXMS5YFAzKTfQmxRtGunUIb_Szyiw7FKkyk9AiX9zIbquzQHHhqZYeOJfeJ_IJIesJ0a3fdm9dSU0KOjBIsxiG_gfCzpXxVjKMpLVc-StXWuMxEc7CmDwcroHhnA_2TNKk-eagWE7uRqVYcHjNgVnWhlilCJUy1NjaKmSuSZa82n0sdri89ki04XJeP-UOMjObUvL1DDjaBFdksM9SkdnA8bh0dM2m8IkUN81En0z3c39QHzdBx2fIYnn-BYDhHUsq6DiS6ogIp2o1hXx5Gbg-E6ZJlbUcGA4Bx-QPO1xqal4MvR0EiWihJ0EIIgJgCwKslkeUkJKFbFKZcoT7sbs_Nizyo8sKLmm5i5QfmYD-UVZTaMbjiICDh2tP5AWvDXwkCQRV0BYUju2eEvdUVyLFqTQ5DCZcuyEJJDccoxqacRrwAGCC3BnZYmLIqto0qQdiPIYtwYkRuvSKUZQEL7HlvuIYHSuUvoO2BTccL7VbvWGe7olGC95vdf639VevRQzPE0JofMKY'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgxNiwiZXhwIjoxNTkyNjQzMjE2fQ.lOMPyMfjR3sf05UHwtmFFg51GoTmg1G7FPpZEpPCvQxqi5JdnOOULxX0okSK6Pr5bYI7YZPhYAGddTtQk8kWSrWH8GgvOVHz_ZqzOL7QO9vWmWhxK8eYX7v3IjTNLXUnIlj4g3ZMxsAOyoqKzA8AbI5lwLZFwUqJ8TXMS5YFAzKTfQmxRtGunUIb_Szyiw7FKkyk9AiX9zIbquzQHHhqZYeOJfeJ_IJIesJ0a3fdm9dSU0KOjBIsxiG_gfCzpXxVjKMpLVc-StXWuMxEc7CmDwcroHhnA_2TNKk-eagWE7uRqVYcHjNgVnWhlilCJUy1NjaKmSuSZa82n0sdri89ki04XJeP-UOMjObUvL1DDjaBFdksM9SkdnA8bh0dM2m8IkUN81En0z3c39QHzdBx2fIYnn-BYDhHUsq6DiS6ogIp2o1hXx5Gbg-E6ZJlbUcGA4Bx-QPO1xqal4MvR0EiWihJ0EIIgJgCwKslkeUkJKFbFKZcoT7sbs_Nizyo8sKLmm5i5QfmYD-UVZTaMbjiICDh2tP5AWvDXwkCQRV0BYUju2eEvdUVyLFqTQ5DCZcuyEJJDccoxqacRrwAGCC3BnZYmLIqto0qQdiPIYtwYkRuvSKUZQEL7HlvuIYHSuUvoO2BTccL7VbvWGe7olGC95vdf639VevRQzPE0JofMKY'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.9446999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  nama_lengkap: 'Nico Danispadmanaba',
+  idkaryawan: '9771294',
+  no_hp: '085163434',
+  email_2: 'tesdo@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 18.5444
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.5903
+Received a request message : {
+  Status: 'Success',
+  Message: 'Logout successful',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logout'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 5.1624
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgyNiwiZXhwIjoxNTkyNjQzMjI2fQ.h4SsTWOJgoGK4qVa4-9T4Wt8hjxnctN0jfFtSEHUdSaeBKpraxMMSdBMiUvKdNcnmqebL9fYq8Q_tpAyFcO1rBGjcdMZN4k4Ni0rT9TfJNJLTYpA2kTKKhr6gKxBbYyzATyxHUKlkf0uSfuTkGxxtLiWlhnPtI7UhDPZUVJN1yBUvbjDfp29Ppq17tHoPrLowxVfN1_3CY1sKnzUJ7RfbcOO1shK3WMujYZQ9ysR5n4PcBBCLqnTg-lHno6ley6Igc_t7HhBM6P02eFr7O1TMlKnBkIMH2Tm45F72tb4pPIGq6PhNNSU6Hp-arM6POH1fXhAfMGlUqbOYoysPzysjfxHUGP58wHuTb0IIhbYduusNllyn23cePyETeO-osUYwy8CKoVQ0hoapo6WCOwdFjrWy58lrScPGvGmIpOGUZUGOpTNCnj2_VJXFfwxWYaIPFV-QBRBPLbPeFYa-lRr_NistkTspDRVpt4Nt_4Y131t7SkDBtvSUJirp_zeHoUrQ_2MDvbuwl2rkccFkud2gVnpj63VuapIlsvN_B8doS7iMUTV8jnWPE8xPbQstkRB2s_pMstHeom_YDJ7GHHntFek123mC-2GFYjG9n__DCYZJjk9N-O3vQBIVgrdXif5tMmQnu_UdlpLIub-e-2YDi1UcT-I_mr-9almYEQYDcg',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTY4MjYsImV4cCI6MTU5Mjk4ODgyNn0.LzUtP7ZsDXZ7lMWQfh7EpxIj3PZKnT_Mj28wOPfSZSHi5z3AfrXbZEBPKufqx0SE2m-RzK9mzDwDbjZSWHaHUqlvbblpNLdKTqx0T86_z6636-_puGOzr-n94XXiq3hb0LwnXo7x1GzygK5tLD48tCf2EN5GCKmgLDp2uSyy2XLjrrubAOvHXGVSdjWhGcKp_I-Mr_ZFmtj7L6TT_t9yhoemgwEokFA1hLJkfbcKaaZwf4U1N-WiTEsGl4NTBK6LQskDUPSxqhadjF_EZTnaACvH_5-s9epeBhrRivXCA2iai-g7827lpADJfYgc0gArOxsuRyufHqOtnqvmRS2Ir0QG3eF0q6ODCBax3RAfyqjW3YhlYantWi7rNhbVR-KW3bz2urjO7s-_zvbgOANeLdzWfyuhZQSaH6u4zG1AP37YOIYElJKKoehQReRsR8A2nhjGhz07RUFOWRFcbsvImvj8wWcefUlgVApGSKvbbFiEDnUXum3dg_ypPitJGe8gWWfLh9DlII6py1-EybYKR9fKfHBKg4HPXOqtODz961Lr_M4vjRJjfICLQgGiEZqhZ_yTwgkVfgSbcKZp2E4EigAFN172xNo-oTDe_t7RyEm6_kMm-Hv1EFBqcE28d0OU1zbZ7vYzSKB-IVQM46KF57HJPuBNezLybUz2RHDYR5E'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 9.9824
+Received a request message : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgyNiwiZXhwIjoxNTkyNjQzMjI2fQ.h4SsTWOJgoGK4qVa4-9T4Wt8hjxnctN0jfFtSEHUdSaeBKpraxMMSdBMiUvKdNcnmqebL9fYq8Q_tpAyFcO1rBGjcdMZN4k4Ni0rT9TfJNJLTYpA2kTKKhr6gKxBbYyzATyxHUKlkf0uSfuTkGxxtLiWlhnPtI7UhDPZUVJN1yBUvbjDfp29Ppq17tHoPrLowxVfN1_3CY1sKnzUJ7RfbcOO1shK3WMujYZQ9ysR5n4PcBBCLqnTg-lHno6ley6Igc_t7HhBM6P02eFr7O1TMlKnBkIMH2Tm45F72tb4pPIGq6PhNNSU6Hp-arM6POH1fXhAfMGlUqbOYoysPzysjfxHUGP58wHuTb0IIhbYduusNllyn23cePyETeO-osUYwy8CKoVQ0hoapo6WCOwdFjrWy58lrScPGvGmIpOGUZUGOpTNCnj2_VJXFfwxWYaIPFV-QBRBPLbPeFYa-lRr_NistkTspDRVpt4Nt_4Y131t7SkDBtvSUJirp_zeHoUrQ_2MDvbuwl2rkccFkud2gVnpj63VuapIlsvN_B8doS7iMUTV8jnWPE8xPbQstkRB2s_pMstHeom_YDJ7GHHntFek123mC-2GFYjG9n__DCYZJjk9N-O3vQBIVgrdXif5tMmQnu_UdlpLIub-e-2YDi1UcT-I_mr-9almYEQYDcg'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NjgyNiwiZXhwIjoxNTkyNjQzMjI2fQ.h4SsTWOJgoGK4qVa4-9T4Wt8hjxnctN0jfFtSEHUdSaeBKpraxMMSdBMiUvKdNcnmqebL9fYq8Q_tpAyFcO1rBGjcdMZN4k4Ni0rT9TfJNJLTYpA2kTKKhr6gKxBbYyzATyxHUKlkf0uSfuTkGxxtLiWlhnPtI7UhDPZUVJN1yBUvbjDfp29Ppq17tHoPrLowxVfN1_3CY1sKnzUJ7RfbcOO1shK3WMujYZQ9ysR5n4PcBBCLqnTg-lHno6ley6Igc_t7HhBM6P02eFr7O1TMlKnBkIMH2Tm45F72tb4pPIGq6PhNNSU6Hp-arM6POH1fXhAfMGlUqbOYoysPzysjfxHUGP58wHuTb0IIhbYduusNllyn23cePyETeO-osUYwy8CKoVQ0hoapo6WCOwdFjrWy58lrScPGvGmIpOGUZUGOpTNCnj2_VJXFfwxWYaIPFV-QBRBPLbPeFYa-lRr_NistkTspDRVpt4Nt_4Y131t7SkDBtvSUJirp_zeHoUrQ_2MDvbuwl2rkccFkud2gVnpj63VuapIlsvN_B8doS7iMUTV8jnWPE8xPbQstkRB2s_pMstHeom_YDJ7GHHntFek123mC-2GFYjG9n__DCYZJjk9N-O3vQBIVgrdXif5tMmQnu_UdlpLIub-e-2YDi1UcT-I_mr-9almYEQYDcg'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.1565
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  nama_lengkap: 'Nico Danispadmanaba',
+  idkaryawan: '9771294',
+  no_hp: '085163434',
+  email_2: 'tesdo@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 32.952
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.6487
+Received a request message : {
+  Status: 'Success',
+  Message: 'Logout successful',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logout'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 6.546399999999999
+Received a request message : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.0443
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NzYzNSwiZXhwIjoxNTkyNjQ0MDM1fQ.e6W4QkJMJUwn72Ah2mDgHyNyV6Ti4xuIe5Sb8AsYpBNtDJoCzt4U0qJiIgxf3VsyK-2USoZb7nyZOnO5v4xydzD8wGc92ZSYJ-5BZHmWXyok5U4J6uw6nV1hjh4fq_phQYWtndq_RAEPt90-GrQCVBA_RdBntgK7o7Kq_zFIPH3vYoMHJi-JQd8k05prdtSkLw5LwpyH_TTXt0djB1gXXyBQdb-69uUFQX1t5gbPne_1Q7YdrGUsccC7EUmVUdnebnif3dfYZjYwXyn-a_CFPD8B5s1TN3uMJgDlBt8pSEEc9SwEwq7JeCAP_rlV1WRRTRMckJNS7jl8WQmPfuJ--C73sc8SIN6Zdht7zAtWVcGPPIg3w0Pr2uQJLntghMLIBgNjkDxoE5xH4KAhNErv903Bhez2Gzf8h5SXdPPu4086bNvwa3y75AFvIV-rBZttipC7ZDRSU7OdeCdtMMtCSSOxe2Hb5uvL1QVDYPdOeT1QgbiFc4GvWMa9uJZkX0pTmtSdmCk-E0N8K62A2HVTDplR0QkKZJypGgEesJAPlNvo7aBz_t5rhDXnY_MFHhJEGEc7kyT7uYAxrq0KFa7tnwvudiT6kBYVNfewevdZTs3lJLhkM_4pnu2MXQtih2wWTc-L-r-E1p_X9N-2FMCGuYZg5qo48Rq-5fLZAtAFUWU',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTc2MzUsImV4cCI6MTU5Mjk4OTYzNX0.QIJJmYztbJz8ihNPmSM0z1sg26J2iq9u1wKC4OuVBxv-k_UDED5A9SLTahxVW7t13OaYZb_S_H4D6hCF5rsLJJQVaA0Om8BFD4SeQPCLEqGB5Ae7-uZuhEoeNyzayGefpRhnQXfX2_C9j3bfWx5jqJoM5mo8Ywu_9o1X4NLHBDq4bpALKJIpwymvHU2jV8SbG327Yy4_G3Wjl4l9tucQu1jePAKQ10bxHSV1Oc3af75-d2XYzLFEinsLdntNMSXUOGQ5v-fmMu-ts8ivrwhaTpSA5W0IsIu27orgvO7jNptuwREIdVwycAkjMy-V4oGUpyKSeMFaD49ubBHV3zoAEjJhv7Eph_fOJ1g5-eagYsQp0AOnhQJR9r8O7TxfvS7_5O3MJJ9SfPwFqSaicIdZdBjKYDYU7YkuDZowApnVqqeyf3_ml1JU803T8RgPJQ15-kHO-z55X55G82Po-HJoHIR-tjSSGypdUs0RDEjEWWVHqwqfswLd401JV0WuTqMvFzLEDWiu_p2Jf1H8NZKy4koCpHM8TaVQhDtXp0m8ELGt7bxzuIDpZvyNjMU37fxs-I7LUXn7Cnlg8XV5wb58YMp6oSeK_q5mMY1RHL8jB56AR80AsBc67vsIDrxaVUChFpCUd4fsd26_5ksGj5URnDgDOK14noRb_vlCXlGdoV4'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 14.3807
+Received a request message : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NzYzNiwiZXhwIjoxNTkyNjQ0MDM2fQ.xJ6DYca1EV8HubN17uNNcvVdjDqZ4hAbH82DL-aoD3zVLPFtoGcLRb_6tBy8c-HPT3NotOoxRZH8-lhqzEL4g4nreS6DDx4ea9BlHBj3wKPsBWatowL83Ec-QeGa9LVzsBiPDCa6p5xybBDI25gF4Csw6tKpMEwxT4KNxMe7IxGNWuFxdquzmabqsdnAVyeZW5pRPJxzs_f_aFrEFJb9s2QbOlpEUCydVxnbMQ2cnzWRryn4uDUoQ37DMZu-7yq0yyJ2TgcL6AgVpHvgSQUA3fkhZok0WAXpH5YfSqTIgHJ7P07szNLey4Ykj9DlAry9gcqcu61F8tp7oGFW11wUxr0Uyide3Tkskg3UaVcABpTZLcFxpG5fxrSi84mJaa-kP8VYCG9aFQWUyiwTHphTiNPTffdQO_54Sp5xQDZiy9RTjaDloc0macq7WZt5cqf_FomnSwnwitVJ1W9pzBh_2cZ7C2ARPCNmqTGnerFnviCMKxMEYPlRQndyVxeBh2alwcAO-0K1WqPS7reRKQOxpYwGQaWiokTo1IYixip-ydlk6H3kEeYbH2LItliq36yLQZnKCcYy5MRj_RRjiGiboIAG-MYoilByu6vxAGinc01wiLd1sBMOp6W1vANdJ6HaoGC0fdkWyyzWd1qY0QGHu7_hyP9pSncYcoSKpzam11I'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1NzYzNiwiZXhwIjoxNTkyNjQ0MDM2fQ.xJ6DYca1EV8HubN17uNNcvVdjDqZ4hAbH82DL-aoD3zVLPFtoGcLRb_6tBy8c-HPT3NotOoxRZH8-lhqzEL4g4nreS6DDx4ea9BlHBj3wKPsBWatowL83Ec-QeGa9LVzsBiPDCa6p5xybBDI25gF4Csw6tKpMEwxT4KNxMe7IxGNWuFxdquzmabqsdnAVyeZW5pRPJxzs_f_aFrEFJb9s2QbOlpEUCydVxnbMQ2cnzWRryn4uDUoQ37DMZu-7yq0yyJ2TgcL6AgVpHvgSQUA3fkhZok0WAXpH5YfSqTIgHJ7P07szNLey4Ykj9DlAry9gcqcu61F8tp7oGFW11wUxr0Uyide3Tkskg3UaVcABpTZLcFxpG5fxrSi84mJaa-kP8VYCG9aFQWUyiwTHphTiNPTffdQO_54Sp5xQDZiy9RTjaDloc0macq7WZt5cqf_FomnSwnwitVJ1W9pzBh_2cZ7C2ARPCNmqTGnerFnviCMKxMEYPlRQndyVxeBh2alwcAO-0K1WqPS7reRKQOxpYwGQaWiokTo1IYixip-ydlk6H3kEeYbH2LItliq36yLQZnKCcYy5MRj_RRjiGiboIAG-MYoilByu6vxAGinc01wiLd1sBMOp6W1vANdJ6HaoGC0fdkWyyzWd1qY0QGHu7_hyP9pSncYcoSKpzam11I'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.6874
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  nama_lengkap: 'Nico Danispadmanaba',
+  idkaryawan: '9771294',
+  no_hp: '085163434',
+  email_2: 'tesdo@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 7.8084
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.3432
+Received a request message : {
+  Status: 'Success',
+  Message: 'Logout successful',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logout'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 17.8116
+Received a request message : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 3.6828999999999996
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1Nzk0MSwiZXhwIjoxNTkyNjQ0MzQxfQ.x9yZ5jveFCNoJwAF4TwxJn2w9JCPwiveEtD7Y4cfkux5ZPuUHnTW6W6s9B0z6Jjw_d4B5uJf58S0P4gWzXQh4y_-UZ3lkNgmEHZuiHjPc8Vj_NnUADBTXaWzZr2kyWsZjgOrs8dShYrt7eEGjoRueuZxW9uiKpU6Wb4EA710UnW9vgVbrI4dCCgT1_-FjtiDZI7s-jujUQrUlRhadJnf-XkFnAvcWXcHe2lGWS8BPbbhi-_kEBHHa7DhZupR1PNZBu2_j4JEz6xDGw3GxJnnfrvSdFqLor3TehtWDF1mrwFOtywOeLN1tO6SfFw9dEwoM2Mv3tDEMBqRY1qOnhn5m9WJUpYModA2ulDY8rbz4mzrLcD90xcGP9_eKwFnZt3T1HHWuigvYoSyeMA9Y7K0mdmzftew1LveUaHsAXhRSUYfYX99Lq4uP5O2Yy21oDVuCoOpvM5A82zRzqo-F7-rpXfRt1edgvFHdRKQ3ObrQJ0KdAtdT0dHV7vE_uxL_LhGc4hs_ODyOf8eHXShA2__xj1MRL3MPWS1iuS7rqTIfO1HpBIFmom9dr4Yx8-RthOycxHcTQ_tqvfum7ElHlgXeYowgo1nMkXIg2Rq1Apq2gk4Mpe9Qdiyeo7EpE_WGHDyFsrGw2NqzKaFTZE5eOgzLhb8iHQzhfLiYdF5FPezFw4',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTI1NTc5NDEsImV4cCI6MTU5Mjk4OTk0MX0.GIAndgFxGVF7iWCcDycC38p5bUdXv76VSdyjqd_JIKXftzcnWaHdSNZD19zC03nmBMgbVJ8HLtagK5afcBwCK5wib1B0gQCe_8SqXgpNqYlVF8Amv3IpGXQRYHK3cadXJ0ZWXsamc-Vm9KxHS1jKksGghQlz07jbcsUXTNCKLf7buBRVpDWPPqXci2zGhBTUte6jubGnc3q0pcrNf3Y6IRN3T6rz4DwZNMPyGMOW_1VDv9r1hLkADoWIg3wzNmHXM1X_DdLORpsE5SsRsqqzgpWCWXNjGEF2sIkIECio666P_41fn8W24_0k5t23J3dS7cgANW3aqEjRmqsMtyx-6QhB7E3BSnlnqL9Mq6L7DgnvOHfVi7eiTofb85zFJupN05Hyig-T42WwKEPp81c2uSrWD_u6RSq4PAhi-s62ZpPlFC7Be8dxfeII49Nt_vVDC92hM_NcwxSI-hyervX5EAmq1l4Q-BfD0ZbaflzQqs7TpY6tS4NKsLLT4KbYiDq8gkdklMOjdrp95skehy9nMVdeL-K24ws3o7duJ1CGYktlmtHUGfiG09F7GIgrIlndGznYWdyrbHqisbZJNx4Xput7bJ2FskfdkBaoyJiX1_86DlQGbfElBPgmFfpA9vnYPksnWLTVVhJ4oqcPnCRaS4OvBgtYWan-k44kZ3fIBHk'
+  },
+  User_id: 'wnpwpvsxdsnggybm3axg0t',
+  Code: 200,
+  email: 'digitrans.noreply@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 12.479199999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1Nzk0MSwiZXhwIjoxNTkyNjQ0MzQxfQ.x9yZ5jveFCNoJwAF4TwxJn2w9JCPwiveEtD7Y4cfkux5ZPuUHnTW6W6s9B0z6Jjw_d4B5uJf58S0P4gWzXQh4y_-UZ3lkNgmEHZuiHjPc8Vj_NnUADBTXaWzZr2kyWsZjgOrs8dShYrt7eEGjoRueuZxW9uiKpU6Wb4EA710UnW9vgVbrI4dCCgT1_-FjtiDZI7s-jujUQrUlRhadJnf-XkFnAvcWXcHe2lGWS8BPbbhi-_kEBHHa7DhZupR1PNZBu2_j4JEz6xDGw3GxJnnfrvSdFqLor3TehtWDF1mrwFOtywOeLN1tO6SfFw9dEwoM2Mv3tDEMBqRY1qOnhn5m9WJUpYModA2ulDY8rbz4mzrLcD90xcGP9_eKwFnZt3T1HHWuigvYoSyeMA9Y7K0mdmzftew1LveUaHsAXhRSUYfYX99Lq4uP5O2Yy21oDVuCoOpvM5A82zRzqo-F7-rpXfRt1edgvFHdRKQ3ObrQJ0KdAtdT0dHV7vE_uxL_LhGc4hs_ODyOf8eHXShA2__xj1MRL3MPWS1iuS7rqTIfO1HpBIFmom9dr4Yx8-RthOycxHcTQ_tqvfum7ElHlgXeYowgo1nMkXIg2Rq1Apq2gk4Mpe9Qdiyeo7EpE_WGHDyFsrGw2NqzKaFTZE5eOgzLhb8iHQzhfLiYdF5FPezFw4'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2l0cmFucy5ub3JlcGx5QGdtYWlsLmNvbSIsInVzZXJfaWQiOiJ3bnB3cHZzeGRzbmdneWJtM2F4ZzB0IiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MjU1Nzk0MSwiZXhwIjoxNTkyNjQ0MzQxfQ.x9yZ5jveFCNoJwAF4TwxJn2w9JCPwiveEtD7Y4cfkux5ZPuUHnTW6W6s9B0z6Jjw_d4B5uJf58S0P4gWzXQh4y_-UZ3lkNgmEHZuiHjPc8Vj_NnUADBTXaWzZr2kyWsZjgOrs8dShYrt7eEGjoRueuZxW9uiKpU6Wb4EA710UnW9vgVbrI4dCCgT1_-FjtiDZI7s-jujUQrUlRhadJnf-XkFnAvcWXcHe2lGWS8BPbbhi-_kEBHHa7DhZupR1PNZBu2_j4JEz6xDGw3GxJnnfrvSdFqLor3TehtWDF1mrwFOtywOeLN1tO6SfFw9dEwoM2Mv3tDEMBqRY1qOnhn5m9WJUpYModA2ulDY8rbz4mzrLcD90xcGP9_eKwFnZt3T1HHWuigvYoSyeMA9Y7K0mdmzftew1LveUaHsAXhRSUYfYX99Lq4uP5O2Yy21oDVuCoOpvM5A82zRzqo-F7-rpXfRt1edgvFHdRKQ3ObrQJ0KdAtdT0dHV7vE_uxL_LhGc4hs_ODyOf8eHXShA2__xj1MRL3MPWS1iuS7rqTIfO1HpBIFmom9dr4Yx8-RthOycxHcTQ_tqvfum7ElHlgXeYowgo1nMkXIg2Rq1Apq2gk4Mpe9Qdiyeo7EpE_WGHDyFsrGw2NqzKaFTZE5eOgzLhb8iHQzhfLiYdF5FPezFw4'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.867999999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  nama_lengkap: 'Nico Danispadmanaba',
+  idkaryawan: '9771294',
+  no_hp: '085163434',
+  email_2: 'tesdo@gmail.com',
+  action: 'updateProfile'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 12.0116
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Nico Danispadmanaba',
+    idkaryawan: '9771294',
+    no_hp: '085163434',
+    email_2: 'tesdo@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 6.733099999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 'Logout successful',
+  Code: 200,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logout'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 9.2792
+Received a request message : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wnpwpvsxdsnggybm3axg0t',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 6.4716
