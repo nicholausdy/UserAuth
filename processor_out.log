@@ -14720,3 +14720,272 @@ Published results for : {
   Action: 'logError'
 }
 Time to process RabbitMQ queue 2.3834
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MzA2MzMzMCwiZXhwIjoxNTkzMTQ5NzMwfQ.QFb_1ubGixnbpOAoVYmuF1wf-eP6SgZe2D0V6SkGZEY1WDPFFKUrTQ3L8eTkdjrZRssrHgv8a1Zn4OanfT17RDjPqOgpwSaQx9dbHAg381qGkluuMT8N1N3CgfPoPYZQR4KuzPdhEJ-yybys3aNqJtJNx58I9Ka5fjofCiD0BumK-YaM1mOknCanbOjyAX6yvREOEM16TKvqssMBq0XBTOi64866xLCvEsm_wthdPux2t0IEM7rXAxgWhSlTPARaPJPXOLwqzZQENmQc_GJBtzpaL_Tm6q_KYIJ1dNIze4ggEWlFDRN4KhkHjfA3S0lsFDdJmCFzVH3GDkVUfXxeyquDLGD2bWvmx-Aze5SwtR2vo6kzoJgVbLQ6uuNB_dWXfROtRIV4hld-u8tp3JkdGm9nCRwyYSf9GpzdzgsrcDCDrtAk-z3xaNJZgHZDRkR84H3EUQ-JwvI79ci4_e_GLjySy20Ox4iL3P33d1BcMKyxpzR--o_ckiwpMXsJLXqi8A3hiJuoKRnydheJFgkkjfAURtjQ4CcAJ38ND-9FA2JuL6sZMShgzpeg2EYa82BuOFl4JrnLy4utBashYIlKqRkx5DhtIwVu-oU3w_sPTwTyOORd_dpjcc6BlJqwcHX6SJMfG2dVtWNV4EMG7j-Ku7W3yeEdd_YH3uMcYMPfHpg',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTMwNjMzMzAsImV4cCI6MTU5MzQ5NTMzMH0.U561obTp4Eji7BUkwzPNbe3IFXPeA6P9fWsptC5fQWXtpFrG127y7yRi_3XXkRUNVvk2O8NnOxlDuwmi_d4kd7x4zW30iw10HWewdff2f1Og0unWcz-mdTXp2JpFmOb_Xs8RIn_vV2QZlmCjLgSlNVSIeJ1ND7IPCLojeeuTBzCWub2TcB_4_g8ROylLtWNTDpg__E7phE5yc9a50T9BRUfl6_lQVWiAtZHU1MZbWBXuj8EqFlT13-iPhCOIr1_hnPzYJP7pCssZm-_eIRPMWh7MD20Ofp0_Ad3n7fcTH1XeJiHMy1U0jjLF2SbqADXLravCPgfoZzwm5-l4f32iSC2c9USoxwVIdGavpMP1lylBXB0mu3lLgSLB5-OtGiR4OQBjRlCifjQLso3qsIwlQltp9CLxeRNzaB0EwO-Pf0cJLz3Z4MwtkeKGSSQQbppjJyMlNjFWzoK5xSxl2Vfwb4jQ4UuNBNqNtlLIYvCODEDJ4qmIJJz8zPiz96JR2zHx4reEpXDKCdBrps3-bvy-BZaZBbRhCVQ9W83LB_ChH-XIIrq_Rsme830eOxeCbIzvpMOMaL_v_Nlm-WxoCW3L5UoEL7xBmY7sO5fv2y8iHwoUTCZctBU60kr5J16Qe7aPjM6PRg6UfLgg_JynrNo2SqXU_ebzfNJ4RjYrgparbu0'
+  },
+  User_id: 'wca1tubnruejwd76q319r',
+  Code: 200,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 24.259
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MzA2MzM0NCwiZXhwIjoxNTkzMTQ5NzQ0fQ.y3hoWoiXmw0jLLE1YT1PXvVpuL3atruvVxyRiUeziZvN1JztvgXNkMYEXWMNkdnxcwJgDIeetQCPy_oIHwmUOvZJbrSz8dwa3lVF74R0jcWujTr3hkdFQDu8ejsTHvHHo_m0P_dH1IJyhrDgRKyney6leqMqf4K-kIKD6097Olv-qxT9xmYRioKdKY34BYR3SZ8zGu508tVJhvoqdxZfpUtLwjSXNVV1FtdieBMPPkOLVW__1oavYOyATO070v7Wqm9hQemcPcbcd9e7wNDpugGF24DO8if63JLpc5K6v9SLWTBom_E930yQfxlrP9Xdgb_DZI4iPHqspSkaPVIL6Dsg2L_6iutVr2MzxMcU5cvSWbGi2d5xdpTBHzQxXmh4sYBFcyQt5_T2Fs53O2sVrcdRA2zC4e21qNUrOaXqmfu3lERIkSRCX29hQ9W0rvaelsDT3zM40D0HeBtTa9S5-ht_x5ymiNLeyXFuwwWVumdTaP9h5rv8q-3R6P6BYt2xt3-9kve7voHQMiKN7dsx8jWVa0FqqDeyLgst9hRx3WZxkiRGKFgLb2sAoWFzq6I-ljMlsR8t6fvlsVty0UIKta6jZVSg9UkZA6QkP6wyjhmcdXdogfaih1phZwGbOunNUBlrHWDVhfjDKnaNIX4rwlXIPtlyx0R-gEUfEpvsFJ0',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTMwNjMzNDQsImV4cCI6MTU5MzQ5NTM0NH0.dQREtnyTzbwcxrrYIlkeXWUNkFLxDF9qDMj0th0xX8irSOXA8P2B-Iim9gH15XxvfWbN_NDE1UbzWjM5ziQNjVAmwdaAfwHLlrZAvrTiX-sBdPCmnQ1SzlPQEbFG5JQGBsDizrTPBANaq-l817iRwjT1b0dT1Pp08vtcsLuvZMV8KqUVH65OqENBXQnCph6bYW6QuBWSKM5qmZWYt2LF8bKCQ8eCAjtctY9iBH9nYb_A1ru8bqR0riOjP2uC_1oexxWVVarANeO5ifPge5nmCsVNSBcICiCsVXAAnsWH4cWEv6J0T_6BxTWqtGEWSpqF4VrFhNji_kuai0-UWhl6E6Cn-Id8vya2UGjhoTcTDoVOyfQi2iuytFBvLCUf48BXNidj71kdaxlmh-GvskD7xv3wrqLZt83GGDtvoTMYbEUF4iVF1-CyL9qnCEjEC4MtYRhpj7Q4big6JzixkKGbUqB35Iu9V0xP6YPkG49yjo2VqLIsnSExz43I_wMK3ea5ZykLxkqZ8fnvUTV8zfICMyeXHQfBxuKTJcNJi7IkFmqJla5K1Fci7iakVUm1XRxN2sF-nCKFong2245a1ueNDFxD2oOUGrvgRO5DnJeWJp-fhkyFQsdvG3I34feVP6KNFygzvCm83IR1i0hoFEcWM_2XK6CfGP9UB7MvbMExV04'
+  },
+  User_id: 'wca1tubnruejwd76q319r',
+  Code: 200,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 17.237099999999998
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.6094999999999997
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MzA2MzM3MCwiZXhwIjoxNTkzMTQ5NzcwfQ.H4yipRXV01DkMYJP-vKj9vxYMUxGyIlGGo86MgBmagmolSVTlWXWYSE-hnXAhY3QCGp3T6IhdtJr5pNFAFYelvgqOvmT0yrYmPCIlcEYIGXx42kciREFdU1z8a8lbnMfKBu2Aien0DH9bhuC-DlC8gO854Ub895_inNbl_-N9SR7KJ7w1-9MTgm_MwX-VHizDteGayw3RcDnsyDz68BKvBWQ5bTqBal6IqdwwYnCH3GFfYGb5TP9pHp57e1YLpGUx7tEmMe4hlAdRlFx6FfDrBq0tCKMccffRrmjWxsg_bazUVZT8jOUn5NzjH1BwnwKsuMsoMW9gSwBIDstFguZAV1HOy65EOJ91eeeeUsctIpmcsu0nJo53SzcEMZnmZp2HCQZPwSzjeWWBUpOne58DRsiVhJay3YX5cwpvBx-6XiOueOLj5K1WlwiuLuirM7uWhT6KYxw0ttdRkRjMKHWUtGUubQ1ITrCZq8LJnXpf5o4IRBGAsLeUGOXBJJWM4ks8_Xn98wMgct2jA_VVvS8bNi7l59pCaLEOr0H49tLHCoiwvBUCXNkVvkUsn-rX7Vfg7cB9OrZyeTLHLyFxFDObcbRRnineCAj7s652QaP1N5ZgQ3kuONWgmLgbEtz7HZ-e9ZkZxHpc0q63qoGIXgyhXfS3QjCIRVgy4SqN3KQKiQ',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTMwNjMzNzAsImV4cCI6MTU5MzQ5NTM3MH0.e3LjFwyQZEI3XKhzFlk3dC3uysEShqjSbau8B6W46J2ovFcP5ujcHG8APZb3-YIZG3hmLReFmYZIUj5JOvqV76t6h7gNryzbYeRQWBQWnTiOUAONPPqAp2yc19bAzOR7skdDOoj-yrEQnXDHiDiLXnEaiOypgZ_ry5GMt_I6_xaw6_gexlUnnPVwclxUBDfh7IyCATn5RsVtWEftgLWpSeCQUBB82Q2EB8jHMGPL56HXESVjB5bC9_tvcw9BR3FqzmKjDbuk7Da7KQ9qzqpMjUanC52_Yw-49Sz9iD_3ptXmaK0CXNki99N2IJuAywReDi5QQezHWWboioGLqJFHlBiYNk0GIR10xHNyG5C9M-NDefp80MtLscWseg2_68rpGWZBUGnwWf2dsgwZ7CKCUq2617Y4MRCv0IrQ1xwg6u8WN-LLS6HMcTuo-g0sGd2bpt5qvvZ4jfPxq89ns7E4OWrYLBV8mPrJH_ihEJTHOaZ7tUonOMERxTnUG3v-CkiYq1ak_3B-ghkqSYcR7jiqbRtaFja2MFdDkLz9Zf0UipCyStaX-QOdkQ8KF7V3SqN5y20m7AbONhUDYzLjXn1Teu40QvMtpqcX_7TvxYrczC5x_zojNtx-2C5Q_A-bjcDFGv6AEhpmJ0VeI7gytqpgNXSrkzYScpktp4AWN5nuBR8'
+  },
+  User_id: 'wca1tubnruejwd76q319r',
+  Code: 200,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 14.827599999999999
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'peter.kanisius2019@gmail.com',
+  tempcode: 713774797,
+  action: 'insertTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Time to process RabbitMQ queue 23.9923
+Received a request message : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.2113
+Received a request message : {
+  Status: 'Success',
+  Message: 'Please wait for email to change password',
+  Code: 200,
+  email: 'peter.kanisius2019@gmail.com',
+  tempcode: 713774797,
+  action: 'requestChangePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'peter.kanisius2019@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1041,
+    messageTime: 802,
+    messageSize: 385,
+    response: '250 2.0.0 OK  1593063507 y187sm22088814pfb.46 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<514837c4-4a8a-9f42-44ae-5a8d18fe85f7@gmail.com>'
+  },
+  Code: 200
+}
+Time to process RabbitMQ queue 2767.7915
+Received a request message : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 3.6994
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 2.9329
+Received a request message : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.7971
+Received a request message : {
+  Status: 'Success',
+  Message: 0,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'deleteTempCode'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 18.244699999999998
+Received a request message : {
+  Status: 'Success',
+  Message: 'Password successfully changed',
+  Code: 200,
+  email: 'peter.kanisius2019@gmail.com',
+  password: '$2b$10$tEPeRVXWWedS6lJaaQNIqO61ifwow3nZXpmZPLXvyjBtBsTIoJOza',
+  action: 'changePassword'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Time to process RabbitMQ queue 31.6798
+Received a request message : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError'
+}
+Published results for : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Time to process RabbitMQ queue 4.0032
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MzA2MzY2MiwiZXhwIjoxNTkzMTUwMDYyfQ.QUiJC-WRC1nxDxcbEnw8eGx9BDlFIze-e1ylT8lDWDyFeln3OtU2N7OAJEk_J2WBmLcXu-hIxK4zbvsqOm98hX1AkOBuNfLYSCxh8LSPDevH_yIdqxrJmykIbL7VULYVbeeCbgG03VlyMWGfDkH5LITlRlKJWBBTH9njeHdtJQvMzfHbEMs52mMxNe7MmpfUGpwVSQmuHaciL8L_Y05lVQRgqbS8zvMqjOrAB6qlVuzb8FbK9KEmu2YzKdSr9RBsfHPXmkvXlCurvAXaqd4el59dS99njw8GqhssotV0nfXwt0Nyq7uBYqfJmnbuMc4CjYDKikp2FOvI2AUFVkgfq2M5vKCx6Lgpf9-PEvIZvYs9Z45bj-zhueXarKH4YX1JxD7Bd_JDLhotemfjRGusGbUw3TvW8hQYgWFgPqmeUqNTbqUfcG1ax-Spisr_ehQMoCCG19OfqVtcvh2yixdsGPpJEQfuEKqkpMdHXVUlpVLEUYau9wTGJ5eQZG4YXSz7GiE3hsGHhEejECdu_skYyg25srVaqW7d4L0FM_Bs_ko2qeY6pjFT1x5c3kY6yQAa0-4N59ho9QVBSA-uG3Fk1BbZja2dPIfVWvACzV0J9ppRUW9-2sogJL9ORir_EtChtWTqQsEX-WdXwLd6xNPgGA8ihP3H4mYRjdQa-RXaOaA',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTMwNjM2NjIsImV4cCI6MTU5MzQ5NTY2Mn0.JOUmWfmO_Q9Zx2veXjJv9Zm5eEX_BTZN2oZf1xX-ltetNIDMAkYLQ6VjiJDhaAZnGS8mwFvONMCtnxhIeKRyjuh0gFvj6zfrC5vumwIbJiKy4eQgSNMEVr6QQ1chn05H34DXbGVQua_xE-c7lnJTVubNVaWIbB7Q4q71D3tlwosPb2EqAbNRFcH2-n6nXN9tHZ1dU_sCtsTyXcKoVHy3uOL3mgfG5ZESNDQWisEogg1z9ywSJSZNVkOV5FqcxkdNMlKj_xSXkkqRoc6rc3Wz7lds3sTgY9LuT_ybR7kGIIEnv7KwNeLBb86YZSQZmvGfrLiiQnJ-mch5H0H3DtMDdv0vmUAcXyAKQc_5qWxALPJYtmn_YsThVI8a8Z2tlaqFSM8nrl72Uc91v5KwwE9ZQ8DCKLl0pl4Xt4GUiioMVUfJaooMDfSN6tHKYV5xdZdmqcAwjSw42vFxn0TO_c0FD2n3gv8KWfI4EZDZzehGuT8I-WHPcvEPz7wjpou9nExfc8p4l7I0Yr4JibV4zkrfoHhwyIxOmJa8l7QAdbgoD99_4RptzPxi50PJtvTL2MSigIpGf8xsRsccl2FxSye4lYltkiXb9vHttEGKY_Fe8c6f0dDJ5v7gzgOT7ATrE1w8XXLp1ExwLXhxfovY5so-lInjux-NUkZrd1NiNvYuzS8'
+  },
+  User_id: 'wca1tubnruejwd76q319r',
+  Code: 200,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 11.6885
+Received a request message : {
+  Status: 'Success',
+  Message: 'User authentication successful',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MzA2MzY4NiwiZXhwIjoxNTkzMTUwMDg2fQ.GUoFm0qtJpSeh-Z7kQYlT53NBvNbiVqc8RTf_PKyY8b2B1EwFqX3s3WeWZY6SPeVpyvIH_AE7I_UOukcnLgWF0g9VSzTLDczSwJ4rrhmNMXP8qaEG0RLmEMjmZc6r3OQwV-KApjMNNEnVhoV58PSkoveweYvUhRIZ4-msv7dEa5w7ZHhic6HWLPtnex71vuVQKoy4c_DThW70hz0LG82qPSuR6mM1Y7tImK956dJD24w8OMS-uaaSKVG1a0oNW5Wu09uHAqZeVukYJ1cHdQ6DGDsz94DQ32ctRjuriRl3WO6rGXbW6umyl6Y6DTWBypan2ukUWblpTMXZ7FgwI0n0UJEo1rLwV75L8ItBzNaoiiRJmN0pD-DQG8BqrGo404gdg3dKgcmzTMlz_2ODdGofNPpcOmBgcT_AgQ6GGdnjxUgAUlXxbp20ZwyZfa85UYGBDyLIcoWhMFf4Po_xAWIVZwo693trb0U317mjI36Y1abzvmWp75GD0GqjuQustykNJV4yhe5zaZl-qZn3UxY-o_-lx0yDWQcUtR68el1__tKFERzwVUK-g1Hq4E8V64j1jBH1AK7brD2dLoyKtvugwQirQFt-WwUQKuGOFUtgDn2sHBaQf5B_MF8lChDZd9yivITl4AwjN0_RhB9-In8OY2GZjFVRASulwSs2usURc4',
+    refresh_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6InJlZnJlc2hfdG9rZW4iLCJpYXQiOjE1OTMwNjM2ODYsImV4cCI6MTU5MzQ5NTY4Nn0.ykMcTnYOY3Qgt3YfgtsWSLO53V94wS2wC3z7j61hnnuRQ0IJaBLdQl8t1WzAy2twFL_OSpga8XsDjvWfGb7wfpJaIU8sX0Xq6gzlYpc76SYfeIM0BRaiVt5q2dEC6G_M35aBR5pFhsN2WZqNpNDDMbxrOIVOEGmGQR9EQxfiHIWEv8sebRdDS_F56A1GxixIojWEr6B2n431JgPQ5-aCC1PSnlzDlwjV4yeFxVRuDf1ZSkXqmC3d9et2Ysqb8mhuS52ZkBNszQ422Y9_5mOnJydlNQm9HpT4qE03YFxBpUnPSBx5hRjs2Oy2fjZYPq-W-Bnbjz7Ln5jOPa_PFmigr72OS5Nrk0uunW95Etl8q3-FjMjoZ4Zu47_i1ZjzVRKNL9PPl97lTze3hQsMbdE2bV5K9fjiLBKKwzfBTVYYN_fvO6a-8D3ae12CSY1fP2_kLxB2D0zn1fcSPXEc19R390K0sIRxWfpzGqrcuf6hDukRc8ZjxL-dguirRx5PPthPEIWs8blQhZTS0Nf-um-U23bMYRroDE6T3kvE9JZkSVb5YEh7UgQHqBPFwkcpSmDJRRLtqvubN9fNJSz7K_y0XTWT-RkpKS_w1L_SrvZTmTMG78pEEal7-RjsYlX5YjMYqhlfqAi4McdVgQKmDZ-m1QJOcBiPaVqRcz0KlVZu-Nk'
+  },
+  User_id: 'wca1tubnruejwd76q319r',
+  Code: 200,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'updateLoggedInStatus'
+}
+Published results for : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Time to process RabbitMQ queue 10.2704
+Received a request message : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Peter Kanisius',
+    idkaryawan: '3434156777',
+    no_hp: '082518434567',
+    email_2: 'tespeter@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog'
+}
+Published results for : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Peter Kanisius',
+    idkaryawan: '3434156777',
+    no_hp: '082518434567',
+    email_2: 'tespeter@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Time to process RabbitMQ queue 2.1888

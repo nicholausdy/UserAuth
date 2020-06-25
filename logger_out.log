@@ -6698,3 +6698,116 @@ Processing result : {
   action: 'logError',
   Action: 'logError'
 }
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'peter.kanisius2019@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1041,
+    messageTime: 802,
+    messageSize: 385,
+    response: '250 2.0.0 OK  1593063507 y187sm22088814pfb.46 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<514837c4-4a8a-9f42-44ae-5a8d18fe85f7@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 713774797,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Peter Kanisius',
+    idkaryawan: '3434156777',
+    no_hp: '082518434567',
+    email_2: 'tespeter@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog',
+  Action: 'standardLog'
+}

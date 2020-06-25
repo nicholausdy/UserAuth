@@ -1210,3 +1210,5 @@ Emitted 'error' event on ChannelModel instance at:
 (node:1015) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 (node:1278) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
 (node:1278) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:1695) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
+(node:1695) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [ChannelModel]. Use emitter.setMaxListeners() to increase limit
