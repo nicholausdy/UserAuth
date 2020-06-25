@@ -10,6 +10,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const accountDBInterface = __importStar(require("../dbInterface/account"));
 const profileRedisInterface = __importStar(require("../redisInterface/profile"));
 const rabbitRequest_1 = require("./rabbitRequest");
+const cloneDeep = require('clone-deep'); //prevent copy by reference
 async function updateProfile(user_id, nama_lengkap, idkaryawan, no_hp, email_2) {
     let resp = { Status: '', Message: '' };
     let req;
@@ -19,7 +20,7 @@ async function updateProfile(user_id, nama_lengkap, idkaryawan, no_hp, email_2) 
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB;
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
             const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -29,7 +30,7 @@ async function updateProfile(user_id, nama_lengkap, idkaryawan, no_hp, email_2) 
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult;
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.action = 'logError';
             }
@@ -37,7 +38,7 @@ async function updateProfile(user_id, nama_lengkap, idkaryawan, no_hp, email_2) 
                 resp = insertRedisResult;
                 resp.Message = 'Profile successfully updated';
                 resp.Code = 200;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.nama_lengkap = nama_lengkap;
                 req.idkaryawan = idkaryawan;
@@ -52,14 +53,14 @@ async function updateProfile(user_id, nama_lengkap, idkaryawan, no_hp, email_2) 
         resp = await profileRedisInterface.updateProfile(user_id, nama_lengkap, idkaryawan, no_hp, email_2);
         if (resp.Status == 'Failed') {
             resp.Code = 500;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
         }
         else {
             resp.Message = 'Profile successfully updated';
             resp.Code = 200;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.nama_lengkap = nama_lengkap;
             req.idkaryawan = idkaryawan;
@@ -81,7 +82,7 @@ async function getProfile(user_id) {
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB;
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
         }
@@ -90,14 +91,14 @@ async function getProfile(user_id) {
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult;
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.action = 'logError';
             }
             else {
                 resp = await profileRedisInterface.readProfile(user_id);
                 resp.Code = 200;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.action = 'standardLog';
             }
@@ -111,7 +112,7 @@ async function getProfile(user_id) {
             resp = await profileRedisInterface.readProfile(user_id);
         }
         resp.Code = 200;
-        req = resp;
+        req = cloneDeep(resp);
         req.user_id = user_id;
         req.action = 'standardLog';
     }

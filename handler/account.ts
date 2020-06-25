@@ -8,6 +8,7 @@ import * as jwt from "jsonwebtoken"
 import * as fs from "fs"
 require('dotenv').config();
 const perf = require('execution-time')();
+const cloneDeep = require('clone-deep'); // deep cloning to prevent copy by reference
 
 async function generateUUID() : Promise<string> {
     // reference: https://gist.github.com/6174/6062387
@@ -118,7 +119,7 @@ export async function resendVerificationEmail(email:string) : Promise<IResponse>
         if (fetchAccountfromDB.Status == 'Failed'){
             resp = fetchAccountfromDB
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.email = email
             req.action = 'logError'
             
@@ -129,7 +130,7 @@ export async function resendVerificationEmail(email:string) : Promise<IResponse>
             if (insertRedisResult.Status == 'Failed'){
                 resp = insertRedisResult
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError' 
             }
@@ -143,7 +144,7 @@ export async function resendVerificationEmail(email:string) : Promise<IResponse>
                 const passphrase : any = process.env.JWT_PASSPHRASE
                 const token : string = jwt.sign({user_id:user_id, email: email, type:'verification_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: 1800});
                 url = url.concat('/account/verify','/',user_id,'/',token)
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.url = url
                 req.action = 'resendVerificationEmail'
@@ -160,7 +161,7 @@ export async function resendVerificationEmail(email:string) : Promise<IResponse>
         const passphrase : any = process.env.JWT_PASSPHRASE
         const token : string = jwt.sign({user_id:user_id, email: email, type:'verification_token'}, {key: privateKey, passphrase: passphrase }, {algorithm:"RS256", expiresIn: 1800});
         url = url.concat('/account/verify','/',user_id,'/',token)
-        req = resp
+        req = cloneDeep(resp)
         req.email = email
         req.url = url
         req.action = 'resendVerificationEmail'
@@ -223,7 +224,7 @@ export async function changeVerificationStatus(user_id:string, token:string) : P
     if (token_check.Status == 'Failed'){
         resp = token_check
         resp.Code = 403
-        req = resp
+        req = cloneDeep(resp)
         req.user_id = user_id
         req.action = 'logError'
     }
@@ -237,7 +238,7 @@ export async function changeVerificationStatus(user_id:string, token:string) : P
                 if (getfromDB.Status == 'Failed'){ // fetching record from DB failed
                     resp = getfromDB
                     resp.Code = 404
-                    req = resp
+                    req = cloneDeep(resp)
                     req.user_id = user_id
                     req.action = 'logError'
                 }
@@ -247,7 +248,7 @@ export async function changeVerificationStatus(user_id:string, token:string) : P
                     if (insertRedisResult.Status == 'Failed'){
                         resp = insertRedisResult
                         resp.Code = 500
-                        req = resp
+                        req = cloneDeep(resp)
                         req.user_id = user_id
                         req.action = 'logError' 
                     }
@@ -256,13 +257,13 @@ export async function changeVerificationStatus(user_id:string, token:string) : P
                         if (resp.Status == 'Success'){
                             resp.Message = 'Account has been verified'
                             resp.Code = 200
-                            req = resp
+                            req = cloneDeep(resp)
                             req.user_id = user_id
                             req.action = 'updateVerification'
                         }
                         else {
                             resp.Code = 500
-                            req = resp
+                            req = cloneDeep(resp)
                             req.user_id = user_id
                             req.action = 'logError'
                         }
@@ -273,7 +274,7 @@ export async function changeVerificationStatus(user_id:string, token:string) : P
                 resp = await accountRedisInterface.updateVerificationField(user_id, true)
                 resp.Message = 'Account has been verified'
                 resp.Code = 200
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.action = 'updateVerification'
             }
@@ -290,7 +291,7 @@ export async function changeVerificationStatus(user_id:string, token:string) : P
             resp.Status = 'Failed'
             resp.Code = 403
             resp.Message = 'Invalid token'
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
         }
@@ -309,7 +310,7 @@ async function validateCredentials(email : string,password : string) : Promise<I
         if (passwordFetchDB.Status == 'Failed') { // record does not exist on DB -> username not found
             resp = passwordFetchDB
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.email = email
             req.action = 'logError'
             const sendToQueue = await requestHandler(req)
@@ -320,7 +321,7 @@ async function validateCredentials(email : string,password : string) : Promise<I
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError' 
                 const sendToQueue = await requestHandler(req)
@@ -331,7 +332,7 @@ async function validateCredentials(email : string,password : string) : Promise<I
                 if (getfromRedis.Status == 'Failed') {
                     resp = getfromRedis
                     resp.Code = 500
-                    req = resp
+                    req = cloneDeep(resp)
                     req.email = email
                     req.action = 'logError'
                     const sendToQueue = await requestHandler(req)
@@ -376,7 +377,7 @@ export async function login(email : string, password : string) : Promise<IRespon
                 resp.Status = 'Failed'
                 resp.Message = 'Account has not been verified'
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
                 const sendToQueue = await requestHandler(req)
@@ -391,7 +392,7 @@ export async function login(email : string, password : string) : Promise<IRespon
                 resp.User_id = emailFetchRedis.Message.user_id
                 resp.Message = 'User authentication successful'
                 resp.Code = isCredentialValid.Code
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'updateLoggedInStatus'
                 const updateRedisLoggedInStatus = accountRedisInterface.updateLoggedInStatus(emailFetchRedis.Message.user_id, true)
@@ -404,7 +405,7 @@ export async function login(email : string, password : string) : Promise<IRespon
                 resp.Status = 'Failed'
                 resp.Message = isCredentialValid.Message
                 resp.Code = 401
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
                 const sendToQueue = await requestHandler(req)
@@ -413,7 +414,7 @@ export async function login(email : string, password : string) : Promise<IRespon
                 resp.Status = 'Failed'
                 resp.Message = 'Wrong password'
                 resp.Code = 401
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
                 const sendToQueue = await requestHandler(req)
@@ -566,7 +567,7 @@ async function insertTempCode(email:string) : Promise<IResponse> {
         const fetchFromDB : IResponse = await accountDBInterface.readAccountByEmail(email)
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB
-            req = resp
+            req = cloneDeep(resp)
             req.email = email
             req.action = 'logError' 
         }
@@ -575,14 +576,14 @@ async function insertTempCode(email:string) : Promise<IResponse> {
             const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin)
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
             } 
             else {
                 const tempcode_insert_result : IResponse = await accountRedisInterface.updateTempCode(fetchFromDB.Message.user_id,tempcode) 
                 resp = tempcode_insert_result
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 if (tempcode_insert_result.Status == 'Failed'){
                     req.action = 'logError'
@@ -596,7 +597,7 @@ async function insertTempCode(email:string) : Promise<IResponse> {
     }
     else {
         resp = await accountRedisInterface.updateTempCode(fetchUserIDFromRedis.Message.user_id,tempcode)
-        req = resp
+        req = cloneDeep(resp)
         req.email = email
         if (resp.Status == 'Failed'){
             req.action = 'logError'
@@ -618,7 +619,7 @@ async function getTempCode(email:string) : Promise<IResponse> {
         const fetchFromDB : IResponse = await accountDBInterface.readAccountByEmail(email)
         if (fetchFromDB.Status == 'Failed'){
             resp = fetchFromDB
-            req = resp
+            req = cloneDeep(resp)
             req.email = email
             req.action = 'logError'
         }
@@ -627,7 +628,7 @@ async function getTempCode(email:string) : Promise<IResponse> {
             const insertRedis : IResponse = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin)
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
             } 
@@ -635,7 +636,7 @@ async function getTempCode(email:string) : Promise<IResponse> {
                 const tempcode_query_result : IResponse = await accountRedisInterface.getAccount(fetchFromDB.Message.user_id)
                 if (tempcode_query_result.Status == 'Failed'){
                     resp = tempcode_query_result
-                    req = resp
+                    req = cloneDeep(resp)
                     req.email = email
                     req.action = 'logError'
                 }
@@ -643,7 +644,7 @@ async function getTempCode(email:string) : Promise<IResponse> {
                     const tempcode : number = tempcode_query_result.Message.tempcode
                     resp.Status = 'Success'
                     resp.Message = tempcode
-                    req = resp
+                    req = cloneDeep(resp)
                     req.email = email
                     req.action = 'standardLog'
                 }
@@ -655,7 +656,7 @@ async function getTempCode(email:string) : Promise<IResponse> {
         const fetchTempcodeFromRedis : IResponse = await accountRedisInterface.getAccount(fetchUserIDFromRedis.Message.user_id)
         resp.Status = 'Success'
         resp.Message = fetchTempcodeFromRedis.Message.tempcode
-        req = resp
+        req = cloneDeep(resp)
         req.email = email
         req.action = 'standardLog' 
     }
@@ -667,7 +668,7 @@ async function removeTempCode(email:string) : Promise<IResponse> {
     let req:any
     const fetchUserIDFromRedis : IResponse = await accountRedisInterface.getUserID(email)
     resp = await accountRedisInterface.updateTempCode(fetchUserIDFromRedis.Message.user_id,0)
-    req = resp
+    req = cloneDeep(resp)
     req.email = email
     if (resp.Status == 'Failed'){
         req.action = 'logError'
@@ -733,7 +734,7 @@ export async function requestChangePassword(email:string) : Promise<IResponse> {
                 resp.Status = 'Failed'
                 resp.Message = 'Account has not been verified. '.concat(deleteResult.Message)
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
                 const sendToQueue = await requestHandler(req)
@@ -742,7 +743,7 @@ export async function requestChangePassword(email:string) : Promise<IResponse> {
                 resp.Status = 'Success'
                 resp.Message = 'Please wait for email to change password'
                 resp.Code = 200
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.tempcode = tempcode
                 req.action = 'requestChangePassword'
@@ -754,7 +755,7 @@ export async function requestChangePassword(email:string) : Promise<IResponse> {
     else {
         resp = tempcode_insert_result
         resp.Code = 500
-        req = resp
+        req = cloneDeep(resp)
         req.email = email
         req.action = 'logError'
         const sendToQueue = await requestHandler(req)
@@ -772,7 +773,7 @@ export async function changePassword (email: string, tempcode:number, newpasswor
         if (fetchFromDB.Status == 'Failed'){
             resp = fetchFromDB
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.email = email
             req.action = 'logError'
         }
@@ -782,7 +783,7 @@ export async function changePassword (email: string, tempcode:number, newpasswor
             if (insertToRedis.Status == 'Failed') {
                 resp = insertToRedis
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
             }
@@ -793,7 +794,7 @@ export async function changePassword (email: string, tempcode:number, newpasswor
     if (tempcode_query_result.Status == 'Failed'){
         resp = tempcode_query_result
         resp.Code = 403
-        req = resp
+        req = cloneDeep(resp)
         req.email = email
         req.action = 'logError'
 
@@ -804,7 +805,7 @@ export async function changePassword (email: string, tempcode:number, newpasswor
             resp.Status = 'Failed'
             resp.Code = 403
             resp.Message = 'Wrong code. Unable to change password'
-            req = resp
+            req = cloneDeep(resp)
             req.email = email
             req.action = 'logError'
         }
@@ -815,7 +816,7 @@ export async function changePassword (email: string, tempcode:number, newpasswor
             if (change_password_result.Status == 'Failed'){
                 resp = change_password_result
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.action = 'logError'
             }
@@ -823,7 +824,7 @@ export async function changePassword (email: string, tempcode:number, newpasswor
                 resp = change_password_result
                 resp.Message = 'Password successfully changed'
                 resp.Code = 200
-                req = resp
+                req = cloneDeep(resp)
                 req.email = email
                 req.password = hashedPasswordResult
                 req.action = 'changePassword'
@@ -844,7 +845,7 @@ export async function refreshToken(user_id:string) : Promise<IResponse> {
         if (fetchFromDB.Status == 'Failed'){
             resp = fetchFromDB
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
         }
@@ -855,7 +856,7 @@ export async function refreshToken(user_id:string) : Promise<IResponse> {
                 resp.Status = 'Failed'
                 resp.Message = 'User is not logged in'
                 resp.Code = 404
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.action = 'logError'
             }
@@ -867,7 +868,7 @@ export async function refreshToken(user_id:string) : Promise<IResponse> {
                 resp.Detail = {access_token:access_token}
                 resp.Message = 'Token refreshed'
                 resp.Code = 200
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.action = 'standardLog'
             }
@@ -878,7 +879,7 @@ export async function refreshToken(user_id:string) : Promise<IResponse> {
             resp.Status = 'Failed'
             resp.Message = 'User is not logged in'
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
         }
@@ -890,7 +891,7 @@ export async function refreshToken(user_id:string) : Promise<IResponse> {
             resp.Message = 'Token refreshed'
             resp.Detail = {access_token:access_token}
             resp.Code = 200
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'standardLog'
         }
@@ -908,7 +909,7 @@ export async function logout(user_id : string) : Promise<IResponse> {
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
         }
@@ -918,7 +919,7 @@ export async function logout(user_id : string) : Promise<IResponse> {
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.action = 'logError'
             }
@@ -927,7 +928,7 @@ export async function logout(user_id : string) : Promise<IResponse> {
                 if (updateResult.Status == 'Failed') {
                     resp = updateResult
                     resp.Code = 500
-                    req = resp
+                    req = cloneDeep(resp)
                     req.user_id = user_id
                     req.action = 'logError'
                 }
@@ -935,7 +936,7 @@ export async function logout(user_id : string) : Promise<IResponse> {
                     resp = updateResult
                     resp.Message = 'Logout successful'
                     resp.Code = 200 
-                    req = resp
+                    req = cloneDeep(resp)
                     req.user_id = user_id
                     req.action = 'logout'
                 }
@@ -947,7 +948,7 @@ export async function logout(user_id : string) : Promise<IResponse> {
         if (updateResult.Status == 'Failed') {
             resp = updateResult
             resp.Code = 500
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
         }
@@ -955,7 +956,7 @@ export async function logout(user_id : string) : Promise<IResponse> {
             resp = updateResult
             resp.Message = 'Logout successful'
             resp.Code = 200 
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logout'
         }

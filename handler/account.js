@@ -16,6 +16,7 @@ const jwt = __importStar(require("jsonwebtoken"));
 const fs = __importStar(require("fs"));
 require('dotenv').config();
 const perf = require('execution-time')();
+const cloneDeep = require('clone-deep'); // deep cloning to prevent copy by reference
 async function generateUUID() {
     // reference: https://gist.github.com/6174/6062387
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
@@ -119,7 +120,7 @@ async function resendVerificationEmail(email) {
         if (fetchAccountfromDB.Status == 'Failed') {
             resp = fetchAccountfromDB;
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.email = email;
             req.action = 'logError';
         }
@@ -129,7 +130,7 @@ async function resendVerificationEmail(email) {
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult;
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
             }
@@ -143,7 +144,7 @@ async function resendVerificationEmail(email) {
                 const passphrase = process.env.JWT_PASSPHRASE;
                 const token = jwt.sign({ user_id: user_id, email: email, type: 'verification_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: 1800 });
                 url = url.concat('/account/verify', '/', user_id, '/', token);
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.url = url;
                 req.action = 'resendVerificationEmail';
@@ -160,7 +161,7 @@ async function resendVerificationEmail(email) {
         const passphrase = process.env.JWT_PASSPHRASE;
         const token = jwt.sign({ user_id: user_id, email: email, type: 'verification_token' }, { key: privateKey, passphrase: passphrase }, { algorithm: "RS256", expiresIn: 1800 });
         url = url.concat('/account/verify', '/', user_id, '/', token);
-        req = resp;
+        req = cloneDeep(resp);
         req.email = email;
         req.url = url;
         req.action = 'resendVerificationEmail';
@@ -221,7 +222,7 @@ async function changeVerificationStatus(user_id, token) {
     if (token_check.Status == 'Failed') {
         resp = token_check;
         resp.Code = 403;
-        req = resp;
+        req = cloneDeep(resp);
         req.user_id = user_id;
         req.action = 'logError';
     }
@@ -235,7 +236,7 @@ async function changeVerificationStatus(user_id, token) {
                 if (getfromDB.Status == 'Failed') {
                     resp = getfromDB;
                     resp.Code = 404;
-                    req = resp;
+                    req = cloneDeep(resp);
                     req.user_id = user_id;
                     req.action = 'logError';
                 }
@@ -245,7 +246,7 @@ async function changeVerificationStatus(user_id, token) {
                     if (insertRedisResult.Status == 'Failed') {
                         resp = insertRedisResult;
                         resp.Code = 500;
-                        req = resp;
+                        req = cloneDeep(resp);
                         req.user_id = user_id;
                         req.action = 'logError';
                     }
@@ -254,13 +255,13 @@ async function changeVerificationStatus(user_id, token) {
                         if (resp.Status == 'Success') {
                             resp.Message = 'Account has been verified';
                             resp.Code = 200;
-                            req = resp;
+                            req = cloneDeep(resp);
                             req.user_id = user_id;
                             req.action = 'updateVerification';
                         }
                         else {
                             resp.Code = 500;
-                            req = resp;
+                            req = cloneDeep(resp);
                             req.user_id = user_id;
                             req.action = 'logError';
                         }
@@ -271,7 +272,7 @@ async function changeVerificationStatus(user_id, token) {
                 resp = await accountRedisInterface.updateVerificationField(user_id, true);
                 resp.Message = 'Account has been verified';
                 resp.Code = 200;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.action = 'updateVerification';
             }
@@ -288,7 +289,7 @@ async function changeVerificationStatus(user_id, token) {
             resp.Status = 'Failed';
             resp.Code = 403;
             resp.Message = 'Invalid token';
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
         }
@@ -307,7 +308,7 @@ async function validateCredentials(email, password) {
         if (passwordFetchDB.Status == 'Failed') {
             resp = passwordFetchDB;
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.email = email;
             req.action = 'logError';
             const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -318,7 +319,7 @@ async function validateCredentials(email, password) {
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult;
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
                 const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -329,7 +330,7 @@ async function validateCredentials(email, password) {
                 if (getfromRedis.Status == 'Failed') {
                     resp = getfromRedis;
                     resp.Code = 500;
-                    req = resp;
+                    req = cloneDeep(resp);
                     req.email = email;
                     req.action = 'logError';
                     const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -373,7 +374,7 @@ async function login(email, password) {
                 resp.Status = 'Failed';
                 resp.Message = 'Account has not been verified';
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
                 const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -388,7 +389,7 @@ async function login(email, password) {
                 resp.User_id = emailFetchRedis.Message.user_id;
                 resp.Message = 'User authentication successful';
                 resp.Code = isCredentialValid.Code;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'updateLoggedInStatus';
                 const updateRedisLoggedInStatus = accountRedisInterface.updateLoggedInStatus(emailFetchRedis.Message.user_id, true);
@@ -401,7 +402,7 @@ async function login(email, password) {
                 resp.Status = 'Failed';
                 resp.Message = isCredentialValid.Message;
                 resp.Code = 401;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
                 const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -410,7 +411,7 @@ async function login(email, password) {
                 resp.Status = 'Failed';
                 resp.Message = 'Wrong password';
                 resp.Code = 401;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
                 const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -560,7 +561,7 @@ async function insertTempCode(email) {
         const fetchFromDB = await accountDBInterface.readAccountByEmail(email);
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB;
-            req = resp;
+            req = cloneDeep(resp);
             req.email = email;
             req.action = 'logError';
         }
@@ -569,14 +570,14 @@ async function insertTempCode(email) {
             const insertRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin);
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
             }
             else {
                 const tempcode_insert_result = await accountRedisInterface.updateTempCode(fetchFromDB.Message.user_id, tempcode);
                 resp = tempcode_insert_result;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 if (tempcode_insert_result.Status == 'Failed') {
                     req.action = 'logError';
@@ -590,7 +591,7 @@ async function insertTempCode(email) {
     }
     else {
         resp = await accountRedisInterface.updateTempCode(fetchUserIDFromRedis.Message.user_id, tempcode);
-        req = resp;
+        req = cloneDeep(resp);
         req.email = email;
         if (resp.Status == 'Failed') {
             req.action = 'logError';
@@ -611,7 +612,7 @@ async function getTempCode(email) {
         const fetchFromDB = await accountDBInterface.readAccountByEmail(email);
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB;
-            req = resp;
+            req = cloneDeep(resp);
             req.email = email;
             req.action = 'logError';
         }
@@ -620,7 +621,7 @@ async function getTempCode(email) {
             const insertRedis = await accountRedisInterface.registerAccount(fetchFromDB.Message.user_id, fetchFromDB.Message.email, fetchFromDB.Message.password, fetchFromDB.Message.isverified, fetchFromDB.Message.tempcode, getNamaLengkap.Message.nama_lengkap, fetchFromDB.Message.isloggedin);
             if (insertRedis.Status == 'Failed') {
                 resp = insertRedis;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
             }
@@ -628,7 +629,7 @@ async function getTempCode(email) {
                 const tempcode_query_result = await accountRedisInterface.getAccount(fetchFromDB.Message.user_id);
                 if (tempcode_query_result.Status == 'Failed') {
                     resp = tempcode_query_result;
-                    req = resp;
+                    req = cloneDeep(resp);
                     req.email = email;
                     req.action = 'logError';
                 }
@@ -636,7 +637,7 @@ async function getTempCode(email) {
                     const tempcode = tempcode_query_result.Message.tempcode;
                     resp.Status = 'Success';
                     resp.Message = tempcode;
-                    req = resp;
+                    req = cloneDeep(resp);
                     req.email = email;
                     req.action = 'standardLog';
                 }
@@ -647,7 +648,7 @@ async function getTempCode(email) {
         const fetchTempcodeFromRedis = await accountRedisInterface.getAccount(fetchUserIDFromRedis.Message.user_id);
         resp.Status = 'Success';
         resp.Message = fetchTempcodeFromRedis.Message.tempcode;
-        req = resp;
+        req = cloneDeep(resp);
         req.email = email;
         req.action = 'standardLog';
     }
@@ -659,7 +660,7 @@ async function removeTempCode(email) {
     let req;
     const fetchUserIDFromRedis = await accountRedisInterface.getUserID(email);
     resp = await accountRedisInterface.updateTempCode(fetchUserIDFromRedis.Message.user_id, 0);
-    req = resp;
+    req = cloneDeep(resp);
     req.email = email;
     if (resp.Status == 'Failed') {
         req.action = 'logError';
@@ -722,7 +723,7 @@ async function requestChangePassword(email) {
                 resp.Status = 'Failed';
                 resp.Message = 'Account has not been verified. '.concat(deleteResult.Message);
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
                 const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -731,7 +732,7 @@ async function requestChangePassword(email) {
                 resp.Status = 'Success';
                 resp.Message = 'Please wait for email to change password';
                 resp.Code = 200;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.tempcode = tempcode;
                 req.action = 'requestChangePassword';
@@ -742,7 +743,7 @@ async function requestChangePassword(email) {
     else {
         resp = tempcode_insert_result;
         resp.Code = 500;
-        req = resp;
+        req = cloneDeep(resp);
         req.email = email;
         req.action = 'logError';
         const sendToQueue = await rabbitRequest_1.requestHandler(req);
@@ -760,7 +761,7 @@ async function changePassword(email, tempcode, newpassword) {
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB;
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.email = email;
             req.action = 'logError';
         }
@@ -770,7 +771,7 @@ async function changePassword(email, tempcode, newpassword) {
             if (insertToRedis.Status == 'Failed') {
                 resp = insertToRedis;
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
             }
@@ -781,7 +782,7 @@ async function changePassword(email, tempcode, newpassword) {
     if (tempcode_query_result.Status == 'Failed') {
         resp = tempcode_query_result;
         resp.Code = 403;
-        req = resp;
+        req = cloneDeep(resp);
         req.email = email;
         req.action = 'logError';
     }
@@ -791,7 +792,7 @@ async function changePassword(email, tempcode, newpassword) {
             resp.Status = 'Failed';
             resp.Code = 403;
             resp.Message = 'Wrong code. Unable to change password';
-            req = resp;
+            req = cloneDeep(resp);
             req.email = email;
             req.action = 'logError';
         }
@@ -802,7 +803,7 @@ async function changePassword(email, tempcode, newpassword) {
             if (change_password_result.Status == 'Failed') {
                 resp = change_password_result;
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.action = 'logError';
             }
@@ -810,7 +811,7 @@ async function changePassword(email, tempcode, newpassword) {
                 resp = change_password_result;
                 resp.Message = 'Password successfully changed';
                 resp.Code = 200;
-                req = resp;
+                req = cloneDeep(resp);
                 req.email = email;
                 req.password = hashedPasswordResult;
                 req.action = 'changePassword';
@@ -831,7 +832,7 @@ async function refreshToken(user_id) {
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB;
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
         }
@@ -842,7 +843,7 @@ async function refreshToken(user_id) {
                 resp.Status = 'Failed';
                 resp.Message = 'User is not logged in';
                 resp.Code = 404;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.action = 'logError';
             }
@@ -854,7 +855,7 @@ async function refreshToken(user_id) {
                 resp.Detail = { access_token: access_token };
                 resp.Message = 'Token refreshed';
                 resp.Code = 200;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.action = 'standardLog';
             }
@@ -865,7 +866,7 @@ async function refreshToken(user_id) {
             resp.Status = 'Failed';
             resp.Message = 'User is not logged in';
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
         }
@@ -877,7 +878,7 @@ async function refreshToken(user_id) {
             resp.Message = 'Token refreshed';
             resp.Detail = { access_token: access_token };
             resp.Code = 200;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'standardLog';
         }
@@ -895,7 +896,7 @@ async function logout(user_id) {
         if (fetchFromDB.Status == 'Failed') {
             resp = fetchFromDB;
             resp.Code = 404;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
         }
@@ -905,7 +906,7 @@ async function logout(user_id) {
             if (insertRedisResult.Status == 'Failed') {
                 resp = insertRedisResult;
                 resp.Code = 500;
-                req = resp;
+                req = cloneDeep(resp);
                 req.user_id = user_id;
                 req.action = 'logError';
             }
@@ -914,7 +915,7 @@ async function logout(user_id) {
                 if (updateResult.Status == 'Failed') {
                     resp = updateResult;
                     resp.Code = 500;
-                    req = resp;
+                    req = cloneDeep(resp);
                     req.user_id = user_id;
                     req.action = 'logError';
                 }
@@ -922,7 +923,7 @@ async function logout(user_id) {
                     resp = updateResult;
                     resp.Message = 'Logout successful';
                     resp.Code = 200;
-                    req = resp;
+                    req = cloneDeep(resp);
                     req.user_id = user_id;
                     req.action = 'logout';
                 }
@@ -934,7 +935,7 @@ async function logout(user_id) {
         if (updateResult.Status == 'Failed') {
             resp = updateResult;
             resp.Code = 500;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logError';
         }
@@ -942,7 +943,7 @@ async function logout(user_id) {
             resp = updateResult;
             resp.Message = 'Logout successful';
             resp.Code = 200;
-            req = resp;
+            req = cloneDeep(resp);
             req.user_id = user_id;
             req.action = 'logout';
         }

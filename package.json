@@ -19,6 +19,7 @@
     "@types/pg": "^7.14.3",
     "amqplib": "^0.5.6",
     "bcrypt": "^4.0.1",
+    "clone-deep": "^4.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "execution-time": "^1.4.1",

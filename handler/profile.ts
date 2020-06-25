@@ -2,6 +2,7 @@ import * as accountDBInterface from "../dbInterface/account"
 import * as profileRedisInterface from "../redisInterface/profile"
 import { requestHandler } from "./rabbitRequest"
 import { IResponse } from "../interface/interfaceCollection"
+const cloneDeep = require('clone-deep'); //prevent copy by reference
 
 export async function updateProfile(user_id : string, nama_lengkap : string, idkaryawan : string, no_hp : string, email_2:string) : Promise<IResponse> {
     let resp : IResponse = {Status:'',Message:''}
@@ -12,7 +13,7 @@ export async function updateProfile(user_id : string, nama_lengkap : string, idk
         if (fetchFromDB.Status == 'Failed'){
             resp = fetchFromDB
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
             const sendToQueue = await requestHandler(req)
@@ -22,7 +23,7 @@ export async function updateProfile(user_id : string, nama_lengkap : string, idk
             if (insertRedisResult.Status == 'Failed'){
                 resp = insertRedisResult
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.action = 'logError' 
             }
@@ -30,7 +31,7 @@ export async function updateProfile(user_id : string, nama_lengkap : string, idk
                 resp = insertRedisResult
                 resp.Message = 'Profile successfully updated'
                 resp.Code = 200
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.nama_lengkap = nama_lengkap
                 req.idkaryawan = idkaryawan
@@ -45,14 +46,14 @@ export async function updateProfile(user_id : string, nama_lengkap : string, idk
         resp = await profileRedisInterface.updateProfile(user_id, nama_lengkap, idkaryawan, no_hp, email_2)
         if (resp.Status == 'Failed'){
             resp.Code = 500
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
         }
         else {
             resp.Message = 'Profile successfully updated'
             resp.Code = 200
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.nama_lengkap = nama_lengkap
             req.idkaryawan = idkaryawan
@@ -74,7 +75,7 @@ export async function getProfile(user_id : string) : Promise<IResponse> {
         if (fetchFromDB.Status == 'Failed'){
             resp = fetchFromDB
             resp.Code = 404
-            req = resp
+            req = cloneDeep(resp)
             req.user_id = user_id
             req.action = 'logError'
         }
@@ -83,14 +84,14 @@ export async function getProfile(user_id : string) : Promise<IResponse> {
             if (insertRedisResult.Status == 'Failed'){
                 resp = insertRedisResult
                 resp.Code = 500
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.action = 'logError' 
             }
             else {
                 resp = await profileRedisInterface.readProfile(user_id)
                 resp.Code = 200
-                req = resp
+                req = cloneDeep(resp)
                 req.user_id = user_id
                 req.action = 'standardLog'
             }
@@ -104,7 +105,7 @@ export async function getProfile(user_id : string) : Promise<IResponse> {
             resp = await profileRedisInterface.readProfile(user_id)
         }
         resp.Code = 200
-        req = resp
+        req = cloneDeep(resp)
         req.user_id = user_id
         req.action = 'standardLog'
     }

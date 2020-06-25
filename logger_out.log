@@ -6335,3 +6335,366 @@ Processing result : {
   action: 'logError',
   Action: 'logError'
 }
+Processing result : {
+  Status: 'Failed',
+  Message: 'Redis insert failed',
+  Detail: {},
+  Code: 500,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Redis insert failed',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'nicholaus_yosodipuro@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 401,
+  email: 'nicholaus_yosodipuro@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'peter.kanisius19@gmail.com' ],
+    rejected: [],
+    envelopeTime: 1335,
+    messageTime: 1168,
+    messageSize: 1453,
+    response: '250 2.0.0 OK  1593060878 25sm21301446pfi.7 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<90438e13-8237-e189-9fc8-951352c962f9@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'peter.kanisius2019@gmail.com' ],
+    rejected: [],
+    envelopeTime: 696,
+    messageTime: 769,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1593060931 k7sm11414549pgh.46 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<c48de3c6-dcc8-5b9b-7ea4-c06d98e48166@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Account has not been verified',
+  Code: 500,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Invalid token',
+  Code: 403,
+  user_id: 'wa1tubnruejwd76q319r',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully generated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 417887394,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Passcode email has been sent',
+  Detail: {
+    accepted: [ 'peter.kanisius2019@gmail.com' ],
+    rejected: [],
+    envelopeTime: 698,
+    messageTime: 788,
+    messageSize: 385,
+    response: '250 2.0.0 OK  1593061433 w17sm5722848pfj.19 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<9dc0ec40-3078-b748-a04c-91938aa94e92@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'peter@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 500,
+  email: 'peter@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'nicholaus_yosodipuro@outlook.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 417887394,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Tempcode successfully deleted',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong password',
+  Code: 401,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  email: 'peter.kanisius@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 403,
+  email: 'peter.kanisius@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 0,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Wrong code. Unable to change password',
+  Code: 403,
+  email: 'peter.kanisius2019@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'Peter K', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'Peter K', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: { nama_lengkap: 'Peter K', idkaryawan: '', no_hp: '', email_2: '' },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Profile successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: {
+    nama_lengkap: 'Peter Kanisius',
+    idkaryawan: '3434156777',
+    no_hp: '082518434567',
+    email_2: 'tespeter@gmail.com'
+  },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Verification email has been sent',
+  Detail: {
+    accepted: [ 'peter.kanisius2019@gmail.com' ],
+    rejected: [],
+    envelopeTime: 943,
+    messageTime: 735,
+    messageSize: 1456,
+    response: '250 2.0.0 OK  1593062547 s36sm18434352pgl.35 - gsmtp',
+    envelope: { from: 'nicholaus.testing@gmail.com', to: [Array] },
+    messageId: '<c4739014-3dc7-5602-616f-d816965cddfd@gmail.com>'
+  },
+  Code: 200
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Account verification status changed to true',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'Username not found',
+  Code: 404,
+  email: 'peter.kanisius@gmail.com',
+  action: 'logError',
+  Action: 'logError'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Token refreshed',
+  Detail: {
+    access_token: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBldGVyLmthbmlzaXVzMjAxOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoid2NhMXR1Ym5ydWVqd2Q3NnEzMTlyIiwidHlwZSI6ImFjY2Vzc190b2tlbiIsImlhdCI6MTU5MzA2MjY3OSwiZXhwIjoxNTkzMTQ5MDc5fQ.vhlEazvD92WOC19411Dee60gwDzlurU1Qy_sD5OLkXt9qCgi3hIzR0ZPV-_oZX-e1geRzViPOCiiDLLGBdsy0AVcD6H-hl1QWrItZBfufUc2l8-yC3STkuDR5-0jsSZr2OvPDGOxozxEgb1M-SSdDNYFGVOdoWaXG6Jw0J9h31_mA7pfSOQQVhwgMTeKFjb3UfcZ0Y4sMY6I1b-Lfhkc8i8kR9T6tcEh9meG-nB9x29_pWfJSAqchE-d82wn-ltc7rT8gL2ycnh6o-PkUY_m3H7DQh5dxe5tjwHqwST3-ZoGSz5v9ObGuHyVJ5GQL66VilbN9VR3pW11vI8GScooI0ilJsLL-4rhjOZDcB5uxTdSnT08MWgNS-1R1aqEijpaTleBhJnl2L-C5ypy_u8fDJ3e4aFXXMzpqUH0VAZakVc1jXcZf-YXxkgGufUF1ydERQaURs0DQsUzbaVD9we07DQBprgBQ4kzfuxsWbYUIXD2s6AOiP59tGnzAjR6G-IxNP-QDsQCBGjk9RcT6PlSNjf8nqOtzduEdh2vLWTRUxc4OWpsq6ARlE6RZtsFj2qv5zhuemNxi-jwtB1n1a4vZYkDx96PaMIiXEAKbmWv67WSxmUPcT5RdHoTr27u31LOv9EijeCZIIvG380HkRbzfYjEBfYa8CkT0orsQgBhi1Q'
+  },
+  Code: 200,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'standardLog',
+  Action: 'standardLog'
+}
+Processing result : {
+  Status: 'Success',
+  Message: 'Login status successfully updated',
+  Code: 200
+}
+Processing result : {
+  Status: 'Failed',
+  Message: 'User is not logged in',
+  Code: 404,
+  user_id: 'wca1tubnruejwd76q319r',
+  action: 'logError',
+  Action: 'logError'
+}
