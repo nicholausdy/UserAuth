@@ -1,7 +1,7 @@
 # UserAuth
 UserAuth System with Redis and RabbitMQ
 <br> <br>
-API Documentation : https://documenter.getpostman.com/view/9502025/SzzkdHdY?version=latest#e00b949a-b1b5-4341-b7d2-47fde346dda1
+API Documentation : https://documenter.getpostman.com/view/9502025/SzzrXtbu?version=latest#98ad8ec6-5719-4ff2-893a-d9c07ad6dcbc
 <br> <br>
 How to use:
 1. Activate WSL on Windows (if you are using Windows, otherwise skip to step 2). Tutorial on how to activate WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
